@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th align="left" colspan="5">用户注册页面</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="right">用户名：</td>
+                <td colspan="3"><input type="text" name="uaername"></td>
+            </tr>
+            <tr>
+                <td align="right">密码：</td>
+                <td colspan="3"><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td align="right">确认密码：</td>
+                <td colspan="3"><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td align="right">性别：</td>
+                <td><input type="radio" name="sex">男<input type="radio" name="sex">女</td>
+            </tr>
+            <tr>
+                <td align="right">爱好：</td>
+                <td><input type="checkbox">听音乐
+                    <input type="checkbox">看电影
+                    <input type="checkbox">玩游戏
+                </td>
+            </tr>
+            <tr>
+                <td align="right">你所在的城市：</td>
+                <td><select>
+                        <option value="无">无</option>
+                        <optgroup label="广东省">
+                            <option value="1">广州</option>
+                            <option value="2">东莞</option>
+                            <option value="3">深圳</option>
+                        </optgroup>
+
+                        <optgroup label="广西省">
+                            <option value="1">南宁</option>
+                            <option value="2">玉林</option>
+                            <option value="3">北海</option>
+                        </optgroup>
+                    </select></td>
+            </tr>
+            <tr>
+                <td align="right">照片：</td>
+                <td><input type="text" disabled>
+                    <input type="file" hidden>
+                    <label for="file">浏览···</label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" rowspan="2">个人简介：</td>
+                <td colspan="4"><textarea name="" id="" cols="50" rows="10"></textarea></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="提交">
+                    <input type="reset" value="重写">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

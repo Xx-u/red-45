@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 表单基本结构 -->
+    <form action="" method="post">
+        <!-- 文本输入框 -->
+        <input type="text" name="username" placeholder="-请输入用户名" autocomplete minlength="2" maxlength="10">
+        <!-- 密码输入框 -->
+        <input type="password" name="password" required>
+        <!-- 数值输入框 -->
+        <input type="number">
+        <!-- 单选框 -->
+        <input type="radio" name="sex">男
+        <input type="radio" name="sex">女
+        <!-- 复选框 -->
+        <input type="checkbox" name="city">广州
+        <input type="checkbox" name="city">东莞
+        <input type="checkbox" name="city">深圳
+        <!-- 搜索框 -->
+        <input type="search">
+        <!-- 文件上传控件 -->
+        <input type="file">
+        <!-- 普通按钮 -->
+        <input type="button" value="普通按钮">
+
+        <!-- 下拉菜单 -->
+        <select name="citys">
+            <option value="广州">广州</option>
+            <option value="东莞">东莞</option>
+            <option value="深圳">深圳</option>
+        </select>
+
+        <!-- 选项分组 -->
+        <select name="" id="">
+            <optgroup label="广东省">
+                <option value="1">广州</option>
+                <option value="2">东莞</option>
+                <option value="3">深圳</option>
+            </optgroup>
+
+            <optgroup label="广西省">
+                <option value="1">南宁</option>
+                <option value="2">玉林</option>
+                <option value="3">北海</option>
+            </optgroup>
+        </select>
+
+        <!-- 重置按钮 -->
+        <input type="reset" value="重置">
+
+        <!-- 提交按钮 -->
+        <input type="submit" value="提交">
+    </form>
+
+
+
+    <!-- label的使用 -->
+    <!-- 方法1 -->
+    <label>
+        <input type="radio" name="sex" value="man">
+        男
+    </label>
+
+    <label>
+        <input type="radio" name="sex" value="woman">
+        女
+    </label>
+
+    <!-- 方法2 -->
+    <label for="11">
+        男
+    </label>
+    <input type="radio" name="sex" value="man" id="11">
+    <label for="12">
+        女
+    </label>
+    <input type="radio" name="sex" value="woman" id="12">
+
+
+    <!-- 下拉菜单 -->
+    <select name="citys">
+        <option value="广州">广州</option>
+        <option value="东莞">东莞</option>
+        <option value="深圳">深圳</option>
+    </select>
+
+    <!-- 选项分组 -->
+    <select name="" id="">
+        <optgroup label="广东省">
+            <option value="1">广州</option>
+            <option value="2">东莞</option>
+            <option value="3">深圳</option>
+        </optgroup>
+
+        <optgroup label="广西省">
+            <option value="1">南宁</option>
+            <option value="2">玉林</option>
+            <option value="3">北海</option>
+        </optgroup>
+    </select>
+
+    <!--  -->
+    <textarea name="" id="" cols="30" rows="10" style="resize: none;"></textarea>
+
+</body>
+
+</html>
