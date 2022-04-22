@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box::after {
+            /* 必写属性 值可以为空 用来填写伪元素显示的内容 */
+            content: ">";
+        }
+
+        .box2::after {
+            content: ">";
+        }
+    </style>
+</head>
+
+<body>
+    <span class="box">最新攻略</span>
+    <span class="box2">移动端开发</span>
+</body>
+
+</html>

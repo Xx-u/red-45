@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.box .box2 .box3 {
+    /* 字体大小 */
+    font-size: 14px;
+}
+
+h3.theme {
+    /* 设置颜色 */
+    color: orange;
+}
+
+h3.shopping {
+    color: rgb(0, 255, 68);
+}
+
+h3.hod {
+    color: red;
+}
+
+h3 {
+    /* 设置字体粗细 */
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.list a {
+    /* 改变行内块元素 */
+    display: inline-block;
+    /* 设置内填充 */
+    padding: 5px;
+}
+
+.list a:hover {
+    /*鼠标悬停在a标签身上时，显示背景*/
+    background-color: orange;
+    border-radius: 5px;
+}
+
+.box3:before {
+    /* 必写属性 值可以为空 用来填写伪元素显示的内容 */
+    content: "";
+    /* 修改元素的显示模式为块级元素 */
+    display: block;
+    width: 330px;
+    height: 3px;
+    background-color: rgb(241, 237, 237);
+}
+
+.box2:before {
+    /* 必写属性 值可以为空 用来填写伪元素显示的内容 */
+    content: "";
+    /* 修改元素的显示模式为块级元素 */
+    display: block;
+    width: 330px;
+    height: 3px;
+    background-color: rgb(237, 231, 231);
+}

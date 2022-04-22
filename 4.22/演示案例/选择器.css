@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+/* 元素选择器 */
+/* p {
+    color: red;
+}
+
+h1 {
+    color: pink;
+} */
+
+/* 群组选择器 */
+/* p,
+h1 {
+    color: blue;
+} */
+
+/* 通配符选择器 */
+/* * {
+    color: blueviolet;
+} */
+
+/* 类选择器 */
+.pa {
+    color: pink;
+    /* 设置背景颜色 */
+    background-color: green;
+}
+
+.aa {
+    background-color: yellow;
+}
+
+.bb {
+    background-color: blue;
+}
+
+p.warning {
+    background-color: aqua;
+}
+
+.warning.aa {
+    background-color: blanchedalmond;
+}
+
+/* ID选择器 */
+#bigp {
+    /* 修改字代变大 */
+    font-size: 30px;
+}
+
+/* 后代选择器 */
+/* div p {
+    color: brown;
+    background-color: aqua;
+} */
+
+/* 后代选择器 */
+.box1 p {
+    color: aqua;
+    background-color: brown;
+}
+
+/* 子代选择器 */
+.box1>p {
+    color: black;
+    background: #87ceeb;
+}
+
+/* 相邻选择器 */
+.box2+p {
+    font-size: 20px;
+    background-color: aquamarine;
+}
+
+/* 兄弟选择器 */
+.box2~p {
+    font-size: 30px;
+    color: black;
+    background-color: blanchedalmond;
+}
+
+a:link {
+    color: blueviolet;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    color: brown;
+}
+
+a:active {
+    color: cadetblue;
+}
+
+/* input获取到焦点时 */
+input:focus {
+    /* 设置2像数 实线 红色 外轮廓线 */
+    border: 2px solid red;
+}
+
+.list li {
+    background-color: aqua;
+}
+
+/* 结构伪类选择器 */
+.list li:nth-child(even) {
+    color: blueviolet;
+    background-color: burlywood;
+}
+
+.box3 span:first-child {
+    color: #87ceeb;
+    background-color: red;
+}
+
+.box3 p:first-of-type {
+    color: blue;
+    background-color: brown;
+}
+
+/* 伪元素 */
+.box4::after {
+    /* 必写属性 值可以为空 用来填写伪元素显示的内容 */
+    content: "<";
+    /* 修改元素的显示模式为块级元素 */
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: red;
+}
+
+/* 属性选择器 */
+div[class] {
+    width: 200px;
+    height: 100px;
+    /* 设置边框 */
+    border: 1px solid black;
+    background-color: pink;
+}
+
+div[class="boxabcde"] {
+    background-color: blue;
+}

@@ -1,0 +1,6 @@
+/* 声明文档编码类型 统一写 @charset "UTF-8" */
+@charset "UTF-8";
+
+div {
+    color: red;
+}
