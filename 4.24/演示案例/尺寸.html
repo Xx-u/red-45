@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .father {
+            width: 300px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        .son {
+            width: 150px;
+            height: 50px;
+            background-color: black;
+        }
+
+        /* 给span a 标签 设置宽高 */
+        span {
+            width: 400px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        a {
+            width: 500px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+
+        body {
+            font-size: 0;
+        }
+
+        .box2,
+        .box3 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            display: inline-block;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+    <span>span</span>
+    <a href="#">a</a>
+
+    <p>
+        这是一个p
+        <span>这是span</span>
+    </p>
+
+    <div class="box2">BOX2</div>
+    <div class="box3">BOX3</div>
+
+</body>
+
+</html>

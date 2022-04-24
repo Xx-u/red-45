@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family:
+        "huawen";
+    src: url("./../../4.24/演示案例/ttf/华文中宋.ttf");
+}
+
+.box1,
+.box2 {
+    font-family: huawen;
+}
+
+.box2 {
+    font-size: 18px;
+    width: 600px;
+    height: 400px;
+    /* border: 1px solid blue; */
+    margin: 50px auto;
+}
+
+.box1 {
+    width: 200px;
+    height: 100px;
+    /* 字体大小 */
+    font-size: 30px;
+    line-height: 100px;
+    /* 背景颜色 */
+    background-color: antiquewhite;
+    /* 设置圆角 */
+    border-radius: 10px;
+    /* 设置文字垂直居中 */
+    vertical-align: middle;
+    margin: 50px auto;
+
+}
+
+.list a {
+    /* 填充背景颜色 */
+    background-color: aquamarine;
+    /* 设置圆角 */
+    border-radius: 10px;
+    /* 改变行内块元素 */
+    display: inline-block;
+    /* 设置内填充 */
+    padding: 5px;
+    /* 设置文字垂直居中 */
+    vertical-align: middle;
+    /* 内边距填充 */
+    padding: 30px;
+    /* 间隔距离 */
+    margin: 5px auto;
+}
+
+.list a:hover {
+    /*鼠标悬停在a标签身上时，显示背景*/
+    background-color: blueviolet;
+    /* 设置圆角 */
+    border-radius: 10px;
+}
