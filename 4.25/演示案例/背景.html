@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            margin: 50px auto;
+            width: 600px;
+            height: 600px;
+            font-size: 35px;
+
+            /* background-image: url(./../../images/微信截图_20220425121904.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: 50% 50%; */
+            background: pink url("./../../images/微信截图_20220425121904.png") no-repeat;
+        }
+
+        .list {
+            width: 400px;
+            margin: 100px auto;
+
+        }
+
+        .list li {
+            width: 74px;
+            height: 88px;
+            border: 1px solid #000;
+            /* 去除列表默认样式 */
+            list-style: none;
+            background: url("./../../images/css_sprites.png") no-repeat;
+            float: left;
+
+        }
+
+        .list li:first-child {
+            background-position: -104px -10px;
+        }
+
+        .list li:nth-child(2) {
+            background-position: -10px -10px;
+        }
+
+        .list li:nth-child(3) {
+            background-position: -10px -120px;
+        }
+
+        .list li:last-child {
+            background-position: -198px -10px;
+        }
+    </style>
+
+</head>
+
+<body>-
+    <!-- <div class="box"></div>  -->
+
+    <ul class="list clearfix">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

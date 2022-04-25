@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .list {
+            width: 300px;
+            margin: 200px auto;
+            padding: 30px;
+        }
+
+        .list li {
+            width: 80px;
+            height: 80px;
+            list-style: none;
+            background: url("./../../images/03.png") no-repeat;
+            float: left;
+            /* 去除列表默认样式 */
+            list-style: none;
+        }
+
+        .list li:first-child {
+            background-position: -10px -10px;
+        }
+
+        .list li:nth-child(2) {
+            background-position: -111px -10px;
+        }
+
+        .list li:nth-child(3) {
+            background-position: -10px -110px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul class="list">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>
