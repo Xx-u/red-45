@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.img {
+    height: 128px;
+    height: 180px;
+}
+.list {
+    display: flex;
+}
+.red1 {
+    width: 375px;
+    display: flex;
+}
+.red2 {
+    width: 110px;
+}
+.one {
+    line-height:28px;
+    font-size: 13px;
+    width: 87px;
+    height: 28px;
+    display: flex;
+    text-align: center;
+    border: 1px solid #5E92CC;
+}
+.twoD {
+    width: 34px;
+    background-color: #5E92CC;
+}
+.imax {
+    flex-wrap: 1;
+}
+
