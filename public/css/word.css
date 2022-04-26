@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.pictures .tabs {
+    width: 100%;
+    height: 1.875rem;
+    padding: 1.25rem 0rem;
+    text-align: center;
+}
+
+.pictures .tabs .tab {
+    display: inline-block;
+    line-height: 1.875rem;
+    font-size: 0.875rem;
+    color: #696D72;
+    cursor: pointer;
+}
+
+.pictures .tabs .tab span {
+    display: inline-block;
+    padding: 0 0.625rem;
+    margin: 0 0.625rem;
+}
+
+.pictures .tabs .tab:after {
+    display: inline-block;
+    width: 0.0625rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    background: #B8B8B8;
+    content: '';
+}
+
+.pictures .tabs .tab:last-child:after {
+    width: 0rem;
+}
