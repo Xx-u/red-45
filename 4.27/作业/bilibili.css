@@ -2,10 +2,8 @@
 
 .bili {
     display: flex;
-    width: 1236px;
-    height: 427px;
-    margin-top: 50px;
-    margin-left: 50px;
+    margin: 100px auto;
+    width: 1455px;
     justify-content: space-between;
     
 }
@@ -15,18 +13,24 @@
     align-content: space-between;
     justify-content: space-between;
     display: flex;
-    width: 986px;
-    height: 400px;
+    width: 1161.59px;
+    height: 440.56px;
 }
-
+.left li {
+    width: 281.39px;
+    height: 210.28px;
+}
 .left-img {
-    width: 237px;
-    height: 133px;
+    position: relative;
+    width: 100%;
+    height: 158.28px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 5px;
 }
 .left-img img {
     width: 100%;
     height: 100%;
-    border-radius: 5px;
 }
 .left-img-wenzi {
     box-sizing: border-box;
@@ -36,6 +40,19 @@
     padding: 10px;
     display: flex;
     justify-content: space-between;
+}
+.left-img-wenzi .div {
+    color: #fff;
+}
+.left li > p {
+    line-height: 20px;
+}
+.left li>h3:first-of-type{
+    font-size: 15px;
+}
+.left li > p:nth-of-type {
+    font-size: 13px;
+    color: #ccc;
 }
 
 /* 右区域 */
