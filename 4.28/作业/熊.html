@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熊</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .add {
+            height: 900px;
+            background-color: cornsilk;
+        }
+        @keyframes Add {
+            0% {
+                top: calc(50% - 100px);
+                left: 0;
+            }
+            50% {
+                top: calc(50% - 100px);
+                left: 50%;
+                /* background-position: -1600px 0; */
+            }
+            100% {
+                top: calc(50% - 100px);
+                left: 0;
+                /* background-position: -1600px 0; */
+            }
+        }
+
+        @keyframes Add2 {
+            100% {
+                background-position: -1600px 0;
+            }
+        }
+        .add2 {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background-image: url("./../../images/10.png");
+            animation: Add 8s ease infinite,Add2 400ms steps(8) infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="add">
+        <div class="add2"></div>
+    </div>
+</body>
+</html>
