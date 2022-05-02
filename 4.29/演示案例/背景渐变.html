@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 300px;
+            height: 300px;
+            /* 从右下角到左上角渐变 */
+            background: linear-gradient(90deg,blue 0%, yellow 50%, pink 100%);
+            /* background-image: linear-gradient(to left top,blue 0%, yellow 50%, pink 100%); */
+            /* 以下是兼容写法 */
+            background: -ms-linear-gradient(90deg,blue 0%, yellow 50%, pink 100%);
+            background: -webkit-linear-gradient(90deg,blue 0%, yellow 50%, pink 100%);
+            background: -moz-linear-gradient(90deg,blue 0%, yellow 50%, pink 100%);
+        }
+
+        .box2 {
+            width: 300px;
+            height: 300px;
+            /* 圆形渐变，从圆心向四周渐变 */
+            background: radial-gradient(circle,white,blue);
+        }
+        .box3 {
+            width: 300px;
+            height: 300px;
+            /* 椭圆形渐变，从圆心向四周渐变 */
+            background: radial-gradient(30% 50%,white 0%, pink 50%,blue 100%);
+
+        }
+
+        /* 通过at关键字  可以改变渐变中心点  中心点位置 允许写px单位/百分百单位的数值/ 方位词 */
+        .box4 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at 70% 30%,white,blue);
+        }
+        .box5 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at left top,white,blue);
+        }
+        .box6 {
+            width: 300px;
+            height: 300px;
+            background: repeating-linear-gradient(to right,blue,yellow 30px);
+
+            /* 以下是兼容写法 */
+            background: 
+            -ms-repeating-linear-gradient(to right,blue,yellow 30px);
+            background: -webkit-repeating-linear-gradient(to right,blue,yellow 30px);
+            background:
+            -moz-repeating-linear-gradient(to right,blue,yellow 30px);
+        }
+        .box7 {
+            width: 300px;
+            height: 300px;
+            background: repeating-radial-gradient(circle,blue 10%,green 20%,pink 30%,yellow 20%);
+
+            /* 以下是兼容写法 */
+            background: 
+            -ms-repeating-radial-gradient(to right,blue,yellow);
+            background: -webkit-repeating-radial-gradient(to right,blue,yellow);
+            background:
+            -moz-repeating-radial-gradient(to right,blue,yellow);
+        }
+    </style>
+</head>
+<body>
+    <!-- 线性渐变 -->
+    <div class="box1"></div>
+    <!-- 径向渐变 -->
+    <!-- 圆形渐变 -->
+    <div class="box2"></div>
+    <!-- 椭圆渐变 -->
+    <div class="box3"></div>
+
+    <!-- 更改渐变中心点 -->
+    <div class="box4"></div>
+    <div class="box5"></div>
+
+    <div class="box6"></div>
+    <div class="box7"></div>
+</body>
+</html>

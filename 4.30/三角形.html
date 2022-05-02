@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            margin: 200px auto;
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        /* 利用边框画三角形的方法 */
+        .box1 {
+            position: relative;
+            width: 0;
+            height: 0;
+            border: 100px solid #000;
+            border-top-width: 200px;
+            border-bottom-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 100px;
+            border-color:transparent red;
+            z-index: 2;
+        }
+        .box2 {
+            position: absolute;
+            width: 0;
+            height: 0;
+            transform: translate(0,-100%);
+            border: 100px solid #000;
+            border-top-width: 100px;
+            border-bottom-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 100px;
+            border-color: transparent white;
+            z-index: 3;
+        }
+
+
+         /* 超链接部分 */
+        .list {
+            margin: 50px auto;
+            width: 900px;
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            justify-content: space-between;
+            /* background-color: blueviolet; */
+        }
+        .list a {
+            display: inline-block;
+            padding: 5px;
+            vertical-align: middle;
+            padding: 30px; 
+            margin: 5px auto;
+        }
+        a {
+            text-shadow: 3px 3px 3px pink;
+            transform: all .3s ease;
+        }
+        .list a:hover {
+            background-color: #BEBEBF;
+        }
+        .list a::after {
+            content: '';
+        }
+    </style>
+</head>
+<body>
+    <div class="list">
+        <a href="./渐变.html">5.1-渐变</a>
+        <a href="./太极.html">5.1-太极</a>
+        <a href="./三角形.html">5.1-三角形</a>
+        <a href="./3D筛子.html">5.1-筛子</a>
+    </div>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

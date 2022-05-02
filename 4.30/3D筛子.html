@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            display: flex;
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 800px;
+            height: 500px;
+            background-color: #ccc; 
+            /* 开启3D空间 */
+            perspective: 500px;
+        }
+        .baba {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            /* 开启3D变形 */
+            transform-style: preserve-3d;
+            animation: with 5s infinite linear;
+        }
+        .son {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #C1C1C1;
+            border: 1px solid black;
+        }
+        .erzi {
+            height: 20px;
+            width: 20px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        .son1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .son2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .erzi2 {
+            margin: 10px auto;
+        }
+
+        .son3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .erzi3 {
+            margin: 10px auto;
+        }
+        .erzi3:nth-child(2) {
+            align-self: center;
+        }
+        .erzi3:nth-child(3) {
+            align-self: flex-end;
+        }
+
+        .son4 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+        .row {
+            display: flex;
+            flex-basis: 100%;
+            justify-content: space-between;
+        }
+        .erzi4 {
+            margin: 10px auto;
+        }
+
+        .son5 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            justify-content: space-between;
+        }
+        .row2 {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .erzi5 {
+            margin: 7px auto;
+        }
+        .abb {
+            display: flex;
+            flex-basis: 100%;
+            justify-content: center;
+        }
+
+        .son6 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            justify-content: space-between;
+        }
+        .row3 {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .erzi6 {
+            margin: 10px auto;
+        }
+
+        .son1 {
+            transform: translateZ(-50px);
+        }
+        .son2 {
+            transform: rotateX(90deg) translateZ(50px);
+        }
+        .son3 {
+            transform: rotateX(90deg) translateZ(-50px);
+        }
+        .son4 {
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        .son5 {
+            transform: rotateY(90deg) translateZ(-50px);
+        }
+        .son6 {
+            transform: translateZ(50px);
+        }
+
+        @keyframes with {
+            50% {
+                transform: rotate3d(0,1,1,360deg);
+            }
+            70% {
+                transform: rotate3d(1,1,1,180deg);
+            }
+        }
+
+        .baba:hover  div:nth-child(1) {
+            border-radius: 10px;
+            transition: 1s linear;
+            transform: translateZ(-100px);
+        }
+        .baba:hover  div:nth-child(2) {
+            border-radius: 10px;
+            transition: 1s linear;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .baba:hover  div:nth-child(3) {
+            border-radius: 10px;
+            transition: 1s linear;
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+        .baba:hover  div:nth-child(4) {
+            border-radius: 10px;
+            transition: 1s linear;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .baba:hover  div:nth-child(5) {
+            border-radius: 10px;
+            transition: 1s linear;
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+        .baba:hover  div:nth-child(6) {
+            border-radius: 10px;
+            transition: 1s linear;
+            transform: translateZ(100px);
+        }
+
+
+
+         /* 超链接部分 */
+        .list {
+            margin: 50px auto;
+            width: 900px;
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            justify-content: space-between;
+            /* background-color: blueviolet; */
+        }
+        .list a {
+            display: inline-block;
+            padding: 5px;
+            vertical-align: middle;
+            padding: 30px; 
+            margin: 5px auto;
+        }
+        a {
+            text-shadow: 3px 3px 3px pink;
+            transform: all .3s ease;
+        }
+        .list a:hover {
+            background-color: #BEBEBF;
+        }
+        .list a::after {
+            content: '';
+        }
+    </style>
+</head>
+<body>
+    <div class="list">
+        <a href="./渐变.html">5.1-渐变</a>
+        <a href="./太极.html">5.1-太极</a>
+        <a href="./三角形.html">5.1-三角形</a>
+        <a href="./3D筛子.html">5.1-筛子</a>
+    </div>
+    <div class="box">
+        <div class="baba">
+            <div class="son son1">
+                <li class="erzi"></li>
+            </div>
+            <div class="son son2">
+                <li class="erzi erzi2"></li>
+                <li class="erzi erzi2"></li>
+            </div>
+            <div class="son son3">
+                <li class="erzi erzi3"></li>
+                <li class="erzi erzi3"></li>
+                <li class="erzi erzi3"></li>
+            </div>
+            <div class="son son4">
+                <li class="row">
+                    <li class="erzi erzi4"></li>
+                    <li class="erzi erzi4"></li>
+                </li>
+                <li class="row">
+                    <li class="erzi erzi4"></li>
+                    <li class="erzi erzi4"></li>
+                </li>
+            </div>
+            <div class="son son5">
+                <li class="row2">
+                    <li class="erzi erzi5"></li>
+                    <li class="erzi erzi5"></li>
+                </li>
+                <li class="abb">
+                    <li class="erzi erzi5"></li>
+                </li>
+                <li class="row2">
+                    <li class="erzi erzi5"></li>
+                    <li class="erzi erzi5"></li>
+                </li>
+            </div>
+            <div class="son son6">
+                <li class="row3">
+                    <li class="erzi erzi6"></li>
+                    <li class="erzi erzi6"></li>
+                    <li class="erzi erzi6"></li>
+                </li>
+                <li class="row3">
+                    <li class="erzi erzi6"></li>
+                    <li class="erzi erzi6"></li>
+                    <li class="erzi erzi6"></li>
+                </li>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

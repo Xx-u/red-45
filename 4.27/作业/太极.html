@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        .box {
+            position: relative;
+            box-sizing: border-box;
+            /* overflow: hidden; */
+            margin: 100px auto;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            border-bottom-width: 200px;
+            transition: all 1s ease;
+            animation: son 2s infinite linear;
+            
+        }
+        .box::before,
+        .box::after {
+            position: absolute;
+            content: "";
+            display: block;
+            left: 0;
+            box-sizing: border-box;
+            top: 50%;
+            width: 50%;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 74px solid #000;
+
+        }
+        .box::after {
+            left: 50%;
+            border-color: #fff;
+            background-color: #000;
+        }
+        .box:hover {
+            animation-play-state: paused;
+        }
+        @keyframes son {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

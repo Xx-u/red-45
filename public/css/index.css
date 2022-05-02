@@ -43,6 +43,7 @@ body {
     height: 400px;
     /* 外边距设置 */
     margin: 50px auto;
+    text-align: center;
 }
 
 .list a {
