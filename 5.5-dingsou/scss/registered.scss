@@ -1,0 +1,250 @@
+@charset "UTF-8";
+@import "./common";
+
+.boby {
+    margin: 0 auto;
+    width: 1000px;
+    height: 1557px;
+    background-color: #FFFFFF;
+}
+
+main {
+    margin: 0 auto;
+    width: 1000px;
+    height: 797px;
+
+    // 注册头部
+    .content {
+        width: 1000px;
+        height: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content-text {
+            width: 339px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .hezi1 {
+                margin-top: 20px;
+                width: 105px;
+                height: 20px;
+                border-top: 1px solid #9AC1C0;
+            }
+
+            .hezi2 {
+                margin-top: 20px;
+                width: 105px;
+                height: 20px;
+                border-top: 1px solid #9AC1C0;
+            }
+
+            .fie-text {
+                width: 129px;
+                text-align: center;
+            }
+
+            .fie-text legend>p {
+                width: 129px;
+                margin-left: 9px;
+                letter-spacing: 10px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .fie-text>p {
+                margin-top: 3px;
+                font-size: 8px;
+                line-height: 6px;
+                word-spacing: -2px;
+                letter-spacing: -1px;
+            }
+        }
+    }
+
+    // 中部区域
+    .instructions {
+        width: 1000px;
+        height: 72px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 550;
+    }
+
+    // 注册区域
+    .text {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        margin: 0 auto;
+        width: 752px;
+        height: 614px;
+
+        .text-box-top {
+            width: 752px;
+            height: 265px;
+
+            .text-box {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 74px;
+                font-size: 14px;
+                height: 18px;
+                margin-top: 6px;
+                margin-bottom: 20px;
+
+                .input-box {
+                    width: 208px;
+                    height: 18px;
+                    margin-left: 5px;
+                    margin-right: 23px;
+                    margin-top: -4px;
+                }
+
+                .input-box2 {
+                    width: 167px;
+                    height: 17px;
+                    margin-left: 5px;
+                    margin-right: 23px;
+                }
+
+                .input-box2>select {
+                    width: 167px;
+                    height: 17px;
+                    border: 1px solid #9AC1C0;
+                    background-color: #FFFFFF;
+                }
+
+                .input-box>input {
+                    width: 208px;
+                    height: 18px;
+                }
+            }
+
+            .text-box>span {
+                color: red;
+                margin-right: 3px;
+            }
+
+            .text-box>p:first-child {
+                width: 70px;
+                text-align: left;
+            }
+        }
+
+        .text-box-buttom {
+            height: 324px;
+
+            .text-box {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 74px;
+                font-size: 14px;
+                height: 18px;
+                margin-top: 6px;
+                margin-bottom: 20px;
+
+                .input-box3 {
+                    width: 63px;
+                    height: 18px;
+                    margin-top: -5px;
+                    margin-left: 20px;
+                    margin-right: 23px;
+                }
+
+                .text-box-img {
+                    width: 57px;
+                    height: 19px;
+                    margin-left: -10px;
+                    margin-top: -3px;
+                }
+
+                .text-box-img>img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .input-box3>input {
+                    width: 63px;
+                    height: 18px;
+                }
+
+                .text-box>a {
+                    margin-left: 4px;
+                }
+
+                .click {
+                    color: red;
+                }
+            }
+
+            .sex {
+                margin-left: 27px;
+            }
+
+            .text-box4 {
+                display: flex;
+                margin-left: 74px;
+                font-size: 14px;
+                height: 18px;
+                margin-top: 6px;
+                margin-bottom: 20px;
+
+
+                .text-box-text {
+                    width: 549px;
+                    height: 116px;
+                    border: 1px solid #9AC1C0;
+                }
+
+                .text-box-text>p {
+                    font-size: 12px;
+                    line-height: 19px;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .text-box5 {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 155px;
+                font-size: 14px;
+                height: 18px;
+                margin-top: 110px;
+                margin-bottom: 20px;
+
+                .input {
+                    border: 1px solid red;
+                }
+            }
+
+            .text-box5>span {
+                font-size: 12px;
+                margin-left: 28px;
+                margin-top: 4px;
+            }
+
+            .text-box6 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                width: 121px;
+                height: 33px;
+                background-color: #6DB6FF;
+                border-radius: 5px;
+                margin-top: 34px;
+
+            }
+
+            .text-box6>a {
+                font-size: 16px;
+                color: #FFFFFF;
+            }
+        }
+
+    }
+}

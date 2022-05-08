@@ -1,0 +1,480 @@
+header {
+  width: 100%;
+}
+
+header .header-top {
+  width: 100%;
+  height: 16px;
+  background-color: #6DB6FF;
+}
+
+.container {
+  width: 100%;
+  height: 117px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFFFFF;
+}
+
+.container .container-logo {
+  width: 121px;
+  height: 63px;
+  margin-bottom: -26px;
+}
+
+.container .container-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 515px;
+  height: 15px;
+  margin-bottom: -65px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.container .container-text > li:first-child > a {
+  border-bottom: 2px solid #000;
+}
+
+.container .container-textbox {
+  width: 217px;
+  height: 30px;
+  margin-bottom: -65px;
+  border: 1px solid #000;
+}
+
+.container .container-textbox .input-img {
+  width: 180px;
+  height: 30px;
+  border: transparent;
+}
+
+.big-img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 1000px;
+  height: 400px;
+}
+
+.big-img-box img {
+  width: 100%;
+}
+
+.big-img-box .img-round {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 65px;
+  height: 15px;
+  background-color: transparent;
+  margin-left: 465px;
+  margin-top: 375px;
+}
+
+.big-img-box .img-round .round {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #897053;
+}
+
+.big-img-box .img-round .round2 {
+  background-color: #395674;
+}
+
+main {
+  margin: 0 auto;
+  width: 900px;
+  height: 1476px;
+}
+
+footer {
+  margin: 0 auto;
+  width: 1000px;
+  border-top: 1px solid #6DB6FF;
+}
+
+footer .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 900px;
+  height: 168px;
+  border-top: 1px solid #EAEDF0;
+}
+
+footer .nav-list .hezi1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 664px;
+  height: 168px;
+}
+
+footer .nav-list .hezi1 .zi {
+  width: 109px;
+  height: 100px;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  font-weight: 700;
+}
+
+footer .nav-list .hezi1 .zi > h2 {
+  font-size: 16px;
+  line-height: 40px;
+}
+
+footer .nav-list .hezi1 .zi > div {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+footer .nav-list .hezi2 {
+  width: 312px;
+  height: 168px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .nav-list .hezi2 .hezi2-img {
+  width: 55px;
+  height: 104px;
+}
+
+footer .nav-list .hezi2 .hezi2-img .img1 {
+  margin-left: 5px;
+  margin-bottom: 17px;
+}
+
+footer .nav-list .hezi2 .hezi2-text {
+  width: 138px;
+  height: 104px;
+  font-size: 16px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+footer .nav-list .hezi2 .hezi2-phone {
+  width: 127px;
+  height: 104px;
+  font-size: 11px;
+}
+
+footer .nav-list .hezi2 .hezi2-phone .phone-img {
+  margin-left: 50px;
+}
+
+footer .footer-bottom {
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  background-color: #6DB6FF;
+}
+
+.boby {
+  margin: 0 auto;
+  width: 1000px;
+  height: 1557px;
+  background-color: #FFFFFF;
+}
+
+main {
+  margin: 0 auto;
+  width: 1000px;
+  height: 797px;
+}
+
+main .content {
+  width: 1000px;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .content .content-text {
+  width: 339px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .content .content-text .hezi1 {
+  margin-top: 20px;
+  width: 105px;
+  height: 20px;
+  border-top: 1px solid #9AC1C0;
+}
+
+main .content .content-text .hezi2 {
+  margin-top: 20px;
+  width: 105px;
+  height: 20px;
+  border-top: 1px solid #9AC1C0;
+}
+
+main .content .content-text .fie-text {
+  width: 129px;
+  text-align: center;
+}
+
+main .content .content-text .fie-text legend > p {
+  width: 129px;
+  margin-left: 9px;
+  letter-spacing: 10px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+main .content .content-text .fie-text > p {
+  margin-top: 3px;
+  font-size: 8px;
+  line-height: 6px;
+  word-spacing: -2px;
+  letter-spacing: -1px;
+}
+
+main .instructions {
+  width: 1000px;
+  height: 72px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 550;
+}
+
+main .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  margin: 0 auto;
+  width: 752px;
+  height: 614px;
+}
+
+main .text .text-box-top {
+  width: 752px;
+  height: 265px;
+}
+
+main .text .text-box-top .text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 74px;
+  font-size: 14px;
+  height: 18px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+main .text .text-box-top .text-box .input-box {
+  width: 208px;
+  height: 18px;
+  margin-left: 5px;
+  margin-right: 23px;
+  margin-top: -4px;
+}
+
+main .text .text-box-top .text-box .input-box2 {
+  width: 167px;
+  height: 17px;
+  margin-left: 5px;
+  margin-right: 23px;
+}
+
+main .text .text-box-top .text-box .input-box2 > select {
+  width: 167px;
+  height: 17px;
+  border: 1px solid #9AC1C0;
+  background-color: #FFFFFF;
+}
+
+main .text .text-box-top .text-box .input-box > input {
+  width: 208px;
+  height: 18px;
+}
+
+main .text .text-box-top .text-box > span {
+  color: red;
+  margin-right: 3px;
+}
+
+main .text .text-box-top .text-box > p:first-child {
+  width: 70px;
+  text-align: left;
+}
+
+main .text .text-box-buttom {
+  height: 324px;
+}
+
+main .text .text-box-buttom .text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 74px;
+  font-size: 14px;
+  height: 18px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+main .text .text-box-buttom .text-box .input-box3 {
+  width: 63px;
+  height: 18px;
+  margin-top: -5px;
+  margin-left: 20px;
+  margin-right: 23px;
+}
+
+main .text .text-box-buttom .text-box .text-box-img {
+  width: 57px;
+  height: 19px;
+  margin-left: -10px;
+  margin-top: -3px;
+}
+
+main .text .text-box-buttom .text-box .text-box-img > img {
+  width: 100%;
+  height: 100%;
+}
+
+main .text .text-box-buttom .text-box .input-box3 > input {
+  width: 63px;
+  height: 18px;
+}
+
+main .text .text-box-buttom .text-box .text-box > a {
+  margin-left: 4px;
+}
+
+main .text .text-box-buttom .text-box .click {
+  color: red;
+}
+
+main .text .text-box-buttom .sex {
+  margin-left: 27px;
+}
+
+main .text .text-box-buttom .text-box4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 74px;
+  font-size: 14px;
+  height: 18px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+main .text .text-box-buttom .text-box4 .text-box-text {
+  width: 549px;
+  height: 116px;
+  border: 1px solid #9AC1C0;
+}
+
+main .text .text-box-buttom .text-box4 .text-box-text > p {
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: 1px;
+}
+
+main .text .text-box-buttom .text-box5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 155px;
+  font-size: 14px;
+  height: 18px;
+  margin-top: 110px;
+  margin-bottom: 20px;
+}
+
+main .text .text-box-buttom .text-box5 .input {
+  border: 1px solid red;
+}
+
+main .text .text-box-buttom .text-box5 > span {
+  font-size: 12px;
+  margin-left: 28px;
+  margin-top: 4px;
+}
+
+main .text .text-box-buttom .text-box6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  width: 121px;
+  height: 33px;
+  background-color: #6DB6FF;
+  border-radius: 5px;
+  margin-top: 34px;
+}
+
+main .text .text-box-buttom .text-box6 > a {
+  font-size: 16px;
+  color: #FFFFFF;
+}

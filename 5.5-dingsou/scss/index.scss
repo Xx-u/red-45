@@ -1,0 +1,228 @@
+@charset "UTF-8";
+@import "./common";
+
+.boby {
+    margin: 0 auto;
+    width: 1000px;
+    height: 2255px;
+    background-color: #FFFFFF;
+}
+
+main {
+    margin: 0 auto;
+    width: 900px;
+    height: 1476px;
+
+    .Aboutus {
+        height: 483px;
+        background-color: #FAFAFA;
+
+        .Aboutus-text {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .fie-text {
+                width: 145px;
+                text-align: center;
+                border: 1px solid #6db6ff;
+                border-color: #6db6ff;
+                color: #fff;
+            }
+
+            .fie-text legend>p {
+                font-size: 24px;
+                line-height: 24px;
+            }
+
+            .fie-text>p {
+                margin-top: 3px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        .Aboutus-picture {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .Aboutus-picture1 {
+            width: 267px;
+            height: 322px;
+            background-color: #F2F2F2;
+
+            .picture1-img {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                height: 142px;
+
+                .box {
+                    margin-top: 16px;
+                    width: 126px;
+                    height: 126px;
+                }
+            }
+
+            .picture1-text {
+                width: 100%;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .fie-text {
+                    width: 145px;
+                    text-align: center;
+                    border-color: #6db6ff;
+                    color: #fff;
+                }
+
+                .fie-text legend>p {
+                    font-size: 24px;
+                    line-height: 24px;
+                }
+
+                .fie-text>p {
+                    margin-top: 3px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+
+            .picture1-span {
+                margin-left: 12px;
+                margin-right: 10px;
+                line-height: 20px;
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+
+        }
+    }
+
+    .investment {
+        height: 664px;
+        background-color: #FFFFFF;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
+
+        .investment-picture2 {
+            width: 295px;
+            height: 307px;
+
+            .investment-img {
+                width: 295px;
+                height: 210px;
+                background-color: beige;
+
+            }
+
+            .text {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                width: 295px;
+                height: 50px;
+
+                .text-span {
+                    margin-top: 15px;
+                    text-align: center;
+                    font-size: 12px;
+                }
+            }
+
+            .investment-botton {
+                .botton {
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    margin-left: 75px;
+                    width: 135px;
+                    height: 27px;
+                    background-color: #6DB6FF;
+                    letter-spacing: 2px;
+
+                    .botton-span {
+                        margin-top: 6px;
+                        text-align: center;
+                        font-size: 15px;
+                        color: #fff;
+                        letter-spacing: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    .link {
+        width: 900px;
+        height: 305px;
+        background-color: #313131;
+        background-image: url("./../../images/dingsou/14625916669c405f593ff89f419079c1.png");
+
+        .link-text {
+            height: 113px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .fie-text {
+                width: 145px;
+                text-align: center;
+                border: 1px solid #6db6ff;
+                border-color: #6db6ff;
+                color: #fff;
+            }
+
+            .fie-text legend>p {
+                font-size: 24px;
+                line-height: 24px;
+            }
+
+            .fie-text>p {
+                margin-top: 3px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        .link-img {
+            display: flex;
+            justify-content: space-between;
+
+            .link-arrow1 {
+                margin-left: 10px;
+                margin-top: 4px;
+                width: 37px;
+                height: 69px;
+                background-color: transparent;
+            }
+
+            .link-arrow2 {
+                margin-right: 10px;
+                margin-top: 6px;
+                width: 37px;
+                height: 69px;
+            }
+
+            .link-img-img {
+                width: 732px;
+                height: 81px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .link-img1 {
+                width: 222px;
+                height: 81px;
+                background-color: #6DB6FF;
+            }
+        }
+    }
+}

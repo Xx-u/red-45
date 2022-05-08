@@ -1,0 +1,187 @@
+// 公共部分
+@charset "UTF-8";
+$colorA : #6DB6FF;
+
+// 头部区域
+header {
+    width: 100%;
+
+    .header-top {
+        width: 100%;
+        height: 16px;
+        background-color: $colorA;
+    }
+}
+
+// 导航栏区域
+.container {
+    width: 100%;
+    height: 117px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFFFFF;
+
+    .container-logo {
+        width: 121px;
+        height: 63px;
+        margin-bottom: -26px;
+    }
+
+    .container-text {
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        width: 515px;
+        height: 15px;
+        margin-bottom: -65px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .container-text>li:first-child>a {
+        border-bottom: 2px solid #000;
+    }
+
+    .container-textbox {
+        width: 217px;
+        height: 30px;
+        margin-bottom: -65px;
+        border: 1px solid #000;
+
+        .input-img {
+            width: 180px;
+            height: 30px;
+            border: transparent;
+        }
+    }
+}
+
+// 大图区域
+.big-img-box {
+    display: flex;
+    position: relative;
+    width: 1000px;
+    height: 400px;
+
+    img {
+        width: 100%;
+    }
+
+    .img-round {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 65px;
+        height: 15px;
+        background-color: transparent;
+        margin-left: 465px;
+        margin-top: 375px;
+
+        .round {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #897053;
+        }
+
+        .round2 {
+            background-color: #395674;
+        }
+    }
+}
+
+// 定义一个中心内容区域
+main {
+    margin: 0 auto;
+    width: 900px;
+    height: 1476px;
+}
+
+// 页脚区域
+footer {
+    margin: 0 auto;
+    width: 1000px;
+    border-top: 1px solid $colorA;
+
+    .nav-list {
+        display: flex;
+        margin-left: 50px;
+        margin-right: 50px;
+        width: 900px;
+        height: 168px;
+        border-top: 1px solid #EAEDF0;
+
+        .hezi1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 664px;
+            height: 168px;
+
+            .zi {
+                width: 109px;
+                height: 100px;
+                align-content: space-between;
+                font-weight: 700;
+            }
+
+            .zi>h2 {
+                font-size: 16px;
+                line-height: 40px;
+            }
+
+            .zi>div {
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+
+        .hezi2 {
+            width: 312px;
+            height: 168px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .hezi2-img {
+                width: 55px;
+                height: 104px;
+
+                .img1 {
+                    margin-left: 5px;
+                    margin-bottom: 17px;
+                }
+
+            }
+
+            .hezi2-text {
+                width: 138px;
+                height: 104px;
+                font-size: 16px;
+                font-weight: 700;
+                font-size: 16px;
+
+            }
+
+            .hezi2-phone {
+                width: 127px;
+                height: 104px;
+                font-size: 11px;
+
+                .phone-img {
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        width: 100%;
+        height: 70px;
+        text-align: center;
+        line-height: 70px;
+        background-color: $colorA;
+    }
+}

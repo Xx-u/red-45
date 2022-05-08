@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/*
+    定义了形参   用来接收主轴对其方式
+*/
+/*
+
+@mixin isFlex($rowAlign:center, $bgcColor:#ccc) {
+    display: flex;
+    justify-content: $rowAlign;
+    align-items: center;
+    background-color: $bgcColor;
+}
+
+//函数的基本用法
+@function getSum($numA, $numB, $monad) {
+    @return $numA+$numB+$monad;
+}
+
+//定义了一个没有参数的mixin复用块
+@mixin textCss {
+    font-size: 18px;
+    font-weight: 600;
+    color: $colorA;
+}
+
+.father {
+    width: getSum(250, 250, px);
+    // width: 500px;
+    height: 500px;
+    //调用mixin 这里传递进去的center和#ccc就是实参
+    @include isFlex($bgcColor:pink);
+    //调用没有参数的mixin复用块
+    @include textCss;
+}
+
+.son {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: 2px solid black;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    @include isFlex(center, pink)
+}
+
+*/
+.father {
+  width: 500px;
+  height: 500px;
+  background-color: blue;
+}
