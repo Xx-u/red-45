@@ -41,10 +41,33 @@ header .header-top {
   margin-bottom: -65px;
   font-size: 15px;
   font-weight: 700;
+  -webkit-transform: all 1s linear;
+          transform: all 1s linear;
 }
 
-.container .container-text > li:first-child > a {
+.container .container-text li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container .container-text li::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 0;
+  height: 100%;
   border-bottom: 2px solid #000;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
+.container .container-text li:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.container .container-text li:hover ~ li::before {
+  left: 0;
 }
 
 .container .container-textbox {
@@ -264,6 +287,22 @@ main .Aboutus .Aboutus-picture {
           justify-content: space-between;
 }
 
+main .Aboutus .Aboutus-picture > .Aboutus-picture1:nth-child(2) {
+  width: 320px;
+}
+
+main .Aboutus .Aboutus-picture > .Aboutus-picture1:nth-child(2) .picture1-span {
+  width: 238px;
+  margin: 0 auto;
+}
+
+main .Aboutus .Aboutus-picture > .Aboutus-picture1:nth-child(2) span {
+  margin-right: 10px;
+  line-height: 23px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
 main .Aboutus .Aboutus-picture1 {
   width: 267px;
   height: 322px;
@@ -323,7 +362,7 @@ main .Aboutus .Aboutus-picture1 .picture1-text .fie-text > p {
 main .Aboutus .Aboutus-picture1 .picture1-span {
   margin-left: 12px;
   margin-right: 10px;
-  line-height: 20px;
+  line-height: 23px;
   font-size: 12px;
   letter-spacing: 2px;
 }
@@ -387,6 +426,8 @@ main .investment .investment-picture2 .investment-botton .botton {
   height: 27px;
   background-color: #6DB6FF;
   letter-spacing: 2px;
+  -webkit-transform: all 1s linear;
+          transform: all 1s linear;
 }
 
 main .investment .investment-picture2 .investment-botton .botton .botton-span {
@@ -395,6 +436,11 @@ main .investment .investment-picture2 .investment-botton .botton .botton-span {
   font-size: 15px;
   color: #fff;
   letter-spacing: 3px;
+}
+
+main .investment .investment-picture2 .investment-botton .botton:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 main .link {
@@ -426,11 +472,13 @@ main .link .link-text .fie-text {
 }
 
 main .link .link-text .fie-text legend > p {
+  color: #fff;
   font-size: 24px;
   line-height: 24px;
 }
 
 main .link .link-text .fie-text > p {
+  color: #fff;
   margin-top: 3px;
   font-size: 16px;
   line-height: 24px;
@@ -451,6 +499,13 @@ main .link .link-img .link-arrow1 {
   width: 37px;
   height: 69px;
   background-color: transparent;
+  -webkit-transform: all 1s linear;
+          transform: all 1s linear;
+}
+
+main .link .link-img .link-arrow1 .arrow:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 main .link .link-img .link-arrow2 {
@@ -458,6 +513,13 @@ main .link .link-img .link-arrow2 {
   margin-top: 6px;
   width: 37px;
   height: 69px;
+  -webkit-transform: all 1s linear;
+          transform: all 1s linear;
+}
+
+main .link .link-img .link-arrow2 .arrow:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 main .link .link-img .link-img-img {
@@ -469,6 +531,13 @@ main .link .link-img .link-img-img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transform: all 1s linear;
+          transform: all 1s linear;
+}
+
+main .link .link-img .link-img-img .link-img1:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 main .link .link-img .link-img1 {

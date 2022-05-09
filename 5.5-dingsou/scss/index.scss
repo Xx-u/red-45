@@ -49,6 +49,22 @@ main {
             justify-content: space-between;
         }
 
+        .Aboutus-picture>.Aboutus-picture1:nth-child(2) {
+            width: 320px;
+
+            .picture1-span {
+                width: 238px;
+                margin: 0 auto;
+            }
+
+            span {
+                margin-right: 10px;
+                line-height: 23px;
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+        }
+
         .Aboutus-picture1 {
             width: 267px;
             height: 322px;
@@ -96,7 +112,7 @@ main {
             .picture1-span {
                 margin-left: 12px;
                 margin-right: 10px;
-                line-height: 20px;
+                line-height: 23px;
                 font-size: 12px;
                 letter-spacing: 2px;
             }
@@ -147,6 +163,7 @@ main {
                     height: 27px;
                     background-color: #6DB6FF;
                     letter-spacing: 2px;
+                    transform: all 1s linear;
 
                     .botton-span {
                         margin-top: 6px;
@@ -155,6 +172,10 @@ main {
                         color: #fff;
                         letter-spacing: 3px;
                     }
+                }
+
+                .botton:hover {
+                    transform: scale(1.1);
                 }
             }
         }
@@ -181,11 +202,13 @@ main {
             }
 
             .fie-text legend>p {
+                color: #fff;
                 font-size: 24px;
                 line-height: 24px;
             }
 
             .fie-text>p {
+                color: #fff;
                 margin-top: 3px;
                 font-size: 16px;
                 line-height: 24px;
@@ -202,6 +225,11 @@ main {
                 width: 37px;
                 height: 69px;
                 background-color: transparent;
+                transform: all 1s linear;
+
+                .arrow:hover {
+                    transform: scale(1.1);
+                }
             }
 
             .link-arrow2 {
@@ -209,6 +237,11 @@ main {
                 margin-top: 6px;
                 width: 37px;
                 height: 69px;
+                transform: all 1s linear;
+
+                .arrow:hover {
+                    transform: scale(1.1);
+                }
             }
 
             .link-img-img {
@@ -216,6 +249,11 @@ main {
                 height: 81px;
                 display: flex;
                 justify-content: space-between;
+                transform: all 1s linear;
+
+                .link-img1:hover {
+                    transform: scale(1.2);
+                }
             }
 
             .link-img1 {

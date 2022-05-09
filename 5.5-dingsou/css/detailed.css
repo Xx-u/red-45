@@ -41,10 +41,33 @@ header .header-top {
   margin-bottom: -65px;
   font-size: 15px;
   font-weight: 700;
+  -webkit-transform: all 1s linear;
+          transform: all 1s linear;
 }
 
-.container .container-text > li:first-child > a {
+.container .container-text li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container .container-text li::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 0;
+  height: 100%;
   border-bottom: 2px solid #000;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
+.container .container-text li:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.container .container-text li:hover ~ li::before {
+  left: 0;
 }
 
 .container .container-textbox {

@@ -237,7 +237,11 @@ main {
                 background-color: #6DB6FF;
                 border-radius: 5px;
                 margin-top: 34px;
+                transform: all 1s linear;
+            }
 
+            .text-box6:hover {
+                transform: scale(1.1);
             }
 
             .text-box6>a {

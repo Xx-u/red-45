@@ -38,11 +38,35 @@ header {
         margin-bottom: -65px;
         font-size: 15px;
         font-weight: 700;
+        transform: all 1s linear;
+
+        li:hover {
+            transform: scale(1.1);
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            top: 40%;
+            left: 0;
+            height: 100%;
+            border-bottom: 2px solid #000;
+            transition: 0.2s all linear;
+        }
+
+        li:hover::before {
+            width: 100%;
+            left: 0;
+        }
+
+        li:hover~li::before {
+            left: 0;
+        }
     }
 
-    .container-text>li:first-child>a {
-        border-bottom: 2px solid #000;
-    }
+    // .container-text>li:first-child>a {
+    //     border-bottom: 2px solid #000;
+    // }
 
     .container-textbox {
         width: 217px;

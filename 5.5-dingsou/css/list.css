@@ -41,10 +41,33 @@ header .header-top {
   margin-bottom: -65px;
   font-size: 15px;
   font-weight: 700;
+  -webkit-transform: all 1s linear;
+          transform: all 1s linear;
 }
 
-.container .container-text > li:first-child > a {
+.container .container-text li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container .container-text li::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 0;
+  height: 100%;
   border-bottom: 2px solid #000;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
+.container .container-text li:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.container .container-text li:hover ~ li::before {
+  left: 0;
 }
 
 .container .container-textbox {
@@ -473,6 +496,11 @@ main .down > button {
   text-align: center;
   border-radius: 0;
   border: 1px solid #C9C9C9;
+}
+
+main .down > button:nth-child(2) {
+  color: #FFFFFF;
+  background-color: #6DB6FF;
 }
 
 main .down > button:nth-child(2) .down > button:nth-child(3) .down > button:nth-child(4) .down > button:nth-child(5) .down > button:nth-child(6) {
