@@ -1,0 +1,20 @@
+.box {
+    display: flex;
+
+}
+
+.left,
+.right {
+    width: 200px;
+    // 禁止缩小
+    flex-shrink: 0;
+    height: 500px;
+    background-color: aqua;
+}
+
+.center {
+    // 剩余空间平均分布给.right
+    flex-grow: 1;
+    height: 800px;
+    background-color: blueviolet;
+}

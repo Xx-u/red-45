@@ -1,0 +1,225 @@
+@charset "UTF-8";
+@import "./../common/common";
+
+// 头部区域
+.top {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 0.64rem;
+    justify-content: space-between;
+    width: 9.387rem;
+    height: 0.76rem;
+    top: 0.64rem;
+    left: 00.307rem;
+    // background-color: aquamarine;
+
+    .top-left {
+        position: relative;
+        width: 1.64rem;
+        height: 0.76rem;
+        background-color: #ffffff;
+        border-radius: 0.267rem;
+        border: solid 0.027rem #ff9344;
+
+        span {
+            position: absolute;
+            top: 0.227rem;
+            left: 0.378rem;
+            font-size: 0.347rem;
+
+        }
+    }
+
+    .top-span span {
+        position: absolute;
+        top: 0.867rem;
+        left: 4.32rem;
+        font-size: 0.347rem;
+    }
+
+    .top-right img {
+        position: absolute;
+        top: 0.607rem;
+        right: 0.27rem;
+        width: 0.827rem;
+        height: 0.8rem;
+    }
+}
+
+// 个人区域
+.my {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 9.387rem;
+    height: 2.893rem;
+    // background-color: #ff9344;
+
+    .my-left {
+        display: flex;
+
+        .my-img {
+            width: 2.267rem;
+            height: 2.267rem;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                width: 2.267rem;
+                height: 2.267rem;
+                object-fit: cover;
+            }
+        }
+
+        .my-text {
+            margin-left: 0.333rem;
+            width: 2.133rem;
+        }
+
+        .my-text a {
+            font-size: 0.4rem;
+        }
+
+        .my-text span {
+            font-size: 0.347rem;
+            color: #9d9d9d;
+        }
+    }
+}
+
+// 图片区域
+.img {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 9.387rem;
+    height: 2.013rem;
+
+    div {
+        display: flex;
+        justify-content: center;
+        width: 2.6rem;
+        height: 2.013rem;
+        background-color: #B2E0A0;
+    }
+
+    div img {
+        position: absolute;
+        top: 0.267rem;
+        width: 1.053rem;
+        height: 1.093rem;
+    }
+
+    div span {
+        position: absolute;
+        top: 1.507rem;
+        width: 1.87rem;
+        text-align: center;
+        height: 0.347rem;
+        font-size: 0.347rem;
+    }
+}
+
+.img div:nth-child(2) {
+    background-color: #A0DCE0;
+}
+
+.img div:nth-child(3) {
+    background-color: #E0B7A0;
+}
+
+
+// 中间区域
+.middle {
+    margin: 0 auto;
+    width: 9.387rem;
+    height: 10rem;
+    // background-color: #A0DCE0;
+
+    .text {
+        margin-top: 0.307rem;
+        width: 9.387rem;
+        height: 0.987rem;
+        // background-color: #ff9344;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        .hezi1 span {
+            position: absolute;
+            top: 0.267rem;
+            left: 1.28rem;
+            font-size: 0.4rem;
+        }
+
+        .hezi2 img {
+            position: absolute;
+            top: 0.307rem;
+            right: 0;
+            width: 0.333rem;
+            height: 0.347rem;
+        }
+
+        .hezi2 span {
+            position: absolute;
+            top: 0.307rem;
+            right: 0.44rem;
+            font-size: 0.32rem;
+        }
+    }
+
+    .text:nth-child(5) {
+        margin-top: 1.053rem;
+    }
+
+    .text:first-child .hezi1 img {
+        width: 0.76rem;
+        height: 0.987rem;
+    }
+
+    .text:nth-child(2) .hezi1 img {
+        width: 0.947rem;
+        height: 0.987rem;
+    }
+
+    .text:nth-child(3) .hezi1 img {
+        width: 1.253rem;
+        height: 0.773rem;
+    }
+
+    .text:nth-child(4) .hezi1 img {
+        width: 0.787rem;
+        height: 0.787rem;
+    }
+
+    .text:nth-child(5) .hezi1 img {
+        width: 1.04rem;
+        height: 1.053rem;
+    }
+
+    .text:nth-child(6) .hezi1 img {
+        width: 1.12rem;
+        height: 0.787rem;
+    }
+
+    .button {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 7.173rem;
+        height: 1.013rem;
+        // background-color: rebeccapurple;
+
+        button {
+            width: 1.96rem;
+            height: 1.013rem;
+            background-color: #ff9344;
+            border: transparent;
+            border-radius: 0.5rem;
+            color: #ffffff;
+            font-size: 0.32rem;
+        }
+    }
+}

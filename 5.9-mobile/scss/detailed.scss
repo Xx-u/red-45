@@ -1,0 +1,276 @@
+@charset "UTF-8";
+@import "./../common/common";
+
+// 头部区域
+.top {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 0.64rem;
+    justify-content: space-between;
+    width: 9.387rem;
+    height: 0.76rem;
+    top: 0.64rem;
+    left: 00.307rem;
+    // background-color: aquamarine;
+
+    .top-left {
+        position: relative;
+        width: 1.64rem;
+        height: 0.76rem;
+        background-color: #ffffff;
+        border-radius: 0.267rem;
+        border: solid 0.027rem #ff9344;
+
+        span {
+            position: absolute;
+            top: 0.227rem;
+            left: 0.378rem;
+            font-size: 0.347rem;
+
+        }
+    }
+
+    .top-span span {
+        position: absolute;
+        top: 0.867rem;
+        left: 4.52rem;
+        font-size: 0.347rem;
+    }
+
+    .top-right img {
+        position: absolute;
+        top: 0.607rem;
+        right: 0.27rem;
+        width: 0.693rem;
+        height: 0.667rem;
+    }
+}
+
+// img
+.img {
+    margin: 0 auto;
+    margin-top: 0.333rem;
+    width: 9.4rem;
+    height: 3.467rem;
+
+    img {
+        width: 9.4rem;
+        height: 3.467rem;
+        object-fit: cover
+    }
+}
+
+//内容区域
+.middle {
+    margin: 0 auto;
+    width: 8.88rem;
+    height: 9.92rem;
+    // background-color: aqua;
+
+    .middle-top {
+        margin-top: 0.48rem;
+        display: flex;
+        justify-content: space-between;
+        width: 8.88rem;
+        height: 0.787rem;
+        // background-color: brown;
+
+        span {
+            margin-top: 0.1rem;
+            width: 1.813rem;
+            height: 0.76rem;
+            font-family: MicrosoftYaHei;
+            font-size: 0.96rem;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 0.607rem;
+            letter-spacing: 0rem;
+            color: #ff9344;
+        }
+
+        button {
+            width: 1.48rem;
+            height: 0.787rem;
+            background-color: #ff9344;
+            border-radius: 0.267rem;
+            border: solid 0.027rem #ff9344;
+        }
+    }
+
+    .middle-middle1 {
+        margin-top: 0.48rem;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        width: 8.88rem;
+        height: 0.48rem;
+        // background-color: cadetblue;
+
+        .middle1-left {
+            width: 0.507rem;
+            height: 0.48rem;
+
+            img {
+                position: absolute;
+                width: 0.507rem;
+                height: 0.48rem;
+            }
+        }
+
+        .text {
+            position: absolute;
+            display: flex;
+            justify-content: flex-end;
+            left: 0.68rem;
+            top: 0;
+
+            span {
+                font-size: 0.4rem;
+            }
+
+        }
+
+        .text span:nth-child(2) {
+            color: #ff9344;
+        }
+
+        .middle1-right {
+
+            span {
+                position: absolute;
+                top: 0rem;
+                left: 6.58rem;
+                font-size: 0.347rem;
+                color: #8e8e8e;
+            }
+        }
+    }
+
+    .middle-middle2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.2rem;
+        width: 8.853rem;
+        height: 0.893rem;
+        background-color: #ff9344;
+    }
+
+    .middle-middle2 span:first-child {
+        width: 1.6rem;
+        height: 0.413rem;
+        font-size: 0.4rem;
+        color: #ffffff;
+    }
+
+    .middle-middle2 span:nth-child(2) {
+        width: 0.407rem;
+        height: 0.733rem;
+        font-size: 0.623rem;
+        color: #ffffff;
+    }
+
+    .middle-bottom {
+        margin-top: 0.133rem;
+        width: 8.853rem;
+        // background-color: red;
+
+        .bottom-box {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 8.853rem;
+            height: 2.347rem;
+            margin-bottom: 0.12rem;
+
+            .left {
+                display: flex;
+
+                .bottom-box-img {
+                    width: 2.36rem;
+                    height: 2.347rem;
+
+                    img {
+                        width: 2.36rem;
+                        height: 2.347rem;
+                    }
+                }
+
+                .text {
+                    position: relative;
+                    width: 3.44rem;
+                    height: 2.347rem;
+                    // background-color: #ffffff;
+                }
+
+                .text span:first-child {
+                    position: absolute;
+                    top: 0.2rem;
+                    left: 0.293rem;
+                    width: 4.44rem;
+                    height: 0.413rem;
+                    font-size: 0.4rem;
+                }
+
+                .text .text-box .text-box-img {
+                    position: absolute;
+                    display: flex;
+                    top: 0.65rem;
+                    left: 0.293rem;
+                    width: 2.667rem;
+                    height: 0.453rem;
+
+                    img {
+                        width: 0.48rem;
+                        height: 0.453rem;
+                    }
+                }
+
+                .text span:nth-child(2) {
+                    position: absolute;
+                    top: 0.75rem;
+                    left: 2.8rem;
+                    width: 0.933rem;
+                    height: 0.347rem;
+                    font-size: 0.347rem;
+                    color: #929292;
+                }
+
+                .text span:nth-child(3) {
+                    position: absolute;
+                    top: 1.26rem;
+                    left: 0.293rem;
+                    font-size: 0.32rem;
+                    color: #929292;
+                }
+
+                .text span:nth-child(4) {
+                    position: absolute;
+                    top: 1.773rem;
+                    left: 0.293rem;
+                    font-size: 0.267rem;
+                    color: #ff9344;
+                }
+            }
+
+            .button {
+                position: absolute;
+                top: 0.893rem;
+                left: 7.383rem;
+                width: 1.48rem;
+                height: 0.787rem;
+                // background-color: bisque;
+
+                button {
+                    position: absolute;
+                    width: 1.48rem;
+                    height: 0.787rem;
+                    background-color: #ff9344;
+                    border-radius: 0.267rem;
+                    border: solid 0.027rem #ff9344;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

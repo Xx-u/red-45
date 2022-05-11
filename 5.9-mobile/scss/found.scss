@@ -1,0 +1,355 @@
+@charset "UTF-8";
+@import "./../common/common";
+
+// 头部搜索区域
+.top {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 0.64rem;
+    justify-content: space-between;
+    width: 9.387rem;
+    height: 0.76rem;
+    top: 0.64rem;
+    left: 00.307rem;
+    // background-color: aquamarine;
+
+    .top-left {
+        position: relative;
+        width: 1.64rem;
+        height: 0.76rem;
+        background-color: #ffffff;
+        border-radius: 0.267rem;
+        border: solid 0.027rem #ff9344;
+
+        span {
+            position: absolute;
+            top: 0.227rem;
+            left: 0.378rem;
+            font-size: 0.347rem;
+
+        }
+    }
+
+    .top-span span {
+        position: absolute;
+        top: 0.867rem;
+        left: 4.32rem;
+        font-size: 0.347rem;
+    }
+
+    .top-right {
+        position: relative;
+        width: 2.12rem;
+        height: 0.747rem;
+        background-color: #ffffff;
+        border: solid 0.027rem #ff9344;
+
+        span {
+            position: absolute;
+            font-size: 0.347rem;
+            top: 0.2rem;
+            left: 0.187rem;
+        }
+
+        .box img {
+            position: absolute;
+            top: 0.307rem;
+            right: 0.147rem;
+            width: 0.427rem;
+            height: 0.213rem;
+        }
+    }
+}
+
+// 搜索区域
+.top-text {
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    // background-color: bisque;
+
+    .top-textbox {
+        position: relative;
+        margin: 0 auto;
+        top: 0.48rem;
+        width: 6.827rem;
+        height: 3.4rem;
+        // background-color: aqua;
+
+        .top-textbox1 {
+            position: relative;
+            margin: 0 auto;
+            width: 3.547rem;
+            height: 0.68rem;
+
+            input {
+                position: absolute;
+                width: 3.547rem;
+                height: 0.68rem;
+                border-radius: 30rem;
+                background-color: #ffffff;
+                border: solid 0.027rem #ff9344;
+                text-align: center;
+            }
+
+            div {
+                position: relative;
+                bottom: 0.273rem;
+                left: 3.1rem;
+
+
+                img {
+                    width: 0.387rem;
+                    height: 0.4rem;
+                }
+            }
+        }
+
+        .top-dabox {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            position: relative;
+            top: 0.667rem;
+            width: 6.827rem;
+            height: 1.747rem;
+            // background-color: bisque;
+
+            .top-dabox1 {
+                position: relative;
+                width: 1.667rem;
+                height: 0.853rem;
+                background-color: #dcdcdc;
+
+                span {
+                    position: absolute;
+                    top: 0.347rem;
+                    left: 0.2rem;
+                    width: 1.2rem;
+                    height: 0.267rem;
+                    text-align: center;
+                    font-size: 0.267rem;
+                    color: #939393;
+                }
+            }
+        }
+    }
+
+    .top-textbox .span {
+        position: relative;
+        margin: 0 auto;
+        top: 0.5rem;
+        width: 1.933rem;
+        height: 0.347rem;
+    }
+
+    .top-textbox .span span {
+        position: absolute;
+        font-size: 0.347rem;
+    }
+}
+
+// 中间区域
+.middle {
+
+    .middle-one {
+        margin: 0 auto;
+        width: 9.467rem;
+        height: 5.707rem;
+        // background-color: aqua;
+
+        .middle-top-one {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            width: 9.44rem;
+            height: 1.36rem;
+
+            .hezi1 img {
+                width: 0.427rem;
+                height: 0.627rem;
+
+            }
+
+            .hezi1 span {
+                width: 1.587rem;
+                height: 0.387rem;
+                font-size: 0.4rem;
+                line-height: 0.56rem;
+                color: #000000;
+            }
+
+            .hezi2 img {
+                width: 0.333rem;
+                height: 0.347rem;
+            }
+
+            .hezi2 span {
+                width: 0.627rem;
+                height: 0.32rem;
+                font-size: 0.32rem;
+                line-height: 0.7rem;
+                color: #000000;
+            }
+        }
+
+        // 图片区域
+        .bottom-img {
+            margin: 0 auto;
+            justify-content: space-between;
+            display: flex;
+            width: 9.467rem;
+            height: 4.693rem;
+            // background-color: rebeccapurple;
+
+            .bottom-left-img {
+                width: 3.733rem;
+                height: 4.393rem;
+                // background-color: blueviolet;
+
+                img {
+                    width: 3.733rem;
+                    height: 4.393rem;
+                    object-fit: cover;
+                }
+            }
+
+            .bottom-right-img {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-between;
+                width: 5.6rem;
+                height: 4.393rem;
+
+                .top-img {
+                    width: 5.6rem;
+                    height: 1.81rem;
+                    // background-color: #dcdcdc;
+
+                    img {
+                        width: 5.6rem;
+                        height: 1.81rem;
+                        object-fit: cover;
+                    }
+                }
+
+                .top-img2 {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 5.6rem;
+                    height: 2.477rem;
+
+                    .top-img2-left {
+                        width: 2.6rem;
+                        height: 2.477rem;
+
+                        img {
+                            width: 2.6rem;
+                            height: 2.477rem;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .top-img2-right {
+                        width: 2.813rem;
+                        height: 2.477rem;
+
+                        img {
+                            width: 2.813rem;
+                            height: 2.477rem;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .middle-two {
+        margin: 0 auto;
+        width: 9.467rem;
+        height: 4.467rem;
+        // background-color: #ff9344;
+
+        .middle-top-two {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            width: 9.44rem;
+            height: 1.36rem;
+
+            .hezi1 img {
+                width: 0.547rem;
+                height: 0.533rem;
+
+            }
+
+            .hezi1 span {
+                width: 1.587rem;
+                height: 0.387rem;
+                font-size: 0.4rem;
+                line-height: 0.56rem;
+                color: #000000;
+            }
+
+            .hezi2 img {
+                width: 0.333rem;
+                height: 0.347rem;
+            }
+
+            .hezi2 span {
+                width: 0.627rem;
+                height: 0.32rem;
+                font-size: 0.32rem;
+                line-height: 0.7rem;
+                color: #000000;
+            }
+        }
+
+        .middle-img-two {
+            display: flex;
+            justify-content: space-between;
+            width: 9.467rem;
+            height: 2.667rem;
+            // background-color: #939393;
+
+            .img1 {
+                width: 3.04rem;
+                height: 2.667rem;
+
+                img {
+                    width: 3.04rem;
+                    height: 2.667rem;
+                    object-fit: cover;
+
+                }
+            }
+
+            .img2 {
+                width: 2.813rem;
+                height: 2.667rem;
+
+                img {
+                    width: 2.813rem;
+                    height: 2.667rem;
+                    object-fit: cover;
+
+                }
+            }
+
+            .img3 {
+                width: 2.933rem;
+                height: 2.667rem;
+
+                img {
+                    width: 2.933rem;
+                    height: 2.667rem;
+                    object-fit: cover;
+
+                }
+            }
+        }
+    }
+
+}

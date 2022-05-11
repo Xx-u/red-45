@@ -1,0 +1,302 @@
+@charset "UTF-8";
+@import "./../common/common";
+
+
+// 头部搜索区域
+.top {
+    display: flex;
+    width: 9.413rem;
+    height: 2rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    // background-color: yellow;
+
+    .logo {
+        position: relative;
+        width: 1.64rem;
+        height: 1.64rem;
+    }
+
+    .textbox {
+        position: relative;
+        width: 3.547rem;
+        height: 0.58rem;
+
+        input {
+            position: absolute;
+            width: 3.547rem;
+            height: 0.68rem;
+            border-radius: 30rem;
+            background-color: #ffffff;
+            border: solid 0.027rem #ff9344;
+            text-align: center;
+        }
+
+        span {
+            position: absolute;
+            width: 0.387rem;
+            height: 0.4rem;
+            right: 0.08rem;
+            bottom: 0.473rem;
+        }
+
+        span img {
+            width: 0.387rem;
+            height: 0.4rem;
+        }
+    }
+
+    .top-textbox {
+        position: relative;
+        margin-left: 1.093rew;
+        width: 2.12rem;
+        height: 0.747rem;
+        background-color: #ffffff;
+        border: solid 0.027rem #ff9344;
+
+        span {
+            position: absolute;
+            width: 2.04rem;
+            height: 0.333rem;
+            font-size: 0.347rem;
+            color: #000000;
+            top: 0.2rem;
+            left: 0.187rem;
+        }
+
+        .box img {
+            position: absolute;
+            top: 0.307rem;
+            right: 0.147rem;
+            width: 0.427rem;
+            height: 0.213rem;
+        }
+    }
+}
+
+.img {
+    position: relative;
+    width: 10rem;
+    height: 3.827rem;
+    overflow: hidden;
+
+}
+
+.img img:first-child {
+    position: absolute;
+    top: -54px;
+    width: 10rem;
+    height: 6.8rem;
+}
+
+.img img:nth-child(2) {
+    position: absolute;
+    width: 10rem;
+    height: 0.16rem;
+    top: 3.667rem;
+}
+
+// .middle {
+//     margin: 0 0 6.666rem;
+// }
+
+.middle-top {
+    width: 10rem;
+    height: 4.267rem;
+
+    .middle-top-one {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 9.44rem;
+        height: 1.36rem;
+
+        .hezi1 img {
+            width: 0.747rem;
+            height: 0.72rem;
+
+        }
+
+        .hezi1 span {
+            width: 1.587rem;
+            height: 0.387rem;
+            font-size: 0.4rem;
+            line-height: 0.607rem;
+            letter-spacing: 0rem;
+            color: #000000;
+        }
+
+        .hezi2 img {
+            width: 0.333rem;
+            height: 0.347rem;
+        }
+
+        .hezi2 span {
+            width: 0.627rem;
+            height: 0.32rem;
+            font-size: 0.32rem;
+            line-height: 0.7rem;
+            letter-spacing: 0rem;
+            color: #000000;
+        }
+    }
+
+    .middle-top-two {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        width: 7.8rem;
+        height: 2.88rem;
+
+        img {
+            width: 3.213rem;
+            height: 1.253rem;
+
+        }
+    }
+}
+
+.middle-down {
+    margin: 0 auto;
+    width: 9.44rem;
+    height: 6.333rem;
+
+    .middle-down-one {
+        display: flex;
+        justify-content: space-between;
+        width: 9.44rem;
+        height: 1.36rem;
+
+        .hezi1 img {
+            width: 0.747rem;
+            height: 0.72rem;
+
+        }
+
+        .hezi1 span {
+            width: 1.587rem;
+            height: 0.387rem;
+            font-size: 0.4rem;
+            line-height: 0.607rem;
+            letter-spacing: 0rem;
+            color: #000000;
+        }
+
+        .hezi2 img {
+            width: 0.333rem;
+            height: 0.347rem;
+        }
+
+        .hezi2 span {
+            width: 0.627rem;
+            height: 0.32rem;
+            font-size: 0.32rem;
+            line-height: 0.7rem;
+            letter-spacing: 0rem;
+            color: #000000;
+        }
+    }
+
+    .middle-down-two {
+        display: flex;
+        flex-wrap: wrap;
+        // align-content: space-between;
+        width: 9.44rem;
+        // height: 4.76rem;
+
+        //链接跳转
+        a {
+            width: 100%;
+            height: 2.173rem;
+            margin-bottom: 0.4rem;
+
+            .box-top {
+                width: 100%;
+                height: 2.173rem;
+                display: flex;
+                justify-content: space-between;
+
+                .left-hezi {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .left-hezi img {
+                    width: 2.813rem;
+                    height: 2.187rem;
+                    object-fit: cover;
+                }
+
+                .left-hezi div {
+                    position: relative;
+                    left: 0.293rem;
+                    top: -0.1rem;
+                    width: 4rem;
+                    height: 2.187rem;
+
+                }
+
+                .left-hezi div span:first-child {
+                    position: absolute;
+                    width: 3.44rem;
+                    height: 0.413rem;
+                    font-size: 0.4rem;
+                    line-height: 0.7rem;
+                    top: 0.333rem;
+                }
+
+                .left-hezi div span:nth-child(2) {
+                    position: absolute;
+                    top: 0.95rem;
+                    width: 3.02rem;
+                    height: 0.307rem;
+                    font-size: 0.293rem;
+                    line-height: 0.7rem;
+                }
+
+                .left-hezi div span:nth-child(3) {
+                    position: absolute;
+                    top: 1.6rem;
+                    width: 1.427rem;
+                    height: 0.347rem;
+                    font-size: 0.427rem;
+                    line-height: 0.513rem;
+                    color: #ff9344;
+                }
+
+                .right-hezi {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: space-between;
+                    justify-content: flex-end;
+                    width: 1.466rem;
+                    height: 1.466rem;
+
+                }
+
+                .right-hezi span:first-child {
+                    width: 1.1rem;
+                    height: 0.24rem;
+                    font-size: 0.293rem;
+                    line-height: 0.513rem;
+                    letter-spacing: 0rem;
+                    color: #494949;
+                }
+
+                .right-hezi span:nth-child(2) {
+                    width: 1.53rem;
+                    height: 0.293rem;
+                    font-size: 0.293rem;
+                    line-height: 0.513rem;
+                    letter-spacing: 0rem;
+                    color: #494949;
+                    ;
+                }
+            }
+        }
+
+    }
+}
