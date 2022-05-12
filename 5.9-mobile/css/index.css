@@ -32,8 +32,8 @@ html {
 }
 
 .bottom .bottom-text .bottom-box a div {
-  width: 0.973rem;
-  height: 0.973rem;
+  width: 0.993rem;
+  height: 0.993rem;
 }
 
 .bottom .bottom-text .bottom-box:first-child a div {
@@ -107,6 +107,7 @@ html {
   background-color: #ffffff;
   border: solid 0.027rem #ff9344;
   text-align: center;
+  outline: none;
 }
 
 .top .textbox span {

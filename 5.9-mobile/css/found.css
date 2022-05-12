@@ -32,8 +32,8 @@ html {
 }
 
 .bottom .bottom-text .bottom-box a div {
-  width: 0.973rem;
-  height: 0.973rem;
+  width: 0.993rem;
+  height: 0.993rem;
 }
 
 .bottom .bottom-text .bottom-box:first-child a div {
@@ -151,6 +151,7 @@ html {
 }
 
 .top-text .top-textbox .top-textbox1 input {
+  outline: none;
   position: absolute;
   width: 3.547rem;
   height: 0.68rem;
