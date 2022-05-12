@@ -2,6 +2,10 @@
 @import "./../common/common";
 
 
+.body {
+    margin-bottom: 1.813rem;
+}
+
 // 头部搜索区域
 .top {
     display: flex;
@@ -9,7 +13,6 @@
     margin-top: 0.64rem;
     justify-content: space-between;
     width: 9.387rem;
-    height: 0.76rem;
     top: 0.64rem;
     left: 00.307rem;
     // background-color: aquamarine;
@@ -59,7 +62,6 @@
     position: relative;
     display: flex;
     width: 9.64rem;
-    height: 3.347rem;
     // background-color: #ff9344;
     left: 0.36rem;
 
@@ -111,7 +113,7 @@
 .middle {
     margin: 0 auto;
     width: 9.4rem;
-    height: 10.667rem;
+    margin-top: 0.8rem;
 
     .middle-one {
         position: relative;
@@ -183,5 +185,19 @@
     .middle-one:nth-child(3) .middle-text .hezi1 img {
         width: 0.707rem;
         height: 0.693rem;
+    }
+}
+
+// 底部导航栏
+
+.bottom .bottom-text {
+    .bottom-box:first-child a div {
+        background: url("./../images/jinglingtu.png") no-repeat 0 0 / 6.2rem 5.64rem;
+    }
+
+    .bottom-box:nth-child(2) a div {
+        width: 0.973rem;
+        height: 0.973rem;
+        background: url("./../images/jinglingtu.png") no-repeat -1.165rem -1.154rem / 6.2rem 5.64rem;
     }
 }

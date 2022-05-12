@@ -353,3 +353,19 @@
     }
 
 }
+
+
+// 底部导航栏
+
+.bottom .bottom-text {
+    .bottom-box:first-child a div {
+        background: url("./../images/jinglingtu.png") no-repeat 0 0 / 6.2rem 5.64rem;
+    }
+
+
+    .bottom-box:nth-child(3) a div {
+        width: 0.973rem;
+        height: 0.973rem;
+        background: url("./../images/jinglingtu.png") no-repeat -2.26rem -1.145rem / 6.2rem 5.64rem;
+    }
+}

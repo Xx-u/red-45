@@ -2,11 +2,15 @@
 @import "./../common/common";
 
 
+.body {
+    margin-bottom: 1.813rem;
+}
+
 // 头部搜索区域
 .top {
     display: flex;
     width: 9.413rem;
-    height: 2rem;
+    padding: 0.227rem;
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
@@ -97,13 +101,9 @@
     top: 3.667rem;
 }
 
-// .middle {
-//     margin: 0 0 6.666rem;
-// }
 
 .middle-top {
     width: 10rem;
-    height: 4.267rem;
 
     .middle-top-one {
         margin: 0 auto;
@@ -162,7 +162,6 @@
 .middle-down {
     margin: 0 auto;
     width: 9.44rem;
-    height: 6.333rem;
 
     .middle-down-one {
         display: flex;

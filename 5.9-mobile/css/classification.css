@@ -31,9 +31,31 @@ html {
   height: 1.507rem;
 }
 
-.bottom .bottom-text .bottom-box img {
+.bottom .bottom-text .bottom-box a div {
   width: 0.973rem;
   height: 0.973rem;
+}
+
+.bottom .bottom-text .bottom-box:first-child a div {
+  background: url("./../images/jinglingtu.png") no-repeat 0 -1.154rem/6.2rem 5.64rem;
+}
+
+.bottom .bottom-text .bottom-box:nth-child(2) a div {
+  width: 0.973rem;
+  height: 0.973rem;
+  background: url("./../images/jinglingtu.png") no-repeat -1.165rem 0/6.2rem 5.64rem;
+}
+
+.bottom .bottom-text .bottom-box:nth-child(3) a div {
+  width: 0.973rem;
+  height: 0.973rem;
+  background: url("./../images/jinglingtu.png") no-repeat -2.26rem 0/6.2rem 5.64rem;
+}
+
+.bottom .bottom-text .bottom-box:nth-child(4) a div {
+  width: 0.973rem;
+  height: 0.973rem;
+  background: url("./../images/jinglingtu.png") no-repeat -3.42rem 0/6.2rem 5.64rem;
 }
 
 .bottom .bottom-text .bottom-box span {
@@ -46,6 +68,10 @@ html {
   line-height: 0.7rem;
 }
 
+.body {
+  margin-bottom: 1.813rem;
+}
+
 .top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,7 +82,6 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 9.387rem;
-  height: 0.76rem;
   top: 0.64rem;
   left: 00.307rem;
 }
@@ -106,7 +131,6 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 9.64rem;
-  height: 3.347rem;
   left: 0.36rem;
 }
 
@@ -160,7 +184,7 @@ html {
 .middle {
   margin: 0 auto;
   width: 9.4rem;
-  height: 10.667rem;
+  margin-top: 0.8rem;
 }
 
 .middle .middle-one {
@@ -237,4 +261,14 @@ html {
 .middle .middle-one:nth-child(3) .middle-text .hezi1 img {
   width: 0.707rem;
   height: 0.693rem;
+}
+
+.bottom .bottom-text .bottom-box:first-child a div {
+  background: url("./../images/jinglingtu.png") no-repeat 0 0/6.2rem 5.64rem;
+}
+
+.bottom .bottom-text .bottom-box:nth-child(2) a div {
+  width: 0.973rem;
+  height: 0.973rem;
+  background: url("./../images/jinglingtu.png") no-repeat -1.165rem -1.154rem/6.2rem 5.64rem;
 }

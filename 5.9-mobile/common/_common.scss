@@ -31,9 +31,31 @@ html {
             height: 1.507rem;
         }
 
-        .bottom-box img {
+        .bottom-box a div {
             width: 0.973rem;
             height: 0.973rem;
+        }
+
+        .bottom-box:first-child a div {
+            background: url("./../images/jinglingtu.png") no-repeat 0 -1.154rem / 6.2rem 5.64rem;
+        }
+
+        .bottom-box:nth-child(2) a div {
+            width: 0.973rem;
+            height: 0.973rem;
+            background: url("./../images/jinglingtu.png") no-repeat -1.165rem 0 / 6.2rem 5.64rem;
+        }
+
+        .bottom-box:nth-child(3) a div {
+            width: 0.973rem;
+            height: 0.973rem;
+            background: url("./../images/jinglingtu.png") no-repeat -2.26rem 0 / 6.2rem 5.64rem;
+        }
+
+        .bottom-box:nth-child(4) a div {
+            width: 0.973rem;
+            height: 0.973rem;
+            background: url("./../images/jinglingtu.png") no-repeat -3.42rem 0 / 6.2rem 5.64rem;
         }
 
         .bottom-box span {
