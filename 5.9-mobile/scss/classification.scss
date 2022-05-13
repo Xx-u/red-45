@@ -61,26 +61,30 @@
 .top-img {
     position: relative;
     display: flex;
-    width: 9.64rem;
-    // background-color: #ff9344;
-    left: 0.36rem;
+    margin-top: 0.24rem !important;
+    margin: 0 auto;
+    width: 9.28rem;
 
     .imgbox {
-        position: relative;
-        top: 0.24rem;
-        height: 2.457rem;
-        margin-right: 0.435rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
 
-        img {
+        .img {
             width: 1.973rem;
             height: 1.987rem;
 
+            img {
+                width: 1.973rem;
+                height: 1.987rem;
+
+            }
         }
 
         .text {
-            position: absolute;
-            top: 1.52rem;
-            left: 0.667rem;
+            display: flex;
+            margin: 0 auto;
 
             span {
                 font-size: 0.347rem;
@@ -92,8 +96,8 @@
         display: flex;
         justify-content: space-between;
         position: absolute;
-        top: 2.917rem;
-        left: 3.96rem;
+        bottom: -0.24rem;
+        left: 43%;
         width: 1.253rem;
         height: 0.24rem;
 
@@ -113,7 +117,7 @@
 .middle {
     margin: 0 auto;
     width: 9.4rem;
-    margin-top: 0.8rem;
+    margin-top: 0.3rem;
 
     .middle-one {
         position: relative;
@@ -192,6 +196,8 @@
 
 .bottom .bottom-text {
     .bottom-box:first-child a div {
+        width: 0.973rem;
+        height: 0.973rem;
         background: url("./../images/jinglingtu.png") no-repeat 0 0 / 6.2rem 5.64rem;
     }
 

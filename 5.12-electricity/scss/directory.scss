@@ -1,2 +1,179 @@
 @charset "UTF-8";
 @import "./../common/common";
+
+// 头部
+.top .top-text a:nth-child(2) span {
+    color: #e02929;
+}
+
+.middle {
+    .middle-text {
+        margin: 0 auto;
+        margin-top: 47px;
+        width: 144px;
+        height: 59px;
+
+        span {
+            font-size: 60px;
+            line-height: 65px;
+            letter-spacing: 12px;
+            color: #242424;
+        }
+    }
+
+    .middle-text2 {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 46px;
+        width: 444px;
+        height: 21px;
+
+        span {
+            font-size: 22px;
+            line-height: 33px;
+        }
+    }
+
+    .middle-text2 span:first-child {
+        color: #e02929;
+    }
+
+
+    // 商品区域
+    .goods-img {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        margin-top: 64px;
+
+        .goods-img-box {
+            position: relative;
+            width: 337px;
+            height: 431px;
+            // background-color: #8dd0da;
+
+            .tag {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: solid 2px #f53c5e;
+
+                span {
+                    font-size: 22px;
+                    line-height: 10px;
+                    color: #f53c5e;
+                }
+            }
+
+            .img-box {
+                margin: 0 auto;
+                width: 320px;
+                height: 320px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+
+
+            .text-box {
+                margin: 0 auto;
+                margin-top: 13px;
+                width: 60px;
+                height: 20px;
+
+                span {
+                    font-size: 20px;
+                    line-height: 20px;
+                    color: #7e7e7e;
+                }
+            }
+
+            .text-box2 {
+                margin: 0 auto;
+                margin-top: 11px;
+                width: 164px;
+                height: 23px;
+
+                span {
+                    font-size: 24px;
+                    line-height: 20px;
+                    letter-spacing: -1px;
+                    color: #242424
+                }
+            }
+
+            .text1 {
+                margin: 0 auto;
+                margin-top: 13px;
+                display: flex;
+                justify-content: space-between;
+                width: 70px;
+                height: 19px;
+            }
+
+            .text1 span:first-child {
+                font-size: 24px;
+                line-height: 20px;
+                letter-spacing: -1px;
+                color: #7e7e7e;
+            }
+        }
+
+        .goods-img-box:nth-child(10) .text1 {
+            width: 144px;
+        }
+
+        .goods-img-box:nth-child(7) .text1 {
+            width: 144px;
+        }
+    }
+
+    .goods-img-box:nth-child(4) {
+        .tag {
+            border: solid 2px #2ac4e5;
+
+            span {
+                color: #2ac4e5;
+            }
+        }
+    }
+
+    .goods-img-box:nth-child(2) {
+        .text-box2 {
+            width: 93px;
+            height: 23px;
+        }
+    }
+
+    .goods-img-box:nth-child(10) .text1 span:first-child {
+        text-decoration-line: line-through;
+    }
+
+    .goods-img-box:nth-child(7) .text1 span:first-child {
+        text-decoration-line: line-through;
+    }
+
+    .goods-img-box:nth-child(10) .text1 span:nth-child(2) {
+        font-size: 24px;
+        line-height: 20px;
+        letter-spacing: -1px;
+        color: #eb1f1f;
+    }
+
+    .goods-img-box:nth-child(7) .text1 span:nth-child(2) {
+        font-size: 24px;
+        line-height: 20px;
+        letter-spacing: -1px;
+        color: #eb1f1f;
+    }
+}

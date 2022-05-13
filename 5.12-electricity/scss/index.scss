@@ -1,6 +1,13 @@
 @charset "UTF-8";
 @import "./../common/common";
 
+
+// top
+.top .top-text a:first-child span {
+    color: #e02929;
+}
+
+// 中间内容
 .middle {
 
     // 大图片区域

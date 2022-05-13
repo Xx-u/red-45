@@ -1,7 +1,6 @@
 .body {
   margin: 0 auto;
   width: 1400px;
-  height: 4440px;
 }
 
 .top {
@@ -17,7 +16,9 @@
           align-items: center;
   width: 100%;
   height: 88px;
-  background-color: azure;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
 .top .top-left {
@@ -129,8 +130,8 @@
   -ms-flex-line-pack: justify;
       align-content: space-between;
   position: absolute;
-  top: 80px;
-  left: 820px;
+  top: 87px;
+  left: 648px;
   width: 71px;
   height: 137px;
 }
@@ -144,8 +145,8 @@
   -ms-flex-line-pack: justify;
       align-content: space-between;
   position: absolute;
-  top: 80px;
-  left: 1000px;
+  top: 87px;
+  left: 891px;
   width: 71px;
   height: 137px;
 }
@@ -161,6 +162,10 @@
 .bottom-img img {
   width: 153px;
   height: 153px;
+}
+
+.top .top-text a:first-child span {
+  color: #e02929;
 }
 
 .middle .middle-daimg {

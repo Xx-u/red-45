@@ -2,8 +2,18 @@ html {
   font-size: 37.5px;
 }
 
+.body {
+  margin-bottom: 1.813rem;
+}
+
 .bottom {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   bottom: 0;
   width: 100%;
   height: 1.813rem;
@@ -11,32 +21,26 @@ html {
 }
 
 .bottom .bottom-text {
-  position: absolute;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  top: 0.187rem;
-  left: 0.613rem;
   bottom: 0.187rem;
   width: 8.693rem;
   height: 1.427rem;
 }
 
-.bottom .bottom-text .bottom-box {
-  position: relative;
+.bottom .bottom-text .bottom-box a {
   width: 0.973rem;
-  height: 1.507rem;
-}
-
-.bottom .bottom-text .bottom-box a div {
-  width: 0.993rem;
-  height: 0.993rem;
+  height: 0.973rem;
 }
 
 .bottom .bottom-text .bottom-box:first-child a div {
+  width: 0.973rem;
+  height: 0.973rem;
   background: url("./../images/jinglingtu.png") no-repeat 0 -1.154rem/6.2rem 5.64rem;
 }
 
@@ -58,12 +62,17 @@ html {
   background: url("./../images/jinglingtu.png") no-repeat -3.42rem 0/6.2rem 5.64rem;
 }
 
+.bottom .bottom-text .bottom-box .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
 .bottom .bottom-text .bottom-box span {
-  position: absolute;
-  top: 0.873rem;
-  left: 0.15rem;
-  width: 0.88rem;
-  height: 0.347rem;
   font-size: 0.347rem;
   line-height: 0.7rem;
 }
