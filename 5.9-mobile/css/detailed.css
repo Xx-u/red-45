@@ -2,10 +2,6 @@ html {
   font-size: 37.5px;
 }
 
-.body {
-  margin-bottom: 1.813rem;
-}
-
 .bottom {
   position: fixed;
   display: -webkit-box;
@@ -77,6 +73,10 @@ html {
   line-height: 0.7rem;
 }
 
+.body {
+  margin-bottom: 1.813rem;
+}
+
 .top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,7 +87,6 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 9.387rem;
-  height: 0.76rem;
   top: 0.64rem;
   left: 00.307rem;
 }
@@ -127,7 +126,6 @@ html {
   margin: 0 auto;
   margin-top: 0.333rem;
   width: 9.4rem;
-  height: 3.467rem;
 }
 
 .img img {
@@ -140,7 +138,6 @@ html {
 .middle {
   margin: 0 auto;
   width: 8.88rem;
-  height: 9.92rem;
 }
 
 .middle .middle-top {

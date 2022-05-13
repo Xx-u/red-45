@@ -2,10 +2,6 @@ html {
   font-size: 37.5px;
 }
 
-.body {
-  margin-bottom: 1.813rem;
-}
-
 .bottom {
   position: fixed;
   display: -webkit-box;
@@ -75,6 +71,10 @@ html {
 .bottom .bottom-text .bottom-box span {
   font-size: 0.347rem;
   line-height: 0.7rem;
+}
+
+.body {
+  margin-bottom: 1.813rem;
 }
 
 .top {

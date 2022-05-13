@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import "./../common/common";
 
+
+.body {
+    margin-bottom: 1.813rem;
+}
+
 // 头部搜索区域
 .top {
     display: flex;

@@ -2,10 +2,6 @@ html {
   font-size: 37.5px;
 }
 
-.body {
-  margin-bottom: 1.813rem;
-}
-
 .bottom {
   position: fixed;
   display: -webkit-box;
@@ -122,6 +118,7 @@ html {
 .top .textbox span {
   position: absolute;
   right: 0.08rem;
+  bottom: 0;
 }
 
 .top .textbox span img {
@@ -348,7 +345,7 @@ html {
 .middle-down .middle-down-two a .box-top .left-hezi div span:nth-child(2) {
   position: absolute;
   top: 0.95rem;
-  width: 3.02rem;
+  width: 3.2rem;
   height: 0.307rem;
   font-size: 0.293rem;
   line-height: 0.7rem;
