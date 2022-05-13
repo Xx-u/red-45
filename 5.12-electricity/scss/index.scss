@@ -333,13 +333,13 @@
         align-content: space-between;
         margin-top: 103px;
         width: 1380px;
-        height: 897px;
+        height: 891px;
 
         .goods-img-box {
             position: relative;
             width: 337px;
-            height: 431px;
-            // background-color: #8dd0da;
+            height: 428px;
+            align-content: space-between;
 
             .tag {
                 position: absolute;
@@ -360,73 +360,140 @@
 
             .img-box {
                 margin: 0 auto;
-                width: 320px;
-                height: 320px;
 
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
-
             }
 
+            .buttom-text {
+                .text-box {
+                    margin: 0 auto;
+                    margin-top: 13px;
+                    text-align: center;
 
-            .text-box {
-                margin: 0 auto;
-                margin-top: 13px;
-                width: 60px;
-                height: 20px;
 
-                span {
-                    font-size: 20px;
-                    line-height: 20px;
-                    color: #7e7e7e;
+                    span {
+                        font-size: 20px;
+                        line-height: 20px;
+                        color: #7e7e7e;
+                    }
                 }
-            }
 
-            .text-box2 {
-                margin: 0 auto;
-                margin-top: 11px;
-                width: 164px;
-                height: 23px;
+                .text-box2 {
+                    margin: 0 auto;
+                    margin-top: 11px;
+                    text-align: center;
 
-                span {
+
+                    span {
+                        font-size: 24px;
+                        line-height: 20px;
+                        letter-spacing: -1px;
+                        color: #242424
+                    }
+                }
+
+                .text1 {
+                    margin: 0 auto;
+                    margin-top: 13px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .text1 span:first-child {
+                    margin-right: 12px;
                     font-size: 24px;
                     line-height: 20px;
                     letter-spacing: -1px;
-                    color: #242424
+                    color: #7e7e7e;
                 }
             }
+        }
 
-            .text1 {
-                margin: 0 auto;
-                margin-top: 13px;
-                display: flex;
-                justify-content: space-between;
-                width: 70px;
-                height: 19px;
+
+        // 文字盒子位置
+        .goods-img-box:nth-child(3) {
+            .img-box {
+                margin-top: 34px;
             }
 
-            .text1 span:first-child {
-                font-size: 24px;
-                line-height: 20px;
-                letter-spacing: -1px;
-                color: #7e7e7e;
+            .text-box {
+                margin-top: 38px;
             }
         }
 
-        .goods-img-box:first-child .text1 {
-            width: 144px;
+        .goods-img-box:nth-child(4) .buttom-text .text-box {
+            margin-top: -6px;
         }
 
-        .goods-img-box:nth-child(7) .text1 {
-            width: 144px;
+        .goods-img-box:nth-child(6) {
+            .img-box {
+                margin-top: 36px;
+            }
+
+            .text-box {
+                margin-top: 30px;
+            }
+        }
+
+        .goods-img-box:nth-child(7) .buttom-text .text-box {
+            margin-top: -5px;
+        }
+
+        .goods-img-box:nth-child(8) .buttom-text .text-box {
+            margin-top: -5px;
+        }
+
+        // 图片盒子宽高
+        .goods-img-box:first-child .img-box {
+            width: 320px;
+            height: 320px;
+        }
+
+        .goods-img-box:nth-child(2) .img-box {
+            width: 320px;
+            height: 320px;
+        }
+
+        .goods-img-box:nth-child(3) .img-box {
+            width: 290px;
+            height: 270px;
+        }
+
+        .goods-img-box:nth-child(4) .img-box {
+            width: 233px;
+            height: 350px;
+        }
+
+        .goods-img-box:nth-child(5) .img-box {
+            width: 309px;
+            height: 319px;
+        }
+
+        .goods-img-box:nth-child(6) .img-box {
+            width: 200px;
+            height: 271px;
+        }
+
+        .goods-img-box:nth-child(7) .img-box {
+            width: 227px;
+            height: 340px;
+        }
+
+        .goods-img-box:nth-child(8) .img-box {
+            width: 227px;
+            height: 340px;
         }
     }
 
+    // 商品左上角
     .goods-img-box:nth-child(4) {
         .tag {
+            top: 13px;
+            left: 35px;
             border: solid 2px #2ac4e5;
 
             span {
@@ -435,12 +502,13 @@
         }
     }
 
-    .goods-img-box:nth-child(2) {
-        .text-box2 {
-            width: 93px;
-            height: 23px;
+    .goods-img-box:nth-child(7) {
+        .tag {
+            top: 20px;
+            left: 21px;
         }
     }
+
 
     .goods-img-box:first-child .text1 span:first-child {
         text-decoration-line: line-through;
@@ -588,26 +656,22 @@
             margin: 0 auto;
             margin-top: 54px;
             position: relative;
-            width: 560px;
+            width: 585px;
             height: 59px;
 
             input {
+                padding-left: 25px;
                 width: 560px;
                 height: 59px;
                 background-color: #ffffff;
                 border: transparent;
                 border-radius: 30px;
                 outline: none;
-            }
-
-            span {
-                position: absolute;
-                top: 18px;
-                left: 25px;
                 font-size: 24px;
                 line-height: 26px;
                 color: #b1b0b0;
             }
+
 
             button {
                 position: absolute;

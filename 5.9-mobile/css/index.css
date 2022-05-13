@@ -118,7 +118,7 @@ html {
 .top .textbox span {
   position: absolute;
   right: 0.08rem;
-  bottom: 0;
+  bottom: -0.09rem;
 }
 
 .top .textbox span img {
