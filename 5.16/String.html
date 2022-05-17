@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // String 字符串
+        // var str = " ";
+        // var num = 12;
+
+        // 第一种
+        // 语法 变量.toString()
+        // 功能 就是将数字变成字符串
+        // console.log(num);
+        // console.log(num.toString());
+
+        // 第二种
+        // 语法 String(变量)
+        // 功能 就是将数字变成字符串
+        // var str1 = String(num);
+        // console.log(typeof str1);
+
+        // Boolean 布尔值  true false
+        // var a = '';
+        // console.log(Boolean(a));
+        // 布尔值的类型转换
+        // 只要字符串中有东西,不管是什么,都是true
+        // 只有空字符串才是false
+        // 只有number的0转换是false，其余都是true
+
+        // undefined（系统自带的） null（人为设置）
+        // 区别
+        // undefined:未定义的值，希望表示一个变量最原始的状态，而非人为操作的结果
+        // null:人为将这个变量设置为空
+
+        // undefined null  =>严格来说是对象
+        // undefined null 转换成布尔值都是false
+        var b = null;
+        console.log(b);
+        console.log(Boolean(b));
+        console.log(Number(b));
+        // 单独记忆 null 转成number  是0
+        console.log(String(b));
+
+        var c;
+        console.log(c);
+        console.log(Boolean(c));
+        console.log(Number(c));
+        console.log(String(c));
+
+        console.log(typeof String(b));
+        console.log(typeof b);
+
+        console.log(typeof String(c));
+        console.log(typeof c);
+    </script>
+</body>
+
+</html>

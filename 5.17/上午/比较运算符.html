@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比较运算符</title>
+</head>
+
+<body>
+    <!-- 比较运算符 == === > < >= <= !=!== -->
+</body>
+<script>
+    var a = 1;
+    var b = 2;
+    var c = "1";
+    console.log(a == b);
+    console.log(a == c);
+    // 双等的时候，是会发生数据类型的转换
+
+    console.log(a === c);
+    // 不仅要求数值相等，还要类型相等
+    // 两个要求同时满足才能返回true
+
+    console.log(a != b);
+    console.log(a !== b);
+    console.log(a != c);
+    console.log(a !== c);
+    // != 不相等，比较值是否不相等
+    // !== 不全等，比较值的同时，比较数据类型是否不相等
+
+    console.log(a > b);
+    console.log(a < b);
+
+    console.log(a >= c);
+</script>
+
+</html>

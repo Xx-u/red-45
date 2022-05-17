@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var a = 11;
+        // var b = "alex";
+        // 可以看到，不同的数据类型
+        // 在内存中的大小是不一样的
+        // 计算机会自动的识别这些类型并自动分配最好的地方来存放这些数据
+
+        // 所有数据类型都是大写开头
+        // 简单数据类型
+        // Number 数字 
+        // String 字符
+        // Boolean 布尔
+        // undefined
+        // null
+
+        // 方法typeof
+        // typeof 是用来判断数据类型
+        // typeof 变量 或 typeof(变量)
+        // Number
+        // var num = 12;
+        // console.log(typeof num);
+
+        // var str = "alex";
+        // console.log(typeof str)
+        // Number : 整数 和 浮点数（小数）
+        // var distance = 12.1314;
+        // 有一个特殊的数值重点记忆  NaN
+        // not a number
+        // console.log(num - 1);//12-1
+        // console.log(num - str);
+        // 当出现这种非正常的数值相加减的时候，会出现NaN
+        // var s = num - str;
+        // console.log(s / 10);
+        // NaN的所有操作最终都是NaN
+
+        // 方法isNaN
+        // isNaN(变量) 功能：判断当前变量是不是一个**非数字**
+        // var b = isNaN(s);
+        // console.log(b);
+        // 如果num是数字，isNaN() 返回 false; 如果是非数字 则返回true
+
+        // 3.数据类型的转换
+        // var demo = prompt('请输入你的年龄：');
+        // console.log(typeof demo);
+        // console.log(demo + 100);
+        // 将demo从string 改成 number
+        // console.log(Number(demo) + 100);//第一种
+        // console.log(parseInt(demo) + 100);//第二种
+        // //通过 - * 隐式转换
+        // console.log(demo - 0 + 0);//第三种
+
+
+        // parseInt()
+        // 取整操作  不管四舍五入
+        console.log(parseInt("3.888888"));//3
+        // 如果是数字开头，截取非数字内容（不管后面还有没有数字）
+        // 如果是非数字开头，直接变成NaN
+        console.log(parseInt("123rem456"));//123
+        console.log(parseInt("rem123"));//NaN
+
+        // parseFloat()  将字符串换成浮点数
+        // 除了保留小数点以外操作不同，其余的跟parseInt一样
+        console.log(parseFloat("3.1415926"));//第四种
+
+
+        // Number 整数  浮点数  NaN
+        // 判断非数字方法  isNaN()
+        // typeof() 判断数据类型
+        // 数据类型转换  三个方法 一个隐式
+
+
+
+    </script>
+</body>
+
+</html>

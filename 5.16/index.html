@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- 1.JS可以在页内和页外引入 -->
+    <!-- 1.1在body标签内引入  body标签后页内引入 -->
+    <!-- 1.2外部引入，新建一个xxx.js -->
+    <!-- <script src="./index.js">
+    // js代码
+    </script> -->
+    <div class="box"></div>
+</body>
+<script>
+    // js代码
+    // 写注释   解释你的代码
+    /*
+    可以
+    写多行
+    */
+    var a = 2;
+    //    注意：在编程的世界 一个等于号 是 赋值 ， 从右到左看
+    //   通过 var（关键字） 去让计算机在内存中开辟一个空间，然后在这个空间存放一个数据， 这个数据就是2
+    //    可以让大家写多个变量声明写一行
+    var b = 3,
+        a = 4;
+
+    // 先声明
+    var d;
+    // 后赋值
+    d = 5;
+
+
+    // 语义化
+    var box = 10;
+    // 下划线 大小写 $
+    // var boxThree = 12;
+    // var box_one = 10;
+
+
+    // 浏览器的输入、输出，学会使用浏览器的调试工具
+    // css Element调试样式
+    // js 控制台调试js的代码
+    console.log(123);
+    console.log(box);
+    // 我们可以在浏览器中打印输出内容
+    // 内容是放在括号里面
+    // 注意：如果你的内容是变量，一定注意这个变量有没有声明
+
+    var kfc = 100;
+    // 数字类，是数据类型之一
+    console.log(kfc);
+    var m = '注释 index';
+    // ''  ""  都可以输出字符串  字符串是数据类型之一 字符串用来显示中英文要加上''或者""  如果不加就会变成变量
+    console.log(m);
+
+    // 浏览器提示框，不按确定，代码停止执行
+    // 提示框里面的内容会显示出来
+    // 面向的是用户
+    // alert("中午吃什么？");
+
+    // 面向的是程序员
+    // console.log(3);
+    // 上述的两种是输出
+
+    // 输入框
+    // 1.获取用户输入的内容
+    // 2.括号--提示文案
+    // 3.我们需要用一个变量来装用户输入的数据
+    // 4.面向用户
+    var i = prompt("今天是几号？");
+    // 面向程序员
+    console.log(i);
+
+
+    // 今天上午 js的组成  历史 定义
+    // js的变量 声明与赋值 命名规范
+    // 3个输入输出 console.log() alert() prompt()
+</script>
+
+</html>

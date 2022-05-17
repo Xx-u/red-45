@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作符</title>
+</head>
+
+<body>
+    <!-- 什么是表达式 -->
+    <!-- 将同类型的数据，用运算符的方式按照一定的规则连接起来，具有意义的式子 -->
+    <!-- 操作符（运算符）分类 -->
+    <!-- 算数运算符  + - * /  %  ++(递增) --(递减) -->
+    <!-- 赋值 -->
+    <!-- 比较 -->
+    <!-- 逻辑(重点 难点) -->
+    <script>
+        var a = 1;
+        var b = 2;
+        var c = a + b;
+        console.log(a % b);
+
+        var d = "alex";
+        var e = "good";
+        console.log(d + c);
+        //如果是数据类型都是数字，相加即可
+        // 如果是数据类型是字符，字符的拼接
+
+        console.log(d + a);
+        // 如果数据类型不一样，系统则会自动将数据类型自动转换为unmber
+        // 转化为字符去拼接
+        // console.log("alex" - 11);
+
+        console.log(a + undefined);
+        // NaN = a + Number(undefined);
+        console.log(a + null);
+        // 11 = a + Number(null);
+        // 特殊记忆
+
+        console.log("alex" + undefined);
+        console.log("alex" + null);
+        // 字符拼接的操作可以用  +  来完成
+        // ES5
+        console.log("alex" + "good" + e);
+        // ES6
+        console.log(`alexgood${e}alexgood${e}`);
+        // 注意:ES6的字符拼接不是双引号,是反引号;变量要放在${变量}
+
+        // ++(递增)
+        // 语法：变量++
+        // 称为：后置递增
+        // 功能：给变量值+1
+        // 执行时机：当前代码行执行完毕后操作
+        var x = 1;
+        console.log(x++);//先运行后加
+        console.log(++x);//先加后运行
+        console.log(x);
+
+        // --(递减)
+        // 语法：变量--
+        // 称为：后置递增
+        // 功能：给变量值-1
+        // 执行时机：当前代码行执行完毕后操作
+        var y = 2;
+        console.log(y--);
+        console.log(--y);
+        console.log(y);
+
+        // 前置递增、递减
+        // 语法：++变量 --变量
+        // 功能：给变量加减+-1
+        // 执行时机：给当前代码执行完毕前操作
+        var z = 2;
+        console.log(++z);
+        console.log(--z);
+        console.log(z);
+
+
+    </script>
+</body>
+
+</html>

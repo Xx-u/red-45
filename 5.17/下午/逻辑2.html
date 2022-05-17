@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    运算规则：
+    一真为真，全假才为假
+
+    断路运算
+
+    运算规则：
+    若操作数1为false，
+    操作数是什么就根本不关心
+
+    若操作数2为true，操作数2如果不是一个布尔值，
+    - 是表达式，就会返回表达式的结果（数子，Boolean）
+    - 是数据类型，返回其本身
+
+    <script>
+        console.log(true || true);//true
+        console.log(true || false);//true
+        console.log(false || false);//false
+
+
+        console.log(true || 1 + 2);//true
+        console.log(true || "alex");//true
+        console.log(true || 2 > 1);//true
+        console.log(true || null);//true
+        console.log(true || undefined);//true
+
+
+        console.log(false || 1 + 2);//3
+        console.log(false || "alex");//alex
+        console.log(false || 2 > 1);//true
+        console.log(false || null);//null
+        console.log(false || undefined);//undefined
+
+
+        console.log(0 || 123);//123
+        console.log('' || 123);//123
+        console.log(NaN || 123);//123
+        console.log(undefined || 123);//123
+        console.log(null || 123);//123
+
+        console.log(!true);
+        console.log(!!1);
+        console.log(!!0);
+    </script>
+</body>
+
+</html>

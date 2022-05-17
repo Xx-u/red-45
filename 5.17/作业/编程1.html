@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = Number(prompt("请输入年龄："));
+        if (num < 14) {
+            alert("儿童");
+        } else if (14 <= num && num < 24) {
+            alert('青少年');
+        } else if (24 <= num && num < 40) {
+            alert('青年');
+        } else if (40 <= num && num < 60) {
+            alert('中年');
+        } else if (num >= 60) {
+            alert('老年');
+        }
+
+
+        // switch (num) {
+        //     case num < 14:
+        //         alert('儿童');
+        //         break;
+        //     case 14 < num < 24:
+        //         alert('青少年');
+        //         break;
+        //     case 24 <= num < 40:
+        //         alert('青年');
+        //         break;
+        //     case 40 <= num < 60:
+        //         alert('中年');
+        //         break;
+        //     case 60 <= num:
+        //         alert('老年');
+        //         break;
+        //     default:
+        //         alert('找不到');
+        //         'alex';
+        // }
+
+
+        // var a = Number(prompt("请输入第一个数："));
+        // var b = Number(prompt("请输入第二个数："));
+        // var c = Number(prompt("请输入第三个数："));
+        // if (a > b) {
+        //     if (a > c) {
+        //         alert(a);
+        //     } else {
+        //         alert(c);
+        //     }
+        // } else {
+        //     if (b > c) {
+        //         alert(b);
+        //     } else {
+        //         alert(c);
+        //     }
+        // }
+
+        // var a = Number(prompt("请输入一个数："));
+        // var b = a / 2;
+        // if (b === 0) {
+        //     alert('偶数');
+        // } else {
+        //     alert('奇数');
+        // }
+
+
+        // var a = Number(prompt("请输入第一个商品价格："));
+        // var b = Number(prompt("请输入第二个商品价格："));
+        // var c = Number(prompt("请输入第三个商品价格："));
+        // var d = a + b + c;
+        // if (a > 50 || b > 50 || c > 50 || d > 100) {
+        //     alert('价格为' + parseFloat(d * 0.85, 2));
+        // } else {
+        //     alert('价格为' + parseFloat(d, 2));
+        // }
+
+
+        // var a = Number(prompt("请输入一个年份："));
+        // if (a % 4 == 0 && a % 100 != 0) {
+        //     alert('闰年');
+        // } else if (a % 400 == 0) {
+        //     alert('闰年');
+        // } else {
+        //     alert('不是闰年');
+        // }
+    </script>
+</body>
+
+</html>
