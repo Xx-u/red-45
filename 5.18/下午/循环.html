@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    for循环
+
+    while
+    语法结构：
+    while(终止条件){
+    循环体
+    }
+
+    do...while
+    语法结构：
+    do{
+    循环体
+    }while(终止条件)
+    //do...while 不管任何情况，都是会先执行循环体的代码
+    //而while必须先判断条件是否成立，如果不成立，直接退出循环
+
+    //while do...while 比for循环更加适合去写复杂的条件判断
+    //实际中for循环比较多
+
+
+    <script>
+        // var num = 1;
+        // var sum = 0;
+        // while (num <= 100) {
+        //     num++
+        //     console.log(num);
+        //     sum += num;
+        // }
+        // console.log(sum);
+
+
+        // var i = 0;
+        // do {
+        //     i++
+        //     console.log(i);
+        // } while (i < 10);
+
+
+        // 跟循环有关的两个关键字 continue break
+        // break 直接跳出循环
+        // continue 不是直接退出循环，而是退出本次循环
+        for (var i = 0; i < 20; i++) {
+            if (i % 4 == 0) {
+                console.log(i);
+                continue;
+            }
+        }
+    </script>
+</body>
+
+</html>
