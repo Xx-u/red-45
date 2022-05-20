@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数进阶</title>
+</head>
+
+<body>
+    <script>
+        // 1.在实际开发中，随着代码量越来越多，即使封装成函数
+        // 出现嵌套函数的情况出现了
+        // function odd (num) {
+        //     if (num % 2 == 0) {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+        // console.log(odd(32));
+
+
+
+        // var sum = 0;
+        // function odd (num) {
+        //     if (num % 2 == 0) {
+        //         sum = 1;
+        //         for (var i = 0; i <= num; i++) {
+        //             sum *= num;
+        //         }
+        //         console.log(sum);
+        //         return sum;
+        //     } else {
+        //         for (var i = 0; i <= num; i++) {
+        //             sum += num;
+        //         }
+        //         console.log(sum);
+        //         return sum;
+        //     }
+        // }
+        // console.log(odd(3));
+
+
+        // 专门用来做累加的
+        /*
+        add()
+            功能：累加器
+            参数：累加的次数
+            返回值：累加结果
+        */
+        // var sum = 0;
+        // function add (num) {
+        //     for (var i = 0; i < num; i++) {
+        //         sum += num;
+        //     }
+        //     console.log(sum);
+        //     return sum;
+        // }
+        // // 专门用来做累乘
+        // function mutiple (num) {
+        //     sum = 1;
+        //     for (var i = 0; i < num; i++) {
+        //         sum *= num;
+        //     }
+        //     console.log(sum);
+        //     return sum;
+        // }
+        // // console.log(add(4), mutiple(3));
+        // // 专门用来判断奇偶数
+        // function odd (num) {
+        //     if (num % 2 == 0) {
+        //         return mutiple(num)
+        //     } else {
+        //         return add(num)
+        //     }
+        // }
+        // console.log(odd(5));
+
+
+
+
+        // function fn (num) {
+        //     num++;
+        //     // 出口  终止条件
+        //     if (num == 100) {
+        //         return;
+        //     fn(num)
+
+        // }
+        // fn(1)
+
+
+
+        // 1+2+3+....+100;
+        // 递归思考是从尾巴开始思考
+        // function fn (num) {
+        //     if (num == 0) {
+        //         return 0;
+        //     }
+        //     return num + fn(num - 1)
+        // }
+        // var sum = fn(100);
+        // console.log(sum);
+
+
+
+        var sum = 1000;
+        function add (num) {
+            if (num == 0) {
+                return sum;
+            }
+            return 1.01 * add(num - 1);
+        }
+        console.log(add(30));
+
+    </script>
+</body>
+
+</html>

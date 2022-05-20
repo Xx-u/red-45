@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+</head>
+
+<body>
+    <script>
+        // 定义数组  通过[元素1，元素2，...]
+        // 元素是所有数据类型都可以
+        // 子面量（常用）
+        var a = [1, 2, 3, 4, 'alex', null];
+        // 通过构造器创建
+        var b = new Array(1, 2);
+        console.log(a[0], a[1], a[2], a[3], a[4]);
+        console.log(a.length);//数组长度
+
+        for (var i = 0; i < a.length; i++) {
+            //此时的 i 是一个计数器
+            console.log(a[i]);
+        }
+        console.log(b);
+
+
+        // var arr = [1, 22, 34, 23, 45, 6, 67]
+        // // 所有数组之和
+        // var sum = 0;
+        // for (var i = 0; i < arr.length; i++) {
+        //     sum += arr[i]
+        // }
+        // console.log(sum);
+
+        var arr = [1, 22, 34, 23, 45, 6, 67]
+        // 所有数组最大值
+        var max = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        console.log(max);
+
+
+        // 过滤出非0，到一个新的数组
+        // 1.新建arr
+        // 2.遍历旧数组，找到非0
+        // 如果我添加的元素中间，空白了，类型是undefined
+        var arr1 = [1, 3, 0, 5, 4, 33, 4, 0, 4];
+        var sum1 = [];
+        var j = 0;
+        for (var i = 0; i < arr1.length; i++) {
+            if (arr1[i] != 0) {
+                // 在分支判断中找到了非0，操作也应该在这
+                // 找到新元素添加的新数组中
+                // 数组[下标] = 值
+                sum1[j] = arr1[i];
+                j++
+
+            }
+        }
+        console.log(sum1);
+
+
+
+        var strArr = ['alex', 'realy', 'is', 'good', 'realy'];
+        var newStr = [];
+        // var j = 0;
+        for (var i = strArr.length - 1; i >= 0; i--) {
+            if (strArr[i] != 'realy') {
+                newStr[newStr.length] = strArr[i];
+            }
+        }
+        console.log(newStr);
+
+
+        //         对象：也是一个数据的集合（无序），没有下标
+        // 语法结构：
+        // obj = {
+        //     属性名：属性值
+        //     key1:value1,
+        //     key2:value2,
+        // }
+        // 多个属性之间用逗号隔开
+
+
+        var obj = {
+            a: 1,
+            b: 'alex'
+        }
+        console.log(obj);
+        // 如何访问属性值
+        // 对象.属性名    或者    对象['属性名']      访问对象属性值
+        console.log(obj.a);
+        console.log(obj['a']);
+
+        // for...in
+        // 遍历对象
+        for (var key in obj) {
+            console.log(key);
+            console.log(obj[key]);
+        }
+
+    </script>
+</body>
+
+</html>

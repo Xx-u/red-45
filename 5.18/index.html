@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.18</title>
+</head>
+
+<body>
+    <script>
+        // 3.
+        // for (var i = 1; i <= 100; i++) {
+        //     if (i % 2 == 1) {
+        //         console.log(i);
+        //         document.write('&nbsp' + i);
+        //     }
+        // }
+
+        // 4.
+
+
+
+        // 5.
+        // var i = 33000;
+        // var j = 0;
+        // while (i > 100) {
+        //     if (i > 30000) {
+        //         i = i - 3000;
+        //         j++
+        //         // document.write(i);
+        //     } else {
+        //         i = i - i * 0.1;
+        //         j++
+        //     }
+        // }
+        // document.write(j);
+
+
+        // 6.
+        // var i = 1000;
+        // for (var j = 1; j <= 30; j++) {
+        //     i = i + i * 0.01;
+        // }
+        // document.write(i);
+
+        // 7.
+        // var i = 1010;
+        // for (var j = 1; j <= 30; j++) {
+        //     if (j % 6 == 0 || j % 7 == 0) {
+        //         i = i
+        //     } else {
+        //         i = i + i * 0.01;
+        //     }
+        //     if (j == 30) {
+        //         i = i + i * 0.01;
+        //     }
+        // }
+        // document.write(i);
+        // var m = 1000 + 10;
+        // for (var i = 0; i < 30; i++) {
+        //     if (i % 5 == 0 || i % 6 == 0) {
+        //         m = m;
+        //     }
+        //     else {
+        //         m *= 1.01;
+        //     }
+        // }
+        // console.log(m);
+
+
+        // 10.
+        // var a = parseFloat(prompt("输入一个任意的正整数（建议这个数比3大）:"));
+        // for (var i = 3; i < a; i++) {
+        //     // console.log(i);
+        //     if (i % 3 == 0) {
+        //         console.log(i);
+        //         document.write(i + "&nbsp;");
+        //     }
+        // }
+
+        // 8.
+        // var a = parseFloat(prompt("输入一个任意的正整数（建议这个数比3大）:"));
+        // var a=54324;
+        // while(a>1){
+
+        // }
+
+
+        // var j = 43431;
+        // var k = '';
+        // for (var i = 0; j <= num.length; j--) {
+        //     console.log([j]);
+        //     k += j
+        //     e++
+        // }
+
+
+        // 8.
+
+        // var num = Number(prompt("输入不多于5位的正整数:"));
+        // num = num + '';
+        // var arr = num.split('');
+        // var str = '';
+        // var j = 0;
+        // while (num > 0) {
+        //     num = parseInt(num / 10);
+        //     j++;
+        // }
+        // for (var i = arr.length - 1; i >= 0; i--) {
+        //     str += arr[i];
+        // }
+        // console.log("位数:" + j);
+        // console.log(str);
+
+
+        // var num26 = 45674;
+        // var leng = (num26 + "").length;
+        // var newNum = parseInt((num26 + "").split("").reverse().join(""));
+        // console.log(`它是 ${leng} 位数,逆序打印：${newNum}`);
+
+
+
+        // 4.
+        // var x = 2;
+        // var y = 1;
+        // var z = 0;
+        // var c;
+        // for (var i = 1; i <= 20; i++) {
+        //     c = x + y;
+        //     z += (x / y);
+        //     y = x;
+        //     x = c;
+        // }
+        // document.write(z);
+
+
+
+
+        // 11.
+        var n = 10;
+        var m = 10;
+
+        document.write("<table class = 't2'>");
+        for (var i = 0; i < n; i++) {
+            document.write("<tr>");
+            for (var j = 0; j < m; j++) {
+
+                if (i % 2 == 1 && j % 2 == 1 || i % 2 == 0 && j % 2 == 0) {
+
+                    document.write("<td class = 'w'>&nbsp</td>");
+                }
+                else {
+                    document.write("<td class = 'b'>*</td>");
+                }
+            }
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+
+
+        // 12.
+        // var a = Number(prompt("输入一个整数:"));
+        // if (a < 3 && a > 1) {
+        //     alert('是素数');
+        // } else {
+        //     alert('不是素数');
+        // }
+        // for (var i = 2; i <= a; i++) {
+        //     if (i % a == 0) {
+        //         alert('是素数')
+        //     } else {
+        //         alert('不是素数');
+        //     }
+        // }
+
+    </script>
+</body>
+
+</html>

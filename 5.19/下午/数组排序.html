@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组排序</title>
+</head>
+
+<body>
+    <script>
+
+        // 如何交换两变量的值
+        // 新建一个新变量，来交换数据
+
+
+        var arr = [5, 4, 3, 2, 1];
+        var sum;
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    sum = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = sum;
+                }
+            }
+        }
+        console.log(arr);
+    </script>
+</body>
+
+</html>

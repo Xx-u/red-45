@@ -1,0 +1,334 @@
+@charset "UTF-8";
+
+.body {
+    width: 100%;
+}
+
+// 导航栏区域
+.nav {
+    display: flex;
+
+    .nav-img {
+        margin-top: 14px;
+        margin-left: 387px;
+        width: 54px;
+        height: 33px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .nav-text {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        margin-left: 388px;
+        width: 728px;
+
+        span {
+            font-family: PingFang-SC-Regular;
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 12px;
+            letter-spacing: 0px;
+            color: #1a1a1a;
+        }
+    }
+
+}
+
+
+// 内容区域
+.top-img {
+    margin-top: 16px;
+    width: 100%;
+    height: 758px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// 标题1区域
+.middle-text {
+    margin: 0 auto;
+    margin-top: 137px;
+    width: 789px;
+    height: 125px;
+
+    .span {
+        margin: 0 auto;
+        width: 789px;
+        height: 46px;
+
+        span {
+            font-family: FZLTCXHJW--GB1-0;
+            font-size: 58px;
+            font-weight: bold;
+            font-stretch: normal;
+            letter-spacing: 6px;
+            color: #bebebe;
+        }
+    }
+
+    .middle-text1 {
+        margin: 0 auto;
+        margin-top: 23px;
+        width: 178px;
+        height: 42px;
+        border: solid 1px #e0e0e0;
+
+        .text1-text {
+            margin: 0 auto;
+            margin-top: 14px;
+            width: 108px;
+            height: 17px;
+
+            span {
+                font-size: 16px;
+                letter-spacing: 2px;
+                color: #010101;
+            }
+        }
+    }
+
+    .span2 {
+        margin: 0 auto;
+        width: 162px;
+        height: 8px;
+
+        span {
+            font-family: SimSun;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #656565;
+        }
+    }
+}
+
+.middle-img {
+    margin-top: 65px;
+    width: 100%;
+    height: 936px;
+    background-color: #000000;
+    opacity: 0.49;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+// 标题2区域
+// 标题
+.buttom-text {
+    width: 1106px;
+    height: 125px;
+    margin: 0 auto;
+    margin-top: 137px;
+
+    .span {
+        margin: 0 auto;
+        width: 1035px;
+        height: 58px;
+
+        span {
+            font-family: FZLTCXHJW--GB1-0;
+            font-size: 58px;
+            font-weight: bold;
+            font-stretch: normal;
+            letter-spacing: 6px;
+            color: #bdbdbd;
+            ;
+        }
+    }
+
+    .middle-text1 {
+        margin: 0 auto;
+        margin-top: 23px;
+        width: 178px;
+        height: 42px;
+        border: solid 1px #e0e0e0;
+
+        .text1-text {
+            margin: 0 auto;
+            margin-top: 14px;
+            width: 108px;
+            height: 17px;
+
+            span {
+                font-size: 16px;
+                letter-spacing: 2px;
+                color: #010101;
+            }
+        }
+    }
+
+    .span2 {
+        margin: 0 auto;
+        width: 162px;
+        height: 8px;
+
+        span {
+            font-family: SimSun;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #656565;
+        }
+    }
+}
+
+// 标题下面图片
+.buttom-img {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 75px;
+    width: 1106px;
+    height: 515px;
+
+    .box-img {
+        position: relative;
+        padding-top: 37px;
+        width: 248px;
+        height: 515px;
+
+        .box1 {
+            position: absolute;
+            top: 0;
+            left: 71px;
+            width: 106px;
+            height: 120px;
+            z-index: 3;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .text-box {
+                position: absolute;
+                top: 32px;
+                left: 34px;
+                width: 40px;
+                height: 43px;
+
+                span {
+                    font-size: 18px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    line-height: 26px;
+                    letter-spacing: 2px;
+                    color: #fefefe;
+                }
+            }
+        }
+
+        .box2 {
+            width: 248px;
+            height: 478px;
+            z-index: 2;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+// 底部区域
+.footer {
+    margin-top: 7px;
+    width: 100%;
+    height: 313px;
+    background-color: #202020;
+    box-shadow: 0px -3px 10px 0px rgba(179, 179, 179, 0.56);
+
+    .footer-top {
+        // padding-top: 49px;
+        width: 100%;
+        height: 268px;
+
+        .footer-toptext {
+            margin-left: 361px;
+            width: 65px;
+            height: 145px;
+
+            div {
+                width: 56px;
+                height: 14px;
+
+                span {
+                    font-size: 14px;
+                    line-height: 12px;
+                    letter-spacing: 0px;
+                    color: #999999;
+                }
+            }
+        }
+
+        .footer-toptext div:first-child {
+            width: 63px;
+            height: 16px;
+
+            span:first-child {
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                line-height: 12px;
+                letter-spacing: 0px;
+                color: #e6e6e6;
+            }
+        }
+    }
+
+    .footer-buttom {
+        display: flex;
+        width: 100%;
+        height: 38px;
+        height: 2px;
+        border-top: 2px solid #666666;
+
+        .footer-buttom-text {
+            margin-top: 15px;
+            margin-left: 362px;
+            width: 766px;
+            height: 13px;
+
+            span {
+                font-size: 12px;
+                font-weight: normal;
+                font-stretch: normal;
+                line-height: 12px;
+                letter-spacing: 0px;
+                color: #999999;
+            }
+        }
+
+        .footer-buttom-text2 {
+            margin-top: 17px;
+            margin-left: 213px;
+            width: 70px;
+            height: 14px;
+
+            span {
+                font-size: 14px;
+                font-weight: normal;
+                font-stretch: normal;
+                line-height: 12px;
+                letter-spacing: 0px;
+                color: #999999;
+            }
+        }
+    }
+}
