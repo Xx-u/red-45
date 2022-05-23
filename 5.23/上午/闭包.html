@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包</title>
+</head>
+
+<body>
+    <script>
+        // function a () {
+        //     var c = 1;
+        //     function b () {
+        //         console.log(c);
+        //     }
+        //     b()
+        // }
+        // a()
+
+
+        // // 函数作为参数被传递
+        // function fn (b) {
+        //     var a = 200;
+        //     b()
+        // }
+        // var a = 100;
+        // function fn1 () {
+        //     console.log(a);
+        // }
+        // fn(fn1)
+
+        // // 函数作为返回值被返回
+        // function fn2 () {
+        //     var b = 200;
+        //     return function () {
+        //         console.log(b);
+        //     }
+        // }
+        // var b = 100;
+        // var c = fn2();
+        // c()
+
+
+        // function fn () {
+        //     var a = 'alex';
+        //     function fn1 () {
+        //         a += ' 6';
+        //         console.log(a);
+        //     }
+        //     return fn1;
+        // }
+        // var fn3 = fn()
+        // fn3() //alex 6
+        // fn3() //alex 6 6
+        //  fn3() //alex 6 6 6
+
+
+        (function () {
+            var a = 1;
+            console.log(a)
+        })()
+    </script>
+</body>
+
+</html>

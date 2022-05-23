@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var a b c;
+
+        // console.log(a, b, c);//undefined undefined undefined
+        // var a = 12,
+        //     b = 13,
+        //     c = 14;
+        // function fn(a) {
+        // var a;局部
+        //     console.log(a, b, c);//10,13,14
+        //     a = 100;
+        //     c = 200;//全局
+        //     console.log(a, b, c);//100,13,200
+        // }
+        // b = fn(10);
+        // console.log(a, b, c);//12，undefined，200
+
+
+        // var a = 1;
+        // var obj = {
+        //     name: "tom"
+        // }
+        // function fn () {
+        //     var a2 = a;
+        //     obj2 = obj;
+        //     a2 = a;
+        //     obj2.name = "jack";
+        // }
+        // fn();
+        // console.log(a);//1
+        // console.log(obj);//{name:"jack"} 传值  传地址问题
+
+
+    // var a = 1;
+    // function fn(a){
+        //var a
+        // 覆盖
+        //function a(){}
+
+    //     console.log(a)//function a(){}
+    //     var a = 2;
+    //     function a(){}
+    // }
+    // fn(a);
+
+
+    //var a
+    // console.log(a);//undefined
+    // var a=12;
+    // function fn(){
+        //var a
+    //     console.log(a);//undefined
+    //     var a=13;//局部
+    // }
+    // fn();
+    // console.log(a);//12
+
+
+    // console.log(a);//undefined
+    // var a=12;
+    // function fn(){
+    //     console.log(a);//12
+    //     a=13;//全局
+    // }
+    // fn();
+    // console.log(a);//13
+
+
+    // var a
+
+    // console.log(a);//undefined
+    // var a=12;
+    // function fn(){
+    //     console.log(a);//12
+    //     a=13;//全局
+    // }
+    // fn();
+    // console.log(a);//13
+
+
+    // var foo='hello';
+    // (function(foo){
+    //   console.log(foo);//'hello'
+    //   var foo=foo||'world';
+    //   console.log(foo);//'hello'
+    // })(foo);
+    // console.log(foo);//'hello'
+
+
+
+    // 一看是否有同名 =>覆盖
+
+    //预编译
+    // var a;
+    // function a(){
+    //   console.log(2)
+    // }
+    // function a(){
+    //   console.log(4)
+    // }
+
+    // console.log(a);//函数 function a(){console.log(4)}
+    // var a=1;
+    // console.log(a);//1
+    // function a(){
+    //   console.log(2)
+    // }
+    // console.log(a)//1
+    // var a = 3;
+    // function a(){
+    //   console.log(4)
+    // }
+    // console.log(a)//3
+    // a()//报错
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

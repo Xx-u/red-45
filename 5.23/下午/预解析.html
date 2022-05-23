@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预解析</title>
+</head>
+
+<body>
+    <script>
+        // var a ； //这是浏览器解析出来的
+        // console.log(a);//undefined
+        // var a = 1;
+        // console.log(a); //1
+
+
+
+        // b()
+        // function b () {
+        //     console.log('hello');
+        // }
+
+
+        // var a;//js预解析 解析出来
+        // function fn () {
+        //     // 如果在函数内部没有有var 去声明一个变量
+        //     // 该变量会被系统自动做一个提升的操作
+        //     // 在代码执行前，先在script开始的时候  自动在全局补充  var a；
+        //     a = 1;//赋值操作 是赋值给全局的 a
+        //     console.log(a);
+
+
+        //     var b = 2;
+        //     console.log(b);
+        // }
+        // fn()
+        // console.log(a);
+
+
+        // function a () {
+        //     function b () {
+        //         c = 1
+        //     }
+        //     b()
+        //     console.log(c);
+        // }
+        // a()
+        // console.log(c);
+
+
+
+        // 隐式提升
+        //var y;
+        // function fn () {
+        //     // var x;
+        //     var x = y = 1;//var x =1  var y =1 错
+        //     console.log(x, y);
+        // }
+        // fn()
+        // // console.log(x, y);//报错
+        // console.log(y);//1
+
+
+
+
+        // function a () {
+        //     console.log('x');
+        // }
+        // function a () {
+        //     console.log('xx');
+        // }
+        // a()
+
+        // // var m;
+        // // function m () {
+        // // console.log(22);
+        // // }
+        // var m = 1;
+        // function m () {
+        //     console.log(22);
+        // }
+        // m()//m=1   =>1()
+
+    </script>
+</body>
+
+</html>
