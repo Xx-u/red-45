@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深浅拷贝</title>
+</head>
+
+<body>
+    在实际开发中 跟 面试中 都会用
+
+    问题：数组 或者 对象 当我们进行 = 赋值之后，修改数据之后 影响之前的数据
+    为什么会造成这种问题
+    解决的方法是什么
+    <script>
+        // let arr = [1, 2, 3]
+        // let newArr
+
+        // newArr = arr
+        // console.log(newArr);
+
+        // newArr.push(4)
+        // console.log(newArr);
+        // console.log(arr);
+
+        // let obj = { a: 1, b: 2 };
+        // let newobj = obj;
+        // newobj.a = 3
+        // console.log(newobj);
+        // console.log(obj);
+
+
+        // 如何判断引用数据类型
+        // 关键字 instanceof  用来判断 当前 变量是不是来自于 对应的构造函数
+        // 如果 变量  instanceof  Array  =》 当前变量是一个数组
+        // console.log(arr instanceof Array);//true
+        // console.log(obj instanceof Array);//false
+
+        // console.log(obj instanceof Object);//true
+        // console.log(arr instanceof Object);//true
+
+        // 如何去判断一个数据类型是数组还是对象呢
+
+        // let item = {}
+        // 定义一个函数，作用输出当前的变量是什么数据类型
+        // 顺序严格
+        // function fn (item) {
+        //     if (item instanceof Array) {
+        //         // 数组
+        //         console.log('数组');
+        //     } else if (item instanceof Object) {
+        //         // 对象
+        //         console.log('对象');
+        //     } else {
+        //         // 简单数据类型
+        //         console.log('简单');
+        //     }
+        // }
+        // fn(item)
+
+
+
+        function deepClone (oldObj, newobj) {
+            for (let key in oldObj) {
+                let item = oldObj[key] //item 是 obj 的属性值
+                if (item instanceof Array) {
+                    // 数组
+                    console.log('数组');
+                    // 同样开辟一个新空间
+                    newObj[key] = []
+                    // 然后再去走deepClone逻辑
+                    deepClone(item, newObj[key])
+                } else if (item instanceof Object) {
+                    // 对象
+                    console.log('对象');
+                    newObj[key] = {}
+                    deepClone(item, newObj[key])
+                } else {
+                    // 简单数据类型
+                    console.log('简单');
+                    // newObj[name] = 'alex'
+                    newObj[key] = item
+                }
+                // newobj {name:'alex'}
+            }
+        }
+
+        let obj = {
+            name: 'alex',
+            age: 18,
+            color: ['red', 'white', 'biue'],
+            food: {
+                banner: '香蕉',
+                apple: '苹果'
+            }
+        }
+        let newObj = {}
+
+        deepClone(obj, newObj)
+        console.log(newObj);
+
+        newObj.age = 20
+        console.log(newObj);
+        console.log(obj);
+        // 浅拷贝
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业</title>
+</head>
+
+<body>
+    <script>
+        //1. 有段文字text = "and in it he says Any damn fool could",
+        //  不改变原text的前提下， 提取第一段话a = "Any damn fool could",
+        //  第二段话b = "and", 第三段话c = "could",
+        //  注意， slice() 可以接受负数, string.slice().
+
+        // let text = "and in it he says Any damn fool could"
+        // let a = text.slice(18)
+        // let b = text.slice(0,3)
+        // let c = text.slice(-5)
+        // console.log('a = '+a);
+        // console.log('b = '+b);
+        // console.log('c = '+c);
+
+
+        //2. 字符串digite = "0123456789", 把前5个字符分割出来，
+        //  返回个单字符的数组,
+        //  注意， 返回数组里面的数字是字符串类型, string.split()
+
+        /*
+        let digite = "0123456789"
+        let str = digite.substr(0,5)
+        console.log(str.split(''));
+        */
+
+
+
+        //3.已知有字符串foo=”get-element-by-id”,
+        // 写一个function将其转化成驼峰表示法”getElementById”.
+
+        // let foo = "get-element-by-id"
+        // let str = foo.split('-')
+        // function fn (foo) {
+        //     for (let i = 1; i < str.length; i++) {
+        //         str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1)
+        //         // console.log(str);
+        //     }
+        //     return str.join('')
+        // }
+        // console.log(fn(foo));
+
+        //4.定义一个函数,将"今天是什么鬼天气，这么热，明天要去游泳！"
+        // 里面的有"天"的下标输出(用indexof())
+
+
+        // let text = "今天是什么鬼天气，这么热，明天要去游泳！"
+        // let str = []
+        // function fn (text) {
+        //     for (let i = 0; i < text.length; i++) {
+        //         if (text.indexOf('天') == i) {
+        //             console.log(i)
+        //             text = text.replace('天', ' ')
+        //         }
+        //     }
+        // }
+        // fn(text)
+
+
+        //5.定义一个函数,将"今天是什么鬼天气，这么热，明天要去游泳！"
+        // 里面的有"天"替换成"日"(用replace())
+
+
+        // let text = "今天是什么鬼天气，这么热，明天要去游泳！"
+        // function fn (text) {
+        //     for (let i = 0; i < text.length; i++) {
+        //         text = text.replace('天', '日')
+        //     }
+        //     return text
+        // }
+        // console.log(fn(text));
+
+
+
+        // 6. 请你设计一个函数，当调用这个函数的时候，传入一个随意且正确时间戳后
+        // 就输出  正确的格式 2021年4月13日星期二 15时07分04秒
+
+
+        // 请你设计一个函数，当调用这个函数的时候，将系统时间按照下列格式输出到控制台
+        // 就输出  2021年4月13日星期二 15时07分04秒
+
+
+        // let date = new Date()
+        // let year = date.getFullYear()
+        // let month = date.getMonth() + 1
+        // let day = date.getDay()//星期
+        // let day2 = date.getDate()//日期
+        // let hnur = date.getHours()
+        // let minutes = date.getMinutes()
+        // let second = date.getSeconds()
+        // let str = `现在的时间是${year}年${month}月${day2}日星期${day} ${hnur}时${minutes}分${second}杪`
+        // function fn () {
+        //     console.log(str);
+        // }
+        // fn()
+
+
+
+        // 7.随机5个不重复的数字[1-5]，并且用数组装起来(Math.random())
+
+
+        // let str = []
+        // function fn (min, max) {
+        //     for (let i = 0; i < 5; i++) {
+        //         str[i] = Math.random() * (max - min) + min;
+        //     }
+        //     return str
+        // }
+        // console.log(fn(1, 5));
+
+
+
+    </script>
+</body>
+
+</html>

@@ -20,13 +20,13 @@
         // var z;
         // console.log(y); //1
         // console.log(z); //undefined
-        // console.log(x); //undefined
+        // console.log(x); //报错
 
 
 
         // var a, b
         // (function () {
-        // var a,b
+        // var a
         //    console.log(a);//undefined
         //    console.log(b);//undefined
         // var b 全局
@@ -85,12 +85,14 @@
         //     b();
         // }
         // a();
+
+
         // function a() {
         //     var temp = 10;
         //     b();
         // }
         // function b() {
-        //     console.log(temp); //undefined
+        //     console.log(temp); //报错
         // }
         // a();
 
@@ -123,7 +125,6 @@
         // (function() {
         //   function g() {return true;} ;
         //    if (g() && [] == ![]) {
-        //ture && false
         //       f = function f() {return false;};
 
         //    }
@@ -136,6 +137,8 @@
         // var b = [];
         // console.log(Boolean(b));//true
         // console.log(typeof b);//object
+
+        //[] == ![]  //true
     </script>
 </body>
 

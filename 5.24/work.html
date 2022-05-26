@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.移除数组 arr[1, 2, 3, 4, 2] 中的2。不要直接修改数组 arr，结果返回新的数组
+        // let arr = [1, 2, 3, 4, 2]
+        // let newArr = arr.filter(function (ele, index) {
+        //     return ele != 2
+        // })
+        // console.log(newArr);
+
+        //2.定义一个函数,能在数组 arr[1, 2, 3, 4, 2] 的 "2"后面添加元素 "Melon"。不要直接修改数组 arr，结果返回新的数组
+        // let arr = [1, 2, 3, 4, 2]
+        // function fn (arr, b) {
+        //     let newArr = []
+        //     arr.forEach(function (ele, index) {
+        //         if (newArr.indexOf(ele) !== index) {
+        //             newArr.push(ele)
+        //             if (ele == 2) {
+        //                 newArr.push(b)
+        //             }
+        //         }
+        //     })
+        //     return newArr
+        // }
+        // let a = fn(arr, 'Melon')
+        // console.log(a);
+
+        // 3.统计数组 arr[1, 2, 3, 4, 2] 中2出现的次数
+        // let i = 0;
+        // let arr = [1, 2, 3, 4, 2]
+        // arr.forEach(function (ele, index) {
+        //     if (arr[ele] == 2) {
+        //         i++
+        //     }
+        // })
+        // console.log(i);
+
+
+        //4.找出数组 arr[1, 2, 3, "melon", 4, "melon", 2, 4, "melon"] 中重复出现过的元素,并用数组将重复元素装起来输出
+        // let arr = [1, 2, 3, "melon", 4, "melon", 2, 4, "melon"]
+        // let newArr = []
+        // let newArr2 = []
+        // let newArr3 = []
+        // arr.forEach(function (ele, index) {
+        //     if (newArr.indexOf(ele) == -1) {
+        //         newArr.push(ele)
+        //     } else {
+        //         newArr2.push(ele)
+        //     }
+        // })
+        // newArr2.forEach(function (a, b) {
+        //     if (newArr3.indexOf(a) == -1) {
+        //         newArr3.push(a)
+        //     }
+        // })
+        // console.log(newArr3);
+
+
+        // 目标
+        // push
+        // 先找到push目标
+        // 如何查找相同元素(参考去重的经验)  indexOf  找下标
+
+
+        // 先找到重复元素放到新数组中 arr.indexOf(ele) != index
+        // 保证新数组不重复  newArr.indexOf(ele) == -1
+        // let arr = [1, 2, 3, "melon", 4, "melon", 2, 4, "melon"]
+        // let newArr = []
+        // arr.forEach(function (ele, index) {
+        //     if (arr.indexOf(ele) != index && newArr.indexOf(ele) == -1) {
+        //         newArr.push(ele)
+        //     }
+        // })
+        // console.log(newArr);
+
+
+
+
+
+
+        // 5.在arr里面输出年龄小于17的对象
+        let arr = [{
+            name: "111",
+            sex: "boy",
+            age: 18
+        },
+        {
+            name: "222",
+            sex: "girl",
+            age: 27
+        },
+        {
+            name: "333",
+            sex: "boy",
+            age: 16
+        },
+        {
+            name: "444",
+            sex: "girl",
+            age: 15
+        },
+        {
+            name: "555",
+            sex: "boy",
+            age: 20
+        }
+        ]
+        // let newArr = arr.filter(function (ele, index) {
+        //     return ele.age > 17
+        // })
+
+        let newArr = []
+        arr.forEach(function (ele, index) {
+            if (ele.age > 17) {
+                newArr.push(ele)
+            }
+        })
+        newArr.sort(function (a, b) {
+            return a.age - b.age
+        })
+        console.log(newArr);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- <base href="http://edu.bluej.cn/public/uploads/20180425/20180425114737数组/js/"> -->
+</head>
+
+<body>
+    <script type="text/javascript">
+        //1.移除数组 arr[1, 2, 3, 4, 2] 中的2。不要直接修改数组 arr，结果返回新的数组
+
+        /*
+        let arr = [1, 2, 3, 4, 2]
+        let newArr = arr.filter(function (ele, index) {
+            return ele != 2
+        })
+        console.log(newArr);
+        */
+
+        //2.定义一个函数,能在数组 arr[1, 2, 3, 4, 2] 的 "2"后面添加元素 "Melon"。不要直接修改数组 arr，结果返回新的数组
+
+        /*
+        let arr = [1, 2, 3, 4, 2]
+        function fn (arr, b) {
+            let newArr = []
+            arr.forEach(function (ele, index) {
+                if (newArr.indexOf(ele) !== index) {
+                    newArr.push(ele)
+                    if (ele == 2) {
+                        newArr.push(b)
+                    }
+                }
+            })
+            return newArr
+        }
+        let a = fn(arr, 'Melon')
+        console.log(a);
+        */
+
+        //3.统计数组 arr[1, 2, 3, 4, 2] 中2出现的次数
+
+        /*
+        let i = 0;
+        let arr = [1, 2, 3, 4, 2]
+        arr.forEach(function (ele, index) {
+            if (arr[ele] == 2) {
+                i++
+            }
+        })
+        console.log(i);
+        */
+     
+        //4.找出数组 arr[1, 2, 3, "melon", 4, "melon", 2, 4, "melon"] 中重复出现过的元素,并用数组将重复元素装起来输出
+        
+        /*
+        let arr = [1, 2, 3, "melon", 4, "melon", 2, 4, "melon"]
+        let newArr = []
+        let newArr2 = []
+        let newArr3 = []
+        arr.forEach(function (ele, index) {
+            if (newArr.indexOf(ele) == -1) {
+                newArr.push(ele)
+            } else {
+                newArr2.push(ele)
+            }
+        })
+        newArr2.forEach(function (a, b) {
+            if (newArr3.indexOf(a) == -1) {
+                newArr3.push(a)
+            }
+        })
+        console.log(newArr3);
+        */
+
+        //5.在arr里面输出年龄小于17的对象
+        // var arr = [{
+        //         name: "111",
+        //         sex: "boy",
+        //         age: 18
+        //     },
+        //     {
+        //         name: "222",
+        //         sex: "girl",
+        //         age: 17
+        //     },
+        //     {
+        //         name: "333",
+        //         sex: "boy",
+        //         age: 16
+        //     },
+        //     {
+        //         name: "444",
+        //         sex: "girl",
+        //         age: 15
+        //     },
+        //     {
+        //         name: "555",
+        //         sex: "boy",
+        //         age: 20
+        //     }
+        // ]
+
+        /*
+        var arr = [{
+            name: "111",
+            sex: "boy",
+            age: 18
+        },
+        {
+            name: "222",
+            sex: "girl",
+            age: 17
+        },
+        {
+            name: "333",
+            sex: "boy",
+            age: 16
+        },
+        {
+            name: "444",
+            sex: "girl",
+            age: 15
+        },
+        {
+            name: "555",
+            sex: "boy",
+            age: 20
+        }
+        ]
+        arr = arr.filter(function (ele, index) {
+            return ele.age < 17
+        })
+        console.log(arr);
+        */
+
+
+        
+    </script>
+</body>
+
+</html>

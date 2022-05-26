@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间对象</title>
+</head>
+
+<body>
+    <script>
+        // let date = new Date()
+        // console.log(date);
+        // // 获取当前计算机系统的时间
+        // let date1 = new Date('2020-10-1 10:10:10')
+        // console.log(date1);
+
+        // let year = date.getFullYear()
+        // let month = date.getMonth() + 1
+        // let day = date.getDay()//星期   如果是星期日 0
+        // let day2 = date.getDate()//日期
+        // let hnur = date.getHours()
+        // let minutes = date.getMinutes()
+        // let second = date.getSeconds()
+        // console.log(year, month, day, day2, hnur, minutes, second);
+
+        // let str = `现在的时间是${year}年${month}月${day2}日,${hnur}时${minutes}分${second}杪`
+        // console.log(str);
+
+
+        // 时间戳  总的 毫秒数  1970 1-1  简单理解就是代表当前时间的一串数字
+        // let date = new Date()
+        // console.log(date.getTime());//获取当前时间戳
+        // console.log(date.valueOf());
+        // let noeTime = +new Date()
+        // console.log(noeTime);
+
+        // // 倒计时 >=  秒杀
+        // // 先获取将来时间戳
+        // // 获取当前时间时间戳
+
+        // let ganfan = +new Date('2022-5-25 18:00:00')
+        // let noeTime = +new Date()
+        // let temp = ganfan - noeTime
+        // console.log(temp);
+
+        // // 如何将这种时间戳转换成普通人看的
+        // // 毫秒 》 = 杪  1000
+        // temp /= 1000
+        // let s = parseInt(temp % 60)
+        // let m = parseInt(temp / 60 % 60)
+        // let h = parseInt(temp / 60 / 60 % 24)
+        // let d = parseInt(temp / 60 / 60 / 24)
+        // console.log(d, h, m, s);
+    </script>
+</body>
+
+</html>

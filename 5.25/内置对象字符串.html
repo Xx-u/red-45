@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内置对象字符串</title>
+</head>
+
+<body>
+    <script>
+        // let str = '123'
+        // console.log(str.length);
+
+        // let str1 = str.indexOf('2')
+        // console.log(str1);
+
+
+        // let str = 'abc'
+        // let str1 = str.charAt(0)
+        // console.log(str1);
+
+        // let str = 'abcefg'
+        // let str1 = str.slice(1, 3)
+        // console.log(str1);
+
+
+        // let str = 'abcefg'
+        // console.log(str.substring(1, 3), str);
+
+        // let str = 'abcefg'
+        // console.log(str.substr(1, 3), str);
+
+        // let str = 'abcefge154e22'
+        // console.log(str.replace('e', '456'));
+
+        // // 定义一个函数去替换所有的 字符  e  变成  的
+
+        // function change (str) {
+        //     for (let i = 0; i < str.length; i++) {
+        //         str = str.replace('e', '的')
+        //     }
+        //     return str
+        // }
+        // let a = change(str)
+        // console.log(a);
+
+        // let str = 'abc-def-ghi'
+        // console.log(str.split('-'));
+
+        // let str = 'abc-def-ghi'
+        // let str1 = 'haha'
+        // console.log(str.concat(str1));
+        // console.log(`${str}${str1}`);
+
+
+        let str = "abcdeffdddddddfedfadsd"
+        // 定义一个函数，统计出现的字符和对应的次数，并求出出现最多次数的字符
+
+        function fn (str) {
+            let obj = {} //存放字符和次数
+            for (let i = 0; i < str.length; i++) {
+                if (obj[str.charAt(i)]) {
+                    //判断obj中是否有对应的属性
+                    // obj[str.charAt(下标)] 看看是不是undefined
+                    // 如果是  说明第一次出现 给一个初始值1
+                    // 如果不是  说明不是第一次 给对应的属性值+1
+                    obj[str.charAt(i)]++
+                } else {
+                    obj[str.charAt(i)] = 1
+                }
+            }
+            console.log(obj);
+
+            let max = 0
+            let max_char = ''
+
+            for (let key in obj) {
+                if (obj[key] > max) {
+                    max = obj[key]
+                    max_char = key
+                }
+            }
+
+            console.log(`在这个字符串出现最多的字符串${max_char},次数是${max}`);
+        }
+        fn(str)
+    </script>
+</body>
+
+</html>

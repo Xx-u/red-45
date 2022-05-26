@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+</head>
+
+<body>
+    <script>
+        // let arr = [1, 2, 'a']
+        // let obj = {
+        //     a: 1,
+        //     b: 2
+        // }
+
+        let wang = {
+            name: '王心凌',
+            age: '18',
+            sex: '女',
+            job: 'singer',
+            // 方法 即行为
+            sing: function (a) {
+                console.log(a);
+            },
+            dance: function () {
+                console.log('爱你的舞');
+            }
+        }
+        // 调用对象的属性
+        console.log(wang.job);//singer
+        console.log(wang['sex']);//女
+        // 当访问没有定义的属性是 不会报错 而是undefined
+        console.log(wang.haha)
+        // 我们可以随时去添加一个对象的属性或方法
+        wang.haha = '哈哈大笑'
+        console.log(wang);
+
+        // 修改属性的操作
+        wang.haha = '嘿嘿'
+        console.log(wang);
+
+        // 对象中如何调用方法
+        // 只要看到函数(方法) 就要联想到 参数  返回值
+        wang.sing('爱你')
+
+
+        // for...in  遍历对象
+        for (let key in wang) {
+            console.log(key);
+            console.log(wang[key]);//wang['name']
+        }
+
+        // 通过构造函数(大写字母开头) 创建对象
+        let obj = new Object()
+        // 字面量创建 直接 let 对象 = {}
+    </script>
+</body>
+
+</html>
