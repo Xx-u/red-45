@@ -59,12 +59,13 @@
         // function fn (text) {
         //     for (let i = 0; i < text.length; i++) {
         //         if (text.indexOf('天') == i) {
-        //             console.log(i)
+        //             str.push(i)
         //             text = text.replace('天', ' ')
         //         }
         //     }
         // }
         // fn(text)
+        // console.log(str);
 
 
         //5.定义一个函数,将"今天是什么鬼天气，这么热，明天要去游泳！"
@@ -94,30 +95,58 @@
         // let year = date.getFullYear()
         // let month = date.getMonth() + 1
         // let day = date.getDay()//星期
+        // let arrDay = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
         // let day2 = date.getDate()//日期
-        // let hnur = date.getHours()
+        // let hnur = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
         // let minutes = date.getMinutes()
-        // let second = date.getSeconds()
-        // let str = `现在的时间是${year}年${month}月${day2}日星期${day} ${hnur}时${minutes}分${second}杪`
+        // let second = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()
+
+        // let str = `现在的时间是${year}年${month}月${day2}日${arrDay[day]} ${hnur}时${minutes}分${second}杪`
         // function fn () {
         //     console.log(str);
         // }
         // fn()
 
 
+        // 三元表达式
+        // 语法结构：
+        // 条件表达式？成立返回值；失败返回值
+        // if...else  一样
+        // 使用场景：一个需要返回内容且 条件相对简单
+        // let a = 2 > 1 ? 'haha' : 'hehe'
+        // console.log(a);
+
 
         // 7.随机5个不重复的数字[1-5]，并且用数组装起来(Math.random())
 
 
-        // let str = []
-        // function fn (min, max) {
-        //     for (let i = 0; i < 5; i++) {
-        //         str[i] = Math.random() * (max - min) + min;
-        //     }
-        //     return str
+        // function fn () {
+        //     return Math.floor(Math.random() * 5 + 1)
         // }
-        // console.log(fn(1, 5));
+        // let arr = []
+        // // for (let i = 0; i < 5; i++) {
+        // //     let num = fn()//获取随机数
+        // //     // 如果发现元素重复，i--
+        // //     // 如果发现元素不重复，push
+        // //     if (arr.indexOf(num) == -1) {
+        // //         arr.push(num)
+        // //     } else {
+        // //         i--
+        // //     }
+        // // }
+        // // console.log(arr);
 
+        // let i = 0
+        // while (i < 5) {
+        //     i++
+        //     let num = fn()
+        //     if (arr.indexOf(num) == -1) {
+        //         arr.push(num)
+        //     } else {
+        //         i--
+        //     }
+        // }
+        // console.log(arr);
 
 
     </script>

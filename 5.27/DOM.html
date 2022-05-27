@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .baba {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+        }
+
+        .son {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="baba">
+        爸爸
+        <div class="son">
+            儿子
+        </div>
+        <div class="son">
+            儿子
+        </div>
+        <div class="son">
+            儿子
+        </div>
+    </div>
+    <div class="uncle">叔叔</div>
+    <script>
+        // 获取元素
+        // let demo = document.getElementById('demo')
+        // let son = document.getElementsByClassName('son')
+        // let div = document.getElementsByTagName('div')
+        // console.log(div);
+        // console.log(son[1]);
+
+        // // 开发常用的获取元素方法
+        // // 不考虑兼容ie的情况下随意使用
+        // let baba = document.querySelector('.baba')   //#id名
+        // console.log(baba);
+
+        // let son1 = document.querySelectorAll('.son')
+        // console.log(son1);
+
+        // console.log(document.body);
+        // console.log(document.documentElement);
+
+        // 绑定事件
+        // 操作的元素节点
+        let baba = document.querySelector('.baba')
+        // 1
+        // let a = baba.addEventListener('click', function () {
+        //     console.log(a)
+        // })
+
+        // 2
+        function fn () {
+            console.log('a');
+        }
+        baba.addEventListener('click', fn)
+    </script>
+</body>
+
+</html>

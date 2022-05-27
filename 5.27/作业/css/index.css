@@ -1,0 +1,281 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.box-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.box-box .body2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(210, 211, 211, 0.5);
+}
+
+.welcome {
+  width: 100%;
+  height: 290px;
+  background-color: #3E2E6F;
+  padding-top: 10px;
+}
+
+.box1 {
+  margin-left: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+}
+
+.welcome_textOne {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.welcome_textTwo {
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.button-box {
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 100px;
+  height: 50px;
+}
+
+.button-box button {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #FF00E8;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  border: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+}
+
+.content .content_Ont {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.content .content_Ont .content_spanOne {
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.content .content_Ont .content_spanTwo {
+  margin-top: 20px;
+}
+
+.content .content_Ont .content_spanThree {
+  margin-top: 20px;
+}
+
+.login {
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 765px;
+  margin-top: 50px;
+  width: 400px;
+  height: 460px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: rgba(240, 248, 248, 0.9);
+  -webkit-animation: son 1.5s ease;
+          animation: son 1.5s ease;
+  z-index: 4;
+}
+
+.login .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 385px;
+  height: 50px;
+  padding-left: 15px;
+  padding-top: 20px;
+  background-color: #3E2E6F;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.login .top .top-img {
+  margin-left: 310px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.login .text {
+  margin-top: 25px;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.login .box {
+  margin-left: 15px;
+}
+
+.login .box .box-text {
+  margin-top: 15px;
+  width: 35px;
+  font-weight: 600;
+}
+
+.login .box .box-text4 {
+  margin-top: 15px;
+  width: 65px;
+  font-weight: 600;
+}
+
+.login .box .box-text2 {
+  width: 370px;
+  height: 30px;
+}
+
+.login .box .box-text2 input {
+  width: 100%;
+  height: 100%;
+}
+
+.login .login_button {
+  position: absolute;
+  bottom: 15px;
+  width: 55px;
+  height: 35px;
+  margin-left: 15px;
+}
+
+.login .login_button button {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: transparent;
+  background-color: #F10CD9;
+  color: #ffffff;
+}
+
+@-webkit-keyframes son {
+  0% {
+    opacity: 0;
+  }
+  /* 50% {
+            opacity: .5;
+        } */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes son {
+  0% {
+    opacity: 0;
+  }
+  /* 50% {
+            opacity: .5;
+        } */
+  100% {
+    opacity: 1;
+  }
+}
+
+.center {
+  position: absolute;
+  width: 200px;
+  height: 100vh;
+  background-color: #3E2E6F;
+  left: -201px;
+  color: #fff;
+  border-right: 1px solid #fff;
+}
+
+.center .center_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  border-bottom: 1px solid #fff;
+}
+
+.center .center_img .img {
+  width: 100px;
+  height: 100px;
+}
+
+.center .center_img .img img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.center .center_text {
+  line-height: 80px;
+  font-size: 20px;
+  width: 200px;
+  height: 80px;
+  border-bottom: 1px solid #fff;
+}
+
+.center .center_text span {
+  margin-left: 15px;
+}
+
+.active {
+  display: block !important;
+}
+
+.active1 {
+  -webkit-transform: translateX(201px);
+          transform: translateX(201px);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.active2 {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}

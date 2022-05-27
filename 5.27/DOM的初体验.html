@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM的初体验</title>
+    <style>
+        .demo {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- DOM 的全称：document object model
+    js:ECMA+DOM+BOM -->
+    <div class="demo"></div>
+    <script>
+        // 一个完整的dom操作分为三步骤
+        // 1.获取元素
+        let demo = document.querySelector('.demo')
+        // 2.绑定事件
+        demo.addEventListener('click', function () {
+            console.log('点击了色块');
+            // 3.事件处理函数
+            demo.innerHTML = `<h1>DOM</h1>`
+        })
+
+    </script>
+</body>
+
+</html>

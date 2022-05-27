@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作元素</title>
+    <style>
+        .demo {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+        }
+
+        .active {
+            background-color: red;
+            font-size: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo">
+        我是盒子
+    </div>
+    <!-- 操作元素节点的文本内容 -->
+    <!-- 需求：点击色块 更换文本 我是大聪明 -->
+    <script>
+        // let demo = document.querySelector('.demo')
+        // demo.addEventListener('click', function () {
+        //     // 更改文本操作
+        //     demo.innerHTML = `<h1>我是大聪明</h1>`
+        //     demo.innerText = '我是大聪明'
+        // })
+
+        let demo = document.querySelector('.demo')
+        // demo.addEventListener('click', function () {
+        // 更改文本操作
+        // demo.style.backgroundColor = 'red'
+        // demo.style.fontSize = '70px'
+
+        // 通过类名去改变样式(给demo节点的样式列表中添加一个类)
+        // demo.classList.add('active')
+        // demo.classList.remove(类名)  //删除
+
+        // 需求：点击偶数次是蓝色  奇数次是红色
+        // })
+
+        let count = 0
+        demo.addEventListener('click', function () {
+            count++
+            console.log(count);
+            if (count % 2 == 0) {
+                // demo.classList.remove('active')
+                // demo.className = 'demo'
+                demo.setAttribute('class', 'demo')
+            } else {
+                // demo.classList.add('active')
+                // demo.className += ' active'
+                demo.setAttribute('class', 'demo active')
+            }
+        })
+    </script>
+</body>
+
+</html>

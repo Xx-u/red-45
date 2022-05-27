@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+    <!-- 左侧边框 -->
+    <div class="center">
+        <div class="center_img">
+            <div class="img">
+                <img src="./images/微信图片_20220520120643.jpg" alt="">
+            </div>
+        </div>
+        <div class="center_text">
+            <span>主页</span>
+        </div>
+        <div class="center_text">
+            <span>关于我们</span>
+        </div>
+        <div class="center_text">
+            <span>课程介绍</span>
+        </div>
+        <div class="center_text">
+            <span>联系我们</span>
+        </div>
+    </div>
+
+    <div class="box-box">
+        <div class="body">
+            <div class="welcome">
+                <div class="box1">
+                    <img src="./images/1653639266(1).jpg" alt="">
+                </div>
+                <div class="welcome_textOne">
+                    欢迎来到Alex的世界
+                </div>
+                <div class="welcome_textTwo">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, quisquam!
+                </div>
+                <div class="button-box">
+                    <button>登录</button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content_Ont">
+                    <div class="content_spanOne">
+                        <span>我们的理想</span>
+                    </div>
+                    <div class="content_spanTwo">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quia, repellendus magnam
+                            enim
+                            dolorem alias adipisci commodi eum. Aspernatur debitis expedita rem itaque dolor! Obcaecati
+                            unde
+                            aliquam mollitia alias maxime.</span>
+                    </div>
+                    <div class="content_spanThree">
+                        <span>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iure consequuntur labore
+                            eaque
+                            repellendus, impedit obcaecati ut veritatis ab sapiente.
+                        </span>
+                    </div>
+
+                    <div class="content_spanOne">
+                        <span>我们的教学宗旨</span>
+                    </div>
+                    <div class="content_spanTwo">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. IIo, quam! Officis non quidem,
+                            nobis
+                            dolorum, ilo,
+                            vel tenetur officia tempora error molestiae nostrum quis libero odit omnis ratione fuga
+                            voluptatum obcaecati vero impedit aliquid nihil doloribus dolorem. Commodi, beatae
+                            provident!</span>
+                    </div>
+
+                    <div class="content_spanOne">
+                        <span>我们的优势</span>
+                    </div>
+                    <div class="content_spanTwo">
+                        <li>优秀的科学理论</li>
+                        <li>优秀的师资团队</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 登录区域 -->
+        <div class="login">
+            <div class="top">
+                <span>登录</span>
+                <div class="top-img">
+                    <span>X</span>
+                </div>
+            </div>
+            <div class="text">
+                <span>登录了解更多课程及促销活动</span>
+            </div>
+            <div class="box">
+                <div class="box-text">
+                    <span>姓名</span>
+                </div>
+                <div class="box-text2">
+                    <input type="text" placeholder="请输入姓名">
+                </div>
+
+                <div class="box-text">
+                    <span>邮箱</span>
+                </div>
+                <div class="box-text2">
+                    <input type="text" placeholder="请输入邮箱">
+                </div>
+
+                <div class="box-text">
+                    <span>密码</span>
+                </div>
+                <div class="box-text2">
+                    <input type="text" placeholder="请输入密码">
+                </div>
+
+                <div class="box-text4">
+                    <span>确认密码</span>
+                </div>
+                <div class="box-text2">
+                    <input type="text" placeholder="请再次输入姓名">
+                </div>
+            </div>
+            <div class="login_button">
+                <button>提交</button>
+            </div>
+        </div>
+        <!-- 阴影区域 -->
+        <div class="body2"></div>
+    </div>
+
+    <script>
+        let title = document.querySelectorAll('.button-box')
+        let contents = document.querySelectorAll('.login')
+        let contents3 = document.querySelectorAll('.body2')
+        title.forEach(function (ele, index) {
+            ele.addEventListener('click', function () {
+                contents[index].classList.add('active')
+                contents3[index].classList.add('active')
+            })
+        })
+
+
+        let title1 = document.querySelectorAll('.top-img')
+        let contents1 = document.querySelectorAll('.login')
+        let contents4 = document.querySelectorAll('.body2')
+        title1.forEach(function (ele, index) {
+            ele.addEventListener('click', function () {
+                contents1[index].classList.remove('active')
+                contents4[index].classList.remove('active')
+            })
+        })
+
+
+
+
+        let title2 = document.querySelectorAll('.box1')
+        let contents2 = document.querySelectorAll('body')
+        let i = 0
+        title2.forEach(function (ele, index) {
+            ele.addEventListener('click', function () {
+                i++
+                console.log(contents2[index]);
+                if (i % 2 == 1) {
+                    contents2[index].classList.remove('active2')
+                    contents2[index].classList.add('active1')
+                } else {
+                    contents2[index].classList.remove('active1')
+                    contents2[index].classList.add('active2')
+                }
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>
