@@ -9,12 +9,11 @@ body {
 }
 
 .box-box {
-  position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
-.box-box .body2 {
+.body2 {
   display: none;
   position: absolute;
   top: 0;
@@ -22,7 +21,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background-color: rgba(210, 211, 211, 0.5);
+  background-color: rgba(9, 9, 9, 0.5);
 }
 
 .welcome {
@@ -84,7 +83,6 @@ body {
 
 .content {
   width: 100%;
-  height: 100vh;
 }
 
 .content .content_Ont {
@@ -109,9 +107,10 @@ body {
 .login {
   display: none;
   position: absolute;
-  top: 100px;
-  left: 765px;
-  margin-top: 50px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 400px;
   height: 460px;
   border: 1px solid #000000;
@@ -263,7 +262,7 @@ body {
 }
 
 .active {
-  display: block !important;
+  display: block;
 }
 
 .active1 {
