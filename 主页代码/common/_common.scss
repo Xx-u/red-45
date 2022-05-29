@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+// 字体风格
+@font-face {
+    font-family:
+        "huawen";
+    src: url("./../字体包/华文中宋.ttf");
+}
+
+// 去a标签下划线
+a {
+    text-decoration: none;
+}
+
+
+// 整体页面
+body {
+    background-position: 100%;
+    font-family: huawen;
+}
+
+// 头部导航栏区域
+.top {
+    width: 100%;
+    height: 88px;
+
+
+    .topOne {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 1100px;
+        height: 88px;
+
+        .topOne-logo {
+            width: 40px;
+            height: 40px;
+            margin-left: 20px;
+            font-size: 35px;
+
+        }
+
+        .topOne-text {
+            display: flex;
+            justify-content: space-between;
+            width: 750px;
+            font-size: 25px;
+            font-weight: 600;
+
+            span {
+                // color: #888888;
+            }
+        }
+    }
+}

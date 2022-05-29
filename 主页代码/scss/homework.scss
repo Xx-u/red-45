@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@import "./../common/common";
+
+.top .topOne .topOne-text a:nth-child(3) span {
+    color: red;
+}
+
+body {
+    background-image: url(./../images/56081f2333c59e1aeed7e13e317941eb2_482x264.png);
+    background-size: auto 180%;
+}
+
+.top {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+}
+
+// 内容区域
+.homework {
+    // display: flex;
+    font-size: 18px;
+    width: 550px;
+    margin: 50px auto;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    border-radius: 10px;
+
+    .title {
+        // margin-top: 10px;
+        // margin-left: 10px;
+        display: flex;
+        font-size: 24px;
+        font-weight: 600;
+
+        span {
+            color: blueviolet;
+        }
+
+        .title-button {
+            margin-left: 10px;
+        }
+    }
+
+
+    .content {
+        // display: none;   
+
+        a {
+            /* 改变行内块元素 */
+            display: inline-block;
+            /* 设置内填充 */
+            padding: 5px;
+            /* 设置文字垂直居中 */
+            vertical-align: middle;
+            /* 内边距填充 */
+            padding: 30px;
+            /* 间隔距离 */
+            margin: 5px auto;
+            text-align: center;
+            color: yellow;
+        }
+    }
+}
+
+// a {
+//     text-shadow: 3px 3px 3px pink;
+//     transform: all .3s ease;
+// }
+
+
+.list a:hover {
+    /*鼠标悬停在a标签身上时，显示背景*/
+    background-color: #BEBEBF;
+    /* 设置圆角 */
+    /* border-radius: 10px; */
+}
+
+.list a::after {
+    content: '';
+}
+
+
+// .active {
+//     display: block !important;
+// }
