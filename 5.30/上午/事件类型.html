@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件类型</title>
+</head>
+
+<body>
+    表单的常用事件
+    change 内容改变
+    input 输入框内容发生改变的时候触发的事件
+    focus 输入框获取焦点的时候触发
+    blur 输入框失去焦点的时候触发
+
+    <style>
+        .tip {
+            display: none;
+        }
+    </style>
+    <div>
+        <input type="text" class="ipt">
+        <div class="tip">请输入正确的手机号码</div>
+    </div>
+
+    <!-- 需求：当失去焦点的时候，判断ipt中输入的手机号码是否正确；
+    如果不正确，提示用户重新输入；如果正确，提示用户输入成功 -->
+</body>
+<script>
+    let ipt = document.querySelector('.ipt')
+    let tip = document.querySelector('.tip')
+    // ipt.addEventListener('input', function () {
+    //     console.log(ipt.value);
+    // })
+
+    ipt.addEventListener('focus', function () {
+        console.log(ipt.value, 'focus');
+        tip.style.display = 'block'
+    })
+    ipt.addEventListener('blur', function () {
+        console.log(ipt.value, 'blur');
+        // 长度11位  数字
+        let val = ipt.value
+        if (val.length == 11 && isNaN(val) == false) {
+            tip.innerHTML = '输入成功'
+        } else {
+            tip.innerHTML = '请重新输入'
+        }
+    })
+</script>
+
+</html>

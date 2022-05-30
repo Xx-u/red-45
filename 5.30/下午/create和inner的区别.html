@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create和inner的区别</title>
+</head>
+
+<body>
+    经典面试题
+    document.createElement 和 innerHTML
+    需求：动态创建1000box 并渲染
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+    <div class="demo"></div>
+    <script>
+        let arr = []
+        let nowTime = +new Date()
+        for (let i = 0; i < 1000; i++) {
+            // let box = document.createElement('div')
+            // box.setAttribute('class', 'box')
+            // document.body.appendChild(box)
+
+            // document.body.innerHTML += `<div class="box"></div>`
+
+            // arr.push('<div class="box" style="width: 100px;height: 100px;background-color: pink;"></div>')
+        }
+        document.body.innerHTML = arr.join('')
+
+        let afterTime = +new Date()
+        console.log(afterTime - nowTime);
+    </script>
+
+    总结：在目前开发中，原则上两种方式都可以
+    createElement 优：是在内存执行，时间耗费较少 缺：代码 思路 比较复杂
+    innerHTML 优：代码 思维 比较简洁 缺：本质是字符拼接（只要是字符拼接是高频消耗）
+
+    以后只要是创建节点，就用 innerHTML
+</body>
+
+</html>
