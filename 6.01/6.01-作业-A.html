@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.01-A</title>
+</head>
+
+<body>
+    <p>这是a页面 可以帮助我们去完成 页面传递数据其中一种</p>
+    <input type="text" id="userName">
+    <input type="password" id="password">
+    <label for="man"><input type="radio" id="man" name="sex" value="男士">男</label>
+    <label for="woman"><input type="radio" id="woman" name="sex" value="女士">女</label>
+    <div><input type="text" name="" id="money">请输入你的金钱</div>
+    <textarea name="" id="textbox" cols="30" rows="10"></textarea>
+
+    <button>点我传递信息给b页面</button>
+    <script>
+        let sex
+        let userName = document.querySelector('#userName')
+        let password = document.querySelector('#password')
+        let textbox = document.querySelector('#textbox')
+        let btn = document.querySelector('button')
+
+        // 点击信息传递
+        btn.addEventListener('click', function () {
+            let date = new Date()
+            console.log(date.getTime());
+            let obj = document.getElementsByName('sex')
+            for (let i = 0; i < obj.length; i++) {
+                if (obj[i].checked) {
+                    sex = obj[i].value
+                }
+                let str = `./6.01-作业-B.html?userName=${userName.value}&password=${password.value}&sex=${sex}&money=${money.value}&time=${date.getTime()}&textbox=${textbox.value}`
+                location.assign(str)
+            }
+        })
+    </script>
+</body>
+
+</html>

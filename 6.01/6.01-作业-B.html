@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.01-B</title>
+</head>
+
+<body>
+    <button>点我回去A</button>
+    <script>
+        let arr = decodeURIComponent(location.search)
+        console.log(arr);
+        arr = arr.slice(1)
+        arr = arr.split('&')
+        console.log(arr);
+        let obj = {}
+        arr.forEach(function (ele) {
+            let newArr = ele.split('=')
+            console.log(newArr);
+            obj[newArr[0]] = newArr[1]
+        })
+        console.log(obj);
+
+
+        // 性别
+        // if (obj.sex == 0) {
+        //     obj.sex = '男士'
+        // } else {
+        //     obj.sex = '女士'
+        // }
+
+        // 密码
+        let text = ''
+        let newArr = (obj.password).split('')
+        console.log(newArr);
+        let a = newArr.slice(1, newArr.length - 1)
+        console.log(a.length);
+        for (let i = 0; i < a.length; i++) {
+            text = text + "*"
+        }
+        obj.password = newArr[0] + text + newArr[newArr.length - 1]
+
+        // 金额
+        let str = obj.money
+        let str2 = str.split('')
+        function fn (str) {
+            // 有小数
+            if (str2.indexOf('.') !== -1) {
+                let newArr = str.split('.')
+                str = newArr[0]
+                let newArr2 = ''
+                while (str.length > 3) {
+                    newArr2 = ',' + str.slice(-3) + newArr2
+                    str = str.slice(0, str.length - 3)
+                }
+                if (str) {
+                    str = str + newArr2
+                }
+                str = '$' + str + '.' + newArr[1]
+            } else {//没有小数
+                let newArr = str.split()
+                str = newArr[0]
+                let newArr2 = ''
+                while (str.length > 3) {
+                    console.log(str.slice(-3));
+                    newArr2 = ',' + str.slice(-3) + newArr2
+                    console.log(newArr2);
+                    str = str.slice(0, str.length - 3)
+                }
+                if (str) {
+                    str = '$' + str + newArr2 + '.00'
+                }
+            }
+            return str
+        }
+        obj.money = fn(str)
+        console.log(obj.money);
+
+
+
+        // 时间
+        function Time (timestamp) {
+            let date = new Date(parseInt(obj.time))
+            let year = date.getFullYear()
+            let month = date.getMonth() + 1
+            month = month < 10 ? '0' + month : month
+            let day2 = date.getDate() < 10 ? '0' + date.getDate() : date.getDate()
+            let hnur = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
+            let minutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
+            let second = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()
+
+            let str = `${year}-${month}-${day2}- ${hnur}:${minutes}:${second}`
+            obj.time = str
+        }
+        Time(obj.time);
+
+        // 判断次数
+        let max = 0
+        let max_char = ''
+        let max2 = 0
+        let b = ''
+        function fn2 (str) {
+            let obj = {} //存放字符和次数
+            for (let i = 0; i < str.length; i++) {
+                if (obj[str.charAt(i)]) {
+                    obj[str.charAt(i)]++
+                } else {
+                    obj[str.charAt(i)] = 1
+                }
+            }
+            console.log(obj);
+            for (let key in obj) {
+                if (obj[key] > max) {
+                    max = obj[key]
+                    max_char = key
+                }
+                if (obj[key] == max) {
+                    max2 = key
+                    b = obj[key]
+                }
+            }
+        }
+        fn2(obj.textbox)
+
+        // 输出
+        let body = document.querySelector('body')
+        body.innerHTML += `
+            <p>姓名:${obj.userName} ${obj.sex}</p>
+            <p>密码:${obj.password}</p>
+            <p>金额:${obj.money}</p>
+            <p>填写时间:${obj.time}</p>
+            <p>填写内容:${obj.textbox}</p>
+            <p>最多的字符是${max_char},出现的次数是${max}</p>
+            <p>最多的字符是${max2},出现的次数是${b}</p>
+            `
+
+        // 点击
+        let btn = document.querySelector('button')
+        btn.addEventListener('click', function () {
+            let str = `./6.01-作业-A.html`
+            location.assign(str)
+        })
+    </script>
+</body>
+
+</html>

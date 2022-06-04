@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改样式练习</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: aquamarine;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .box_title {
+            width: 100%;
+            height: 100px;
+            background-color: pink;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .title {
+            width: 150px;
+            font-size: 40px;
+            line-height: 100px;
+            text-align: center;
+            background-color: green;
+        }
+
+        .box_content {
+            width: 100%;
+            height: 400px;
+            background-color: blueviolet;
+            position: relative;
+        }
+
+        .content {
+            position: absolute;
+            text-align: center;
+            font-size: 40px;
+            line-height: 400px;
+            width: 100%;
+            height: 100%;
+            background-color: cadetblue;
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 选项卡：点击不同的title，在同一块区域内实现不同的内容 -->
+    <div class="box">
+        <div class="box_title">
+            <div class="title">服装</div>
+            <div class="title">美食</div>
+            <div class="title">护肤品</div>
+        </div>
+
+        <div class="box_content">
+            <div class="content active">服装内容</div>
+            <div class="content">美食内容</div>
+            <div class="content">护肤品内容</div>
+        </div>
+    </div>
+    <script>
+        // 1.分析你的事件源（源头） 你要点击的东西是谁
+        // 2.分析出 获取元素并且绑定事件
+        // 3.分析点击之后 我们影响操作了谁
+        // content属性中的class
+        // let title = document.querySelectorAll('.title')
+        // let contents = document.querySelectorAll('.content')
+        // title.forEach(function (ele, index) {
+        //     ele.addEventListener('click', function () {
+        //         // 接下来点击之后要处理的内容
+        //         // 我们如何知道点击title之后找到对应的content
+        //         // content[index] 点击之后title对应的content
+        //         console.log(contents[index]);
+        //         // 对这个节点 添加 active
+        //         // 清除上一次的 active  
+        //         // 小技巧：不管你点击的是哪一个 先通过循环的方式 将所有的节点清空
+        //         contents.forEach(function (ele) {
+        //             ele.classList.remove('active')
+        //         })
+        //         contents[index].classList.add('active')
+        //         // 记住：循环是一件非常耗费性能的玩意  能免则免
+        //     })
+        // })
+
+
+
+        // 精确定位
+        let title = document.querySelectorAll('.title')
+        let contents = document.querySelectorAll('.content')
+        let oldIndex = 0
+        title.forEach(function (ele, index) {
+            ele.addEventListener('click', function () {
+                // 接下来点击之后要处理的内容
+                // 我们如何知道点击title之后找到对应的content
+                // content[index] 点击之后title对应的content
+                console.log(contents[index]);
+                // 对这个节点 添加 active
+                // 清除上一次的 active  
+                // 小技巧：不管你点击的是哪一个 先通过循环的方式 将所有的节点清空
+                // contents.forEach(function (ele) {
+                //     ele.classList.remove('active')
+                // })
+                contents[oldIndex].classList.remove('active')
+                contents[index].classList.add('active')
+                oldIndex = index
+                // 记住：循环是一件非常耗费性能的玩意  能免则免
+            })
+        })
+    </script>
+</body>
+
+</html>

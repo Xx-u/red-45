@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>端午作业</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .top {
+            margin: 0 auto;
+            width: 250px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .body {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 920px;
+            height: 500px;
+            background-color: #F4F4F4;
+            border-radius: 10px;
+        }
+
+        .left {
+            display: flex;
+            flex-wrap: wrap;
+            width: 300px;
+            border-right: 2px solid #000;
+        }
+
+        .button {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            width: 90%;
+            height: 80%;
+            border-radius: 10px;
+            font-size: 24px;
+        }
+
+        .right-top {
+            display: flex;
+            justify-content: space-between;
+            width: 600px;
+            height: 60px;
+            border-bottom: 2px solid #000;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 60px;
+        }
+
+        .textbox {
+            display: flex;
+            justify-content: space-between;
+            width: 600px;
+            height: 60px;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 60px;
+        }
+
+        .right {
+            position: relative;
+        }
+
+        .buttom {
+            position: absolute;
+            top: 500px;
+            left: -20px;
+            width: 620px;
+            height: 60px;
+        }
+
+        .textbox2 {
+            display: flex;
+            justify-content: space-between;
+            width: 600px;
+            height: 60px;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 60px;
+        }
+
+        .active {
+            border-radius: 10px;
+            background-color: #F4F4F4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <h1>DOM数组方法</h1>
+    </div>
+    <div class="body">
+        <div class="left">
+            <div class="button">
+                <button class="userName">添加账户👴</button>
+            </div>
+            <div class="button">
+                <button class="money">资金翻倍💰</button>
+            </div>
+            <div class="button">
+                <button class="query">查询百万富翁💴</button>
+            </div>
+            <div class="button">
+                <button class="Richlist">财富榜↓</button>
+            </div>
+            <div class="button">
+                <button class="calculate">计算总金额🧮</button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-top">
+                <span>Person</span>
+                <span>Wealth</span>
+            </div>
+            <div class="rightTetx">
+            </div>
+            <div class="buttom">
+            </div>
+        </div>
+    </div>
+    <script>
+        // 列表
+        let data = [
+            { name: "English chan", money: 392001 },
+            { name: "alex chan", money: 568932 },
+            { name: "melon chan", money: 698756 },
+            { name: "Clare Langner", money: 292489 },
+            { name: "Abigail Rice", money: 953957 },
+            { name: "Clarice Dias", money: 168472 },
+            { name: "Vernon Lucas", money: 718225 },
+            { name: "Nina Schmidt", money: 889147 },
+        ];
+        /*
+        功能：渲染数据
+        返回：数据
+        */
+        function Renderdata (obj) {
+            textBtn.innerHTML += `
+                        <div class="textbox"><span>${obj.name}</span><span>${changMoney(obj.money)}</span></div>
+                    `
+        }
+        /*
+        功能：渲染总额
+        */
+        function Rental (arr) {
+            let buttom = document.querySelector('.buttom')
+            buttom.innerHTML += `
+                        <div class="textbox2"><span>总额</span><span>${changMoney(arr)}</span></div>
+                    `
+        }
+
+        /*
+        功能：金钱分隔逗号
+        返回：分隔完成的金钱
+        */
+        function changMoney (money) {
+            let netMoney = ''
+            netMoney = '$' + Number(money).toLocaleString() + '.00'
+            return netMoney
+        }
+
+
+        /*
+        功能：字符串转数字
+        返回：数字
+        */
+        function newMoney (str) {
+            let newArr = ''
+            num = str.slice(1).slice(0, -3).split('')
+            num = num.filter(function (ele) {
+                return ele != ','
+            })
+            num.forEach(function (ele) {
+                newArr += ele
+            })
+            return Number(newArr)
+        }
+
+        /*
+        功能：从小到大排序
+        返回：排序后的数组
+        */
+        function Sorting (conver) {
+            conver.sort(function (a, b) {
+                a = newMoney(a.children[1].innerHTML)
+                b = newMoney(b.children[1].innerHTML)
+                return a - b
+            })
+            console.log(conver);
+            conver.forEach(function (ele) {
+                textBtn.appendChild(ele)
+            })
+        }
+
+
+
+        // 添加用户
+        let nameBtn = document.querySelector('.userName')
+        let textBtn = document.querySelector('.rightTetx')
+        let count = -1
+        let i = 0
+        nameBtn.addEventListener('click', function () {
+            count++
+            i++
+            if (i <= data.length) {
+                let obj = data[count]
+                Renderdata(obj)
+            } else {
+                alert('没有更多数据')
+            }
+        })
+
+        // 资金翻倍
+        let moneyBtn = document.querySelector('.money')
+        moneyBtn.addEventListener('click', function () {
+            let textbox = document.querySelectorAll('.textbox')
+            textbox.forEach(function (ele, index) {
+                let objMoney = changMoney(newMoney(textbox[index].children[1].innerHTML) * 2)
+                textbox[index].children[1].innerHTML = objMoney
+            })
+        })
+
+        // 查询百万富翁
+        let queryBtn = document.querySelector('.query')
+        queryBtn.addEventListener('click', function () {
+            let textbox = document.querySelectorAll('.textbox')
+            textbox.forEach(function (ele, index) {
+                if (newMoney(ele.children[1].innerHTML) >= 1000000) {
+                    console.log(ele);
+                } else {
+                    ele.remove()
+                }
+            })
+        })
+
+        // 财富榜
+        let RichlistBtn = document.querySelector('.Richlist')
+        RichlistBtn.addEventListener('click', function () {
+            let textbox = document.querySelectorAll('.textbox')
+            let conver = Array.from(textbox)
+            Sorting(conver)
+        })
+
+        // 计算总金额
+        let calculateBtn = document.querySelector('.calculate')
+        calculateBtn.addEventListener('click', function () {
+            let textbox = document.querySelectorAll('.textbox')
+            let textbox2 = document.querySelectorAll('.textbox2')
+            let buttom = document.querySelector('.buttom')
+            buttom.classList.add('active')
+            textbox2.forEach(function (ele) {
+                ele.remove()
+            })
+            let num = []
+            for (let i = 0; i < textbox.length; i++) {
+                num.push(newMoney(textbox[i].children[1].innerHTML))
+            }
+            let arr = num.reduce(function (sum, ele, index) {
+                sum += ele;
+                return sum
+            }, 0)
+            Rental(arr)
+        })
+
+    </script>
+</body>
+
+</html>

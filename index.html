@@ -12,32 +12,132 @@
 </head>
 
 <body>
+    <!-- 左侧边框 -->
+    <div class="center">
+        <div class="center_img">
+            <div class="img">
+                <img src="./主页代码/images/微信图片_20220520120643.jpg" alt="">
+            </div>
+        </div>
+        <div class="center_text">
+            <span>主页</span>
+        </div>
+        <div class="center_text">
+            <span>作业</span>
+        </div>
+        <div class="center_text">
+            <span>简介</span>
+        </div>
+        <div class="center_text">
+            <span>联系</span>
+        </div>
+    </div>
     <div class="body">
-        <!-- 头部导航栏区域 -->
-        <div class="top">
-            <div class="topOne">
-                <div class="topOne-logo">
-                    <span>Xx</span>
-                </div>
-                <div class="topOne-text">
-                    <a href="./../../index.html"><span>首页</span></a>
-                    <a href=""><span>个人介绍</span></a>
-                    <a href="./主页代码/pages/homework.html"><span>个人作业</span></a>
-                    <a href=""><span>兴趣爱好</span></a>
-                    <a href=""> <span>关于联系</span></a>
-                </div>
+        <!-- 图标 -->
+        <div class="box1">
+            <img src="./主页代码/images/微信图片_20220520120643.jpg" alt="">
+        </div>>
 
+        <!-- 内容区域 -->
+
+        <div class="homework">
+            <div class="list">
+                <div class="title">
+                    <span>四月</span>
+                    <div class="title-button">
+                        <i class="iconfont icon-xialajiantouxiao"></i>
+                    </div>
+                </div>
+                <div class="content">
+                    <a href="./4.19/作业/写给自己的一封信.md" target="_blank">4.19</a>
+                    <a href="./4.20/作业/4.20第一个页面.html" target="_blank">4.20</a>
+                    <a href="./4.21/作业/4.21-课程表.html" target="_blank">4.21</a>
+                    <a href="./4.21/作业/4.21-01注册界面.html" target="_blank">4.22</a>
+                    <a href="./4.22/作业/作业1.html" target="_blank">4.23</a>
+                </div>
+            </div>
+            <div class="list">
+                <div class="content">
+                    <a href="./4.23/练习.html" target="_blank">4.24</a>
+                    <a href="./4.25/作业/4.25.html" target="_blank">4.25</a>
+                    <a href="./4.26/作业/购票页面.html" target="_blank">4.26</a>
+                    <a href="./4.27/作业/bilibili.html" target="_blank">4.27</a>
+                    <a href="./4.28/作业/4.28.html" target="_blank">4.28</a>
+                </div>
+            </div>
+
+
+            <div class="list">
+                <div class="title">
+                    <span>五月</span>
+                    <div class="title-button">
+                        <i class="iconfont icon-xialajiantouxiao"></i>
+                    </div>
+                </div>
+                <div class="content">
+                    <a href="./4.30/渐变.html" target="_blank">5&nbsp;.&nbsp;1</a>
+                    <a href="./5.5-dingsou/pages/index.html" target="_blank">5&nbsp;.&nbsp;8</a>
+                    <a href="./5.9-mobile/pages/index.html" target="_blank">5.11</a>
+                    <a href="./5.12-electricity/pages/index.html" target="_blank">5.12</a>
+                    <a href="./5.17/作业/index.html" target="_blank">5.17</a>
+
+                </div>
+            </div>
+            <div class="list">
+                <div class="content">
+                    <a href="./5.18/上午/index.html" target="_blank">5.18</a>
+                    <a href="./5.18/作业/index.html" target="_blank">5.19</a>
+                    <a href="./5.20/作业/index.html" target="_blank">5.20</a>
+                    <a href="./5.23/作业.html" target="_blank">5.23</a>
+                    <a href="./5.24/5.24作业.html" target="_blank">5.24</a>
+                </div>
+            </div>
+            <div class="list">
+                <div class="content">
+                    <a href="./5.25/5.25-作业.html" target="_blank">5.25</a>
+                    <a href="./5.27/作业/index.html" target="_blank">5.27</a>
+                    <a href="./5.30/下午/节点操作练习2.html" target="_blank">5.30</a>
+                    <a href="./5.31/5.31-作业.html" target="_blank">5.31</a>
+                </div>
+            </div>
+
+
+
+            <div class="list">
+                <div class="title">
+                    <span>六月</span>
+                    <div class="title-button">
+                        <i class="iconfont icon-xialajiantouxiao"></i>
+                    </div>
+                </div>
+                <div class="content">
+                    <a href="./6.01/6.01-作业-A.html" target="_blank">6.01</a>
+                    <a href="./6.02/a的作业.html" target="_blank">6.02</a>
+                    <a href="./6.03/端午作业.html" target="_blank">6.03</a>
+                </div>
             </div>
         </div>
 
-
-        <!-- 图片区域 -->
-        <div class="middle-img">
-            <img src="./主页代码/images/fefe370c097bda6450e3b49298867b0d_482x264.jpg" alt="">
-        </div>
-
     </div>
-</body>
 
+    <script>
+        let title2 = document.querySelector('.box1')
+
+        title2.addEventListener('click', function () {
+            let contents2 = document.querySelector('.body')
+            document.body.classList.remove('active2')
+            document.body.classList.add('active1')
+            // title2.remove('active3')
+            // title2.add('active')
+        })
+        let img = document.querySelector('.img')
+        img.addEventListener('click', function () {
+            document.body.classList.remove('active1')
+            document.body.classList.add('active2')
+            // title2.remove('active')
+            // title2.add('active3')
+        })
+    </script>
+</body>
 
 </html>

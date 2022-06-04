@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A页面</title>
+</head>
+
+<body>
+    <!-- 在url上传递中文
+    url上URL编码格式，中文字符，对照URL编码 -->
+    <input type="text" placeholder="输入用户名" class="uname">
+    <input type="text" placeholder="输入密码" class="pwd">
+    <input type="radio" value="1" id="male" name="sex">
+    <label for="male">男</label>
+    <input type="radio" value="0" id="female" name="sex">
+    <label for="female">女</label>
+    <input type="text" name="请输入金额" id="money">请输入你的金钱
+    <textarea name="" id="long" cols="30" rows="10"></textarea>
+
+    <button>点我把信息传递个b页面</button>
+    <script>
+        let btn = document.querySelector('button');
+        let uname = document.querySelector('.uname');
+        let long = document.querySelector('#long')
+        let pwd = document.querySelector('.pwd')
+        let money = document.querySelector('#money')
+        let radio = document.querySelectorAll('input[type=radio]')
+        let val;
+
+        radio.forEach(function (ele, index) {
+            ele.addEventListener('click', function () {
+                if (radio[index].checked) {
+                    val = radio[index].value
+                }
+            })
+        })
+
+
+        btn.addEventListener('click', function () {
+            // 先点击查看字符拼接是否成功
+            let unameVel = uname.value
+            let pwdVel = pwd.value
+            let moneyVel = money.value
+            let longVel = long.value
+            let time = +new Date()
+            let str = `./b的作业.html?name=${unameVel}&sex=${val}&pwd=${pwdVel}&money=${moneyVel}&long=${longVel}&time=${time}`
+            location.assign(str)
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B</title>
+</head>
+
+<body>
+    <h1>B</h1>
+    <div class="demo"></div>
+
+    <script>
+        // 1.获取数据
+        // 2.将字符串转成对象
+        // 3.通过innerHTML渲染页面上面
+        let arr = location.search
+        console.log(arr);
+        arr = arr.slice(1)
+        arr = arr.split('&')
+        console.log(arr);
+        let obj = {}
+        arr.forEach(function (ele) {
+            let newArr = ele.split('=')
+            console.log(newArr);
+            obj[newArr[0]] = newArr[1]
+        })
+        console.log(obj);
+        let body = document.querySelector('body')
+        for (let key in obj) {
+            body.innerHTML += `
+            <span>${key}</span>:<span>${obj[key]}</span>
+            `
+        }
+    </script>
+</body>
+
+</html>

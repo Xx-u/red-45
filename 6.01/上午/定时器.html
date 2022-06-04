@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+
+<body>
+    <button>点我周期定时器停止</button>
+    <script>
+        console.log(window);
+        var a = 1  //自动挂在到window对象，形成一个属性  平时忽略不写
+        console.log(window.a);
+        // 自动挂在到window对象，形成一个方法
+        function add () {
+            console.log('add');
+        }
+        window.add()
+        let b = 1
+        console.log(window.b);//undefined
+        // ES6的声明方式就不是挂载到window对象中，脱离window对象，自己在内存开辟一个新的空间来存放变量
+
+        // 知识扩展：用在面试中
+        // 13-27:TDZ暂时性死区   tempora  dead  zone
+        // 概念：从变量定义到开始标签一个区域
+        // console.log(x);
+        // let x = 2
+
+        // alert()
+        // prompt()
+
+        // 定时器  只执行一次
+        // 在页面刷新，在1000ms后调用前面的函数
+        let timer = setTimeout(function () {
+            console.log('666');
+        }, 1000)
+
+        // 周期性定时器   不断的执行
+        let timer1 = setInterval(function () {
+            console.log('6666');
+        }, 1000)
+
+        console.log(timer);
+        console.log(timer1);
+        // 清除定时器
+        let button = document.querySelector('button')
+        button.addEventListener('click', function () {
+            clearTimeout(2)
+        })
+    </script>
+</body>
+
+</html>

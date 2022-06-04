@@ -1,22 +1,175 @@
 @charset "UTF-8";
-@import "./../common/common";
 
-
-.top .topOne .topOne-text a:first-child span {
-    color: red;
+body {
+    overflow-x: hidden;
+    background-image: url('./../images/56081f2333c59e1aeed7e13e317941eb2_482x264.png');
+    background-size: auto 180%;
 }
 
-.top {}
-
-
-// 图片区域
-.middle-img {
-    margin-top: 10px;
+.body {
     width: 100%;
-    height: 660px;
+    height: 100%;
+}
+
+// 图标
+
+.box1 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 100px;
+    height: 100px;
+    transition: all 1s ease;
+    animation: son 2s infinite linear;
 
     img {
+        border-radius: 50%;
         width: 100%;
         height: 100%;
+    }
+}
+
+
+// 内容区域
+.homework {
+    // display: flex;
+    font-size: 18px;
+    width: 550px;
+    margin: 50px auto;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    border-radius: 10px;
+
+    .title {
+        // margin-top: 10px;
+        // margin-left: 10px;
+        display: flex;
+        font-size: 24px;
+        font-weight: 600;
+
+        span {
+            color: blueviolet;
+        }
+
+        .title-button {
+            margin-left: 10px;
+        }
+    }
+
+
+    .content {
+
+        a {
+            /* 改变行内块元素 */
+            display: inline-block;
+            /* 设置文字垂直居中 */
+            vertical-align: middle;
+            /* 内边距填充 */
+            padding: 30px;
+            /* 间隔距离 */
+            margin: 5px auto;
+            text-align: center;
+            color: yellow;
+        }
+    }
+}
+
+// 左侧边栏
+.center {
+    // display: none;
+    position: absolute;
+    width: 200px;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    left: -200px;
+    // border-right: 1px solid #fff;
+
+    .center_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        border-bottom: 1px solid #fff;
+
+
+        .img {
+            width: 100px;
+            height: 100px;
+
+            img {
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .center_text {
+        line-height: 80px;
+        font-size: 20px;
+        width: 200px;
+        height: 80px;
+        border-bottom: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            color: #fff;
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+}
+
+
+.active {
+    display: none;
+}
+
+.active3 {
+    display: block;
+}
+
+.active1 {
+    transform: translateX(201px);
+    transition: all .5s ease;
+}
+
+.active2 {
+    transform: translateX(0);
+    transition: all .5s ease;
+}
+
+.list a:hover {
+    /*鼠标悬停在a标签身上时，显示背景*/
+    background-color: #BEBEBF;
+    /* 设置圆角 */
+    /* border-radius: 10px; */
+}
+
+.list a::after {
+    content: '';
+}
+
+.center span:hover {
+    background-color: #BEBEBF;
+
+}
+
+.list span::after {
+    content: '';
+}
+
+.box1:hover {
+    animation-play-state: paused;
+}
+
+@keyframes son {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }

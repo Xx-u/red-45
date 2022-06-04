@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom-Part2</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .skeblue {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="box">获取</button>
+    <script>
+        let type = navigator.userAgent
+        let box = document.querySelector('.box')
+        box.addEventListener('click', function () {
+            // if (type.indexOf('iPhone') != -1) {
+            //     box.classList.add('skeblue')
+            // }
+            // if (type.indexOf('Android') != -1) {
+            //     box.classList.add('red')
+            // }
+            // 0是刷新 -1后退1页  1前进1页
+            history.go()
+            // 后退
+            history.back()
+            // 前进
+            history.forward()
+        })
+    </script>
+</body>
+
+</html>

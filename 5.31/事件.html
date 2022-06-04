@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+    <style>
+        .baba {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+
+        .son {
+            width: 300px;
+            height: 300px;
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+
+<body>
+    事件冒泡：先触发自身的事件函数，执行完毕后，触发上级事件，直到body结束
+    事件捕获：- 先触发上级事件函数，执行完毕后，再触发自身的事件，直到body结束
+
+    如何设置事件捕获或者冒泡
+    - node.addEventListener(事件类型，事件处理函数，事件冒泡或者捕获)
+    事件冒泡或者捕获 是一个布尔值
+    默认值是false 事件是冒泡
+    为true 事件是捕获
+    <div class="baba">
+        <div class="son"></div>
+    </div>
+
+    <form action="">
+        <input type="text">
+        <button type="submit">点击</button>
+        <!-- submit  是默认行为  点击后自动刷新 -->
+    </form>
+
+    <a href="">跳转</a>
+    <script>
+
+        let btn = document.querySelector('button')
+        btn.addEventListener('click', function (e) {
+            e.preventDefault()
+        })
+
+        // btn.onclick = function (e) {
+        //     e.preventDefault()
+        //     console.log('click');
+        // }
+
+
+
+        let baba = document.querySelector('.baba')
+        let son = document.querySelector('.son')
+        baba.addEventListener('click', function (e) {
+            console.log(e);
+            console.log('baba');
+        }, false)
+        son.addEventListener('click', function (e) {
+            console.log(e);
+            e.stopPropagation()
+            console.log('son');
+        }, false)
+    </script>
+</body>
+
+</html>

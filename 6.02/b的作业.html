@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B页面</title>
+</head>
+
+<body>
+    <!-- 接收数据
+    处理数据  字符串转对象
+    渲染
+    渲染的过程中也要做处理 -->
+    <div class="dmeo"></div>
+    <script>
+
+        /*
+        功能：字符串转对象
+        返回一个对象
+        */
+        function getObj (date) {
+            let obj = {}
+            // 开始处理数据 ?name=alex&pwd=123
+            // 1.把？去掉   name=alex&pwd=123
+            date = date.substring(1)
+            // 2.把&去掉
+            date = date.split('&')
+            date.forEach(function (ele) {
+                let item = ele.split('=')
+                obj[item[0]] = item[1]
+                // obj[name] = alex
+            })
+            return obj
+        }
+
+        /*
+        功能：根据数据渲染到页面，你要渲染的节点位置
+        参数：要渲染的数据返回值
+        返回：无
+        */
+        function print (date) {
+            dmeo.innerHTML = `
+                <div>
+                    <sapn>姓名:</span>
+                    <sapn>${obj.name} ${Number(obj.sex) ? '男士' : '女士'}</span>
+                </div>
+                <div>
+                    <sapn>密码:</span>
+                    <sapn>${cover(obj.pwd)}</span>
+                </div>
+                <div>
+                    <sapn>金额:</span>
+                    <sapn>${changMoney(obj.money)}</span>
+                </div>
+                <div>
+                    <sapn>填写时间:</span>
+                    <sapn>${Time(obj.time)}</span>
+                </div>
+                <div>
+                    <sapn>填写内容:</span>
+                    <sapn>${obj.long}</span>
+                </div>
+           `
+        }
+
+
+        /*
+        功能：密码遮掩
+        功能：完成的遮掩
+        */
+        function cover (str) {
+            // str 12345 =》1***5
+            // 只保留首尾，中间都是***
+            let netStr = ''
+            let back = str[str.length - 1]
+            let front = str[0]
+            netStr += front//netStr '1'
+            for (let i = 0; i < str.length - 2; i++) {
+                newStr += '*'
+            }
+            netStr += back
+            return netStr
+        }
+
+        /*
+        功能：金钱分隔逗号
+        返回：分隔完成的金钱
+        */
+        function changMoney (money) {
+            let netMoney = ''
+            netMoney = '$' + Number(money).toLocaleString() + '.00'
+            return netMoney
+        }
+
+
+        /*
+        功能：时间戳转正常显示
+        返回：正常时间显示
+        */
+        function Time (timestamp) {
+            let date = new Date(parseInt(obj.time))
+            let year = date.getFullYear()
+            let month = date.getMonth() + 1
+            month = month < 10 ? '0' + month : month
+            let day2 = date.getDate() < 10 ? '0' + date.getDate() : date.getDate()
+            let hnur = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
+            let minutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
+            let second = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()
+            let str = `${year}-${month}-${day2}- ${hnur}:${minutes}:${second}`
+            return str
+        }
+
+        /*
+        功能：
+        */
+
+        // 1.接收数据
+        let str = location.search
+        // 2.处理数据  字符串转对象
+        let obj = getObj(str)
+        // 3.渲染   >1.)不要考虑处理的数据 2.)直接渲染数据
+        let dmeo = document.querySelector('.dmeo')
+        print(obj.demo)
+
+    </script>
+</body>
+
+</html>

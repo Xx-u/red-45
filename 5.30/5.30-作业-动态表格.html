@@ -40,7 +40,6 @@
         let length = tbody.firstElementChild.children.length
         // console.log(tbody.firstElementChild.children.length);
         let count = -1
-        let count2 = -1
         let i = 0
         addBtn.addEventListener('click', function () {
             i++
@@ -48,38 +47,58 @@
                 count++
                 let obj = info[count]
                 // 创建tr td
-                let tr = document.createElement('tr')
-                // ele 指的是每个对象
-                for (let key in obj) {
-                    let td = document.createElement('td')
-                    td.innerHTML = obj[key]
-                    tr.appendChild(td)
-                }
-                let td = document.createElement('td')
-                td.innerHTML = '<button class="btn">删除</button>'
-                tr.appendChild(td)
-                let td1 = document.createElement('td')
-                td1.innerHTML = '<input type="checkbox" class="checkOne">'
-                tr.appendChild(td1)
-                tbody.appendChild(tr)
+                // let tr = document.createElement('tr')
+                // // ele 指的是每个对象
+                // for (let key in obj) {
+                //     let td = document.createElement('td')
+                //     td.innerHTML = obj[key]
+                //     tr.appendChild(td)
+                // }
+                // let td = document.createElement('td')
+                // td.innerHTML = '<button class="btn">删除</button>'
+                // tr.appendChild(td)
+                // let td1 = document.createElement('td')
+                // td1.innerHTML = '<input type="checkbox" class="checkOne">'
+                // tr.appendChild(td1)
+                // tbody.appendChild(tr)
 
+
+                tbody.innerHTML += `
+                                <tr>
+                                    <td>${obj.name}</td>
+                                    <td>${obj.age}</td>
+                                    <td><button class="btn">删除</button></td>
+                                    <td><input type="checkbox" class="checkOne"></td>
+                                </tr>
+                                `
 
                 // 点击删除
-                let tdBtn = document.querySelectorAll('.btn')
-                // console.log(tdBtn);
-                tdBtn.forEach(function (ele) {
-                    ele.addEventListener('click', function () {
-                        ele.parentElement.parentElement.remove()
-                    })
+                // let tdBtn = document.querySelectorAll('.btn')
+                // // console.log(tdBtn);
+                // tdBtn.forEach(function (ele) {
+                //     ele.addEventListener('click', function () {
+                //         ele.parentElement.parentElement.remove()
+                //     })
+                // })
+
+                // 点击删除
+                // 事件委托
+                tbody.addEventListener('click', function (e) {
+                    // 判断当前的点击是点击到了删除按钮
+                    // 利用事件对象做判断
+                    console.log('click', e);
+                    if (e.target.className == 'btn') {
+                        e.target.parentElement.parentElement.remove()
+                    }
                 })
 
 
 
                 // 删除选中
-                let checkboxs = document.querySelectorAll('.checkOne')
                 // console.log(checkboxs);
                 let del = document.querySelector('.del')
                 del.addEventListener('click', function () {
+                    let checkboxs = document.querySelectorAll('.checkOne')
                     checkboxs.forEach(function (ele) {
                         if (ele.checked) {
                             ele.parentElement.parentElement.remove()
@@ -90,15 +109,13 @@
                 // 从小到大排序
                 let sort = document.querySelector('.sort')
                 sort.addEventListener('click', function () {
-                    let tr2 = document.querySelectorAll('tr')
+                    let tr2 = document.querySelectorAll('tr:not(:first-child)')
+                    console.log(tr2);
                     let arr = Array.from(tr2)
                     arr.sort(function (a, b) {
                         a = a.firstElementChild.nextElementSibling.innerHTML
                         b = b.firstElementChild.nextElementSibling.innerHTML
                         return a - b
-                    })
-                    tr2.forEach(function (ele, index) {
-                        ele.remove()
                     })
                     arr.forEach(function (ele, index) {
                         tbody.appendChild(ele)

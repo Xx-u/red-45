@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘事件</title>
+</head>
+
+<body>
+    <div class="demo"></div>
+    <script>
+        // 键盘事件
+        let body = document.querySelector('body')
+        body.addEventListener('keydown', function (e) {
+            console.log(e.keyCode);
+            // e.keyCode 返回的是一个具体的数字 ASCII
+            // 最好记住功能键 回车  空格  ESC
+            if (e.keyCode == 97) {
+                console.log('a');
+            }
+        })
+
+
+        // 页面事件
+        // 新建一个img节点
+        let img = new Image()
+        img.src = 'https://coderutil.oss-cn-beijing.aliyuncs.com/bbs-image/moyurili/20220601000001321873612213.png'
+        document.body.appendChild(img)
+        console.log(img);
+
+        img.onload = function () {
+            // img 图片回来了就会触发的事件
+            console.log('图片回来了');
+        }
+        img.onerror = function () {
+            // img 图片回来了就会触发的事件
+            console.log('图片加载失败');
+            alert('图片地址有误')
+        }
+    </script>
+</body>
+
+</html>
