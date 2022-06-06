@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .scroll {
+            width: 300px;
+            height: 2000px;
+            background-color: pink;
+            overflow: scroll;
+            /* 设置子元素不换行 */
+            white-space: nowrap;
+
+        }
+
+        p {
+            display: inline-block;
+
+        }
+    </style>
+    <div class="scroll">
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+        <p>今天星期一</p>
+    </div>
+    <script>
+        let scroll = document.querySelector('.scroll')
+
+        // 返回元素的宽度
+        console.log(scroll.scrollWidth);
+
+        // 如果不出现滚动条，直接返回设置的样式
+        // 当你的元素中出现滚动条，scrollWidth返回的是元素集合的总高度
+        // 当你的元素中出现滚动条，scrollHeight返回的是元素集合的总高度
+        console.log(scroll.scrollHeight);
+
+        // node.scrollLeft  横向滚动距离
+        // node.scrollTTop  纵向滚动距离
+        console.log(scroll.scrollLeft);
+
+        // 通常情况下，我们scroll系列是要搭配 scroll 事件
+
+
+        // document.documentElement.scrollTop  获取浏览器的滚动距离
+        document.addEventListener('scroll', function () {
+            console.log(document.documentElement.scrollTop);
+        })
+        document.addEventListener('click', function () {
+            // 通过定时器自动执行这个减法
+            let timer = setInterval(function () {
+                document.documentElement.scrollTop -= 100;
+                if (document.documentElement.scrollTop == 0) {
+                    // 清除定时器
+                    clearInterval(timer)
+                }
+            }, 16.66666667)
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client客户端</title>
+</head>
+
+<body>
+    <!-- client 和 offset 很相似 都是获取元素中的信息 -->
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .baba {
+            width: 500px;
+            height: 500px;
+            background-color: antiquewhite;
+            padding: 0 10px;
+        }
+
+        .son {
+            width: 300px;
+            height: 300px;
+            background-color: rebeccapurple;
+        }
+    </style>
+    <div class="baba">
+        <div class="son">
+        </div>
+    </div>
+    <div class="uncle" style="width: 100px;height: 300px;background-color: pink;"></div>
+</body>
+
+<script>
+    let baba = document.querySelector('.baba')
+    let son = document.querySelector('.son')
+
+    //node.clientWidth    node.clientHeight
+    // 返回自身的宽高，受padding的影响，跟borber  和  margin 无关
+    console.log(baba.clientWidth);
+    console.log(baba.clientHeight);
+
+    //node.clientTop   node.clientLeft
+    // 返回自身的border值(上边框、左边框)
+    console.log(baba.clientTop);
+    console.log(son.clientTop);
+    console.log(baba.clientLeft);
+    console.log(son.clientLeft);
+
+</script>
+
+</html>
