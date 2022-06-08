@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跨域</title>
+</head>
+
+<body>
+    <!-- 开发模式：前后分离
+    都会遇到一个问题：跨域问题
+    node server.js
+
+    "CORS policy: No 'Access-Control-Allow-Origin'"
+    以后看到上述报错，不是前端的错
+    跨域问题
+
+    为什么会产生这样的跨域问题？
+    答：浏览器是有一个安全机制：同源策略
+
+    同源策略：协议(http) 域名(IP地址) 端口
+    前端(客户端)和后台中 三者都不相同就会产生跨域问题
+
+    如何解决跨域：
+
+    1.CORS 是后台爸爸设置的
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    前端就解决了跨域问题
+
+    2.JSONP 是要依赖后台解决的
+    3.NGINX 服务器配置 apache 
+    开启一个服务器 
+    服务器之间的通信是不会有同源策略
+    同源策略只存在于客户端(前端)
+    4.ifame(偏门 舍弃)
+    -->
+    <script>
+        fetch('http://localhost:7777/alex')
+            .then(function (res) {
+                return res.json()
+            })
+            .then(function (res) {
+                console.log(res);
+            })
+    </script>
+</body>
+
+</html>

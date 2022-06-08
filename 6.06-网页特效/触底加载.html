@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>触底加载</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 100%;
+            height: 2000px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+<script>
+    window.addEventListener('scroll', function () {
+        let scrollTop = document.documentElement.scrollTop
+        let clientHeight = document.documentElement.clientHeight
+        let scrollHeight = document.documentElement.scrollHeight
+        console.log(scrollTop);//滚动条的距离 =  内容被卷的高度
+        console.log(clientHeight);//元素在浏览器的高度
+        console.log(scrollHeight);//box 的高度2000
+        let num = scrollTop + clientHeight
+        if (num / scrollHeight > 0.8) {
+            console.log("即将到底");
+        }
+    })
+</script>
+
+</html>

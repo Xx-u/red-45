@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.07-作业</title>
+</head>
+
+<body>
+    <div id="div1" class="box box-re form-inline">
+        <input type="text" class="form-control" id="keywords" placeholder="搜索歌曲" value="">
+
+        <button class="btn btn-info content" id="send">搜索</button>
+
+        <div style="margin: 10px 0;">
+            <button class="btn btn-info content disable" id="prev">上一页</button>
+            <button class="btn btn-info content disable" id="next">下一页</button>
+        </div>
+
+        <div>
+            <audio id="player" src="" controls></audio>
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+                <td>音乐标题</td>
+                <td>歌手</td>
+                <td>专辑</td>
+                <td>时长</td>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // ajkx
+        let limit = 10
+        let page = 0
+
+        // 获取节点
+        const keywords = document.getElementById('keywords')
+        const send = document.getElementById('send')
+        const tbody = document.querySelector('tbody')
+        const player = document.getElementById('player')
+        const prev = document.getElementById('prev')
+        const next = document.getElementById('next')
+
+        // 获取输入值
+        let val
+        keywords.addEventListener('input', function (ele) {
+            val = ele.target.value
+        })
+        // 获取网易云数据
+        function getPosts (cd) {
+            let xhr = new XMLHttpRequest()
+            let url = `http://netease.0melon0.cn/search?keywords='${val}'&limit=${limit}&page=${page}`
+            xhr.open("GET", url)
+            xhr.send()
+            xhr.addEventListener("readystatechange", function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    let data = JSON.parse(xhr.responseText)
+                    cd(data)
+                }
+            })
+        }
+
+
+        // 获取音频
+        tbody.addEventListener('click', (e) => {
+            let a = e.target.parentElement.getAttribute('data-id')
+            player.src = `https://music.163.com/song/media/outer/url?id=${a}.mp3`
+        })
+        // 渲染
+        function showPost () {
+            getPosts(function (data) {
+                let posts = data
+                console.log(posts);
+                let arr = []
+                for (let key in posts) {
+                    arr.push(posts[key])
+                    arr = arr.slice(0, 1)
+                }
+                let str
+                arr.forEach(function (ele) {
+                    str = ele.songs
+                })
+                str.forEach(function (ele) {
+                    const tr = document.createElement('tr')
+                    tr.setAttribute('data-id', ele.id)
+                    tr.innerHTML = `
+                                    <td>${ele.album.name}</td>
+                                    <td>${ele.artists[0].name}</td>
+                                    <td>${ele.name}</td>
+                                    <td>${MillisecondToDate(ele.duration)}</td>
+                                `
+                    tbody.appendChild(tr)
+                })
+            })
+        }
+
+        // 搜索
+        send.addEventListener('click', function () {
+            showPost()
+        })
+
+        // 下一页
+        next.addEventListener('click', function () {
+            tbody.children
+            limit += 10
+            page++
+            showPost()
+        })
+
+        function MillisecondToDate (msd) {
+            var time = parseFloat(msd) / 1000; //先将毫秒转化成秒
+            if (null != time && "" != time) {
+                if (time > 60 && time < 60 * 60) {
+                    let num = 0
+                    num = parseInt((parseFloat(time / 60.0) - parseInt(time / 60.0)) * 60)
+                    num = num > 9 ? num : '0' + num
+                    time = parseInt(time / 60.0) + ":" + num + "";
+                } else {
+                    time = parseInt(time) + "";
+                }
+            }
+            return time;
+        };
+
+
+    </script>
+</body>
+
+</html>

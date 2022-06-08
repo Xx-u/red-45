@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>富豪榜</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li>主页</li>
+            <li>排行榜</li>
+            <li>联系方式</li>
+        </ul>
+    </nav>
+    <!-- 头部内容 -->
+    <div class="box">
+        <header>
+            <!-- 导航栏的按钮 -->
+            <button id="toggle">导航栏</button>
+            <!-- 标题 -->
+            <h2>欢迎来到富豪排行榜</h2>
+            <!-- 欢迎语句 -->
+            <p>weclome to the rich rank</p>
+            <!-- 登陆按钮 -->
+            <!-- <button id="login">登陆</button> -->
+        </header>
+        <!-- 主题内容 -->
+        <div class="container">
+            <!-- 左盒子 -->
+            <aside>
+                <!-- 五个按钮 -->
+                <button id="add-user">添加账户</button>
+                <button id="double">资金翻倍</button>
+                <button id="show-millionaire">查询百万富翁</button>
+                <button id="sort">财富榜</button>
+                <button id="calculate">计算总额</button>
+            </aside>
+            <!-- 右盒子 -->
+            <main id="main">
+                <h2>
+                    <strong>Person</strong>
+                    <span>Wealth</span>
+                </h2>
+                <!-- <div class="person">
+            <strong>alex</strong>
+            <span>12222222</span>
+          </div> -->
+            </main>
+            <div id="moneyTotal">
+                <strong id="totalWord"></strong>
+                <span id="totalNum"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let data = [
+            { name: "English chan", money: 392001 },
+            { name: "alex chan", money: 568932 },
+            { name: "melon chan", money: 698756 },
+            { name: "Clare Langner", money: 292489 },
+            { name: "Abigail Rice", money: 953957 },
+            { name: "Clarice Dias", money: 168472 },
+            { name: "Vernon Lucas", money: 718225 },
+            { name: "Nina Schmidt", money: 889147 },
+        ];
+        // 获取节点
+        let addUser = document.querySelector("#add-user");
+        let double = document.querySelector("#double");
+        let showMillionaire = document.querySelector("#show-millionaire");
+        let sort = document.querySelector("#sort");
+        let calculate = document.querySelector("#calculate");
+        let main = document.querySelector("#main");
+        let totalWord = document.querySelector("#totalWord");
+        let totalNum = document.querySelector("#totalNum");
+
+        // 给按钮添加监听事件
+        addUser.addEventListener("click", addUserFn);
+        double.addEventListener("click", doubleFn);
+        showMillionaire.addEventListener("click", showMillionaireFn);
+        sort.addEventListener("click", sortFn);
+        calculate.addEventListener("click", calculateFn);
+        let count = 0;
+        let arr = [];
+        function addUserFn () {
+            count++;
+            arr.push(data[count]);
+            render(arr);
+        }
+        function doubleFn () {
+            arr.forEach(function (ele) {
+                ele.money *= 2;
+            });
+            render(arr);
+        }
+        function showMillionaireFn () {
+            //过滤操作filter
+            arr = arr.filter(function (ele) {
+                return ele.money >= 1000000;
+            });
+            render(arr);
+        }
+        function sortFn () {
+            arr.sort(function (a, b) {
+                return b.money - a.money;
+            });
+            render(arr);
+        }
+        function calculateFn () {
+            //   reduce
+            let total = 0;
+            console.log(arr);
+            total = arr.reduce(function (sum, ele) {
+                return (sum += ele.money);
+            }, 0);
+            console.log(total);
+            totalWord.innerHTML = `总金额`;
+            totalNum.innerHTML = `${changeMoney(total)}`;
+        }
+        function changeMoney (money) {
+            return `$${money.toLocaleString()}.00`;
+        }
+        //专门用来渲染的
+        function render (arr) {
+            //渲染数据
+            main.innerHTML = `
+                            <h2>
+                                <strong>Person</strong>
+                                <span>Wealth</span>
+                            </h2>
+                            `;
+            arr.forEach(function (ele) {
+                let div = document.createElement("div");
+                div.innerHTML = `
+                            <div class="person">
+                                 <strong>${ele.name}</strong>
+                                 <span>${changeMoney(ele.money)}</span>
+                             </div>
+                         `;
+                main.appendChild(div);
+            });
+        }
+    </script>
+</body>
+
+</html>

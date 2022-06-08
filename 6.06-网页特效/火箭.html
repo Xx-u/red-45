@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 100%;
+            height: 3000px;
+            background-color: pink;
+        }
+
+        .rocket {
+            position: fixed;
+            right: 0;
+            top: 80%;
+            width: 148px;
+            height: 249px;
+            background-image: url(./images/QQ图片20220606121809.png);
+            display: none;
+        }
+
+        .active {
+            animation: son 1s infinite steps(4);
+        }
+
+        .active1 {
+            display: block;
+        }
+
+        .rocket:hover {
+            background-position: -148px 0;
+        }
+
+        @keyframes son {
+            0% {
+                background-position: -296px 0;
+            }
+
+            100% {
+                background-position: -892px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="rocket"></div>
+    </div>
+    <script>
+        let rocket = document.querySelector('.rocket')
+        rocket.addEventListener('click', function () {
+            // 点火
+            rocket.classList.add('active')
+            // 升空
+            // 火箭移动距离  offsetTop + 火箭自身 offsetHeight
+            let rocket_distance = rocket.offsetTop + rocket.offsetHeight
+            // 火箭速度
+            let rocket_v = rocket_distance / 50;
+            let scroll_distance = document.documentElement.scrollTop;
+            let scroll_v = scroll_distance / 50;
+
+            // 事件1s  1000ms   20 50 
+            // 开启定时器目的  火箭慢慢升空
+            // 开启定时器，做rocket_distance的递减
+            let timer = setInterval(function () {
+                document.documentElement.scrollTop -= scroll_v;
+                rocket.style.top = `${rocket.offsetTop - rocket_v}px`;
+                if (document.documentElement.scrollTop == 0) {
+                    clearInterval(timer)
+                }
+            }, 20)
+        })
+        let body = document.querySelector('body')
+        console.log(body.offsetHeight * 0.2);
+        window.addEventListener('scroll', function () {
+            if (document.documentElement.scrollTop > body.offsetHeight * 0.2) {
+                rocket.classList.add('active1')
+            }
+        })
+
+    </script>
+</body>
+
+</html>

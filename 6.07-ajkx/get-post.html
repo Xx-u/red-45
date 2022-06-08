@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get</title>
+</head>
+
+<body>
+
+    <!-- get请求   放在url中-->
+    <!-- 除了学会ajkx的使用以外，学会看接口文档（后台提供）
+    四看一测
+    一看 请求地址
+    二看 请求方式
+    三看 参数
+    四看 返回（有的公司有 有的没有） -->
+    <!-- 1.get请求的参数是拼接在我们的url上的   offset  limit
+    
+    参数的意义在于，你设置不同的数值时，那么就会返回不同的数据 -->
+
+    <!-- 当请求报错的时候，打开浏览器，点击网络，查看请求，再看响应中是否有错提示，如果没有，再去看标头是否成功拼接 -->
+
+
+    <!-- post请求   放在请求体中-->
+    <!-- 一共有三种格式可以设置
+    设置请求体中的格式
+    key = value -->
+
+    <!-- application/x-www-form-urlencoded   将数据设置为键值对 
+    application/json                    将数据数字为json
+    application/formdata                用来上传文件 -->
+    <!-- socket.io                           实时通讯  流媒体  node.js -->
+    <script>
+        // get
+        let xhr = new XMLHttpRequest()
+        let url = `http://netease.0melon0.cn/search?keywords='周杰伦'&limit=10`;
+        // let url = "http://jsonplaceholder.typicode.com/posts?_limit=10&_page=1";
+        xhr.open("GET", url)
+        xhr.send()
+        xhr.addEventListener("readystatechange", function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                let data = JSON.parse(xhr.responseText)
+                console.log(data);
+            }
+        })
+
+        // post
+        // let xhr = new XMLHttpRequest()
+        // let url = "http://eggblog.0melon0.cn/api/user/login";
+        // xhr.open("POST", url)
+        // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+        // let a = "phone=18520234935&password=123456"
+        // xhr.send(a)
+        // xhr.addEventListener("readystatechange", function () {
+        //     if (xhr.readyState == 4 && xhr.responseText == 200) {
+        //         let data = JSON.parse(xhr.responseText)
+        //     }
+        // })
+
+    </script>
+</body>
+
+</html>
