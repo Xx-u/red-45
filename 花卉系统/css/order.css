@@ -1,0 +1,105 @@
+@charset "UTF-8";
+html {
+  font-size: 37.5px;
+}
+
+.body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: url("./../images/drawable-xhdpi/背景.png") no-repeat;
+  background-size: cover;
+}
+
+.bodybox {
+  margin: 0 auto;
+  margin-top: 5.313rem;
+  width: 18.438rem;
+  height: 26.219rem;
+  background-color: #ffffff;
+  background-color: rgba(255, 251, 251, 0.5);
+  -webkit-box-shadow: 0rem 0.125rem 0.416rem 0.147rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0rem 0.125rem 0.416rem 0.147rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.313rem;
+}
+
+.bodybox .bodybox-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 4.333rem;
+}
+
+.bodybox .bodybox-top span {
+  margin-left: 1.625rem;
+  width: 3.313rem;
+  height: 0.844rem;
+  font-family: SourceHanSansCN-Medium;
+  font-size: 0.938rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.313rem;
+  letter-spacing: 0rem;
+  color: #0075c1;
+}
+
+.bodybox .bodybox-content {
+  width: 100%;
+}
+
+.bodybox .bodybox-content table {
+  width: 100%;
+  font-size: 0.813rem;
+}
+
+.bodybox .bodybox-content table thead th {
+  color: #0075c1;
+}
+
+.bodybox .bodybox-content tr {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 60%;
+  height: 4.333rem;
+}
+
+.bodybox .bodybox-content tr td {
+  color: #434242;
+}
+
+.bodybox .bodybox-content .prompt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 4.333rem;
+}
+
+.bodybox .bodybox-content .prompt span {
+  text-align: center;
+  font-size: 0.813rem;
+  line-height: 0.563rem;
+  letter-spacing: 0rem;
+  color: #434242;
+}

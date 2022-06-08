@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+
+html {
+    font-size: 37.5px;
+}
+
+.body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: url("./../images/drawable-xhdpi/背景.png") no-repeat;
+    background-size: cover;
+}
