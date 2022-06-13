@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="1000px" height="800px">
+    </canvas>
+</body>
+<script>
+    // 1.获取canvas节点
+    const canvasEle = document.querySelector('#canvas');
+    // 2.控制canvas的内容
+    const ctx = canvasEle.getContext('2d');
+
+    // 1.根据图片的绝对路径找到图片的内容
+
+    // 生成img标签
+    const imgEle = document.createElement('img');
+
+    // 告诉img标签需要展示图片的路径
+    imgEle.src = `https://melono-1251395798.cos.ap-guangzhou.myqcloud.com/melon.png`
+
+    // 图片内容请求回来后，自动触发
+    imgEle.addEventListener('load', () => {
+        // 允许白名单  运行资源跨域访问
+        imgEle.crossOrigin = '';
+
+        // 根据图片宽高动态渲染
+        // canvasEle.setAttribute('width', imgEle.width)
+        // canvasEle.setAttribute('height', imgEle.height)
+
+        // 2.将图片的内容渲染到canvas上
+        ctx.drawImage(imgEle, 0, 0);
+
+        // 通过canvas将图片的内容转成base64
+        console.log(canvasEle.toDataURL());
+
+        // 3.通过canvas将图片的内容转成base64
+        canvasEle.toDataURL()
+
+        const aEle = document.createElement('a')
+
+        aEle.download = '邀请码.png'
+
+        aEle.href = canvasEle.toDataURL()
+
+        // aEle.click()
+    })
+</script>
+
+</html>

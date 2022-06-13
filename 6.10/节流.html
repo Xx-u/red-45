@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节流</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+
+<body>
+    节流
+    什么是？ 我们去设置一个时间，当我们的时间足够的长后，才会触发对应的事件处理
+    类似 scroll 系统的触发事件大约在300-500ms 之间
+
+    作用：降低事件的触发频率 滑动 10m 触发100次 节流触发10次
+
+    <script>
+        function handle (e) {
+            console.log(this);
+            console.log(e);
+        }
+        function throttle (fn, wait = 800) {
+            let previous = 0//记录时间
+            return function proxy () {
+                let that = this
+                // 往下滑的时候  触发proxy  很多次
+                // 当时间差足够的长的时候，长触发对应的事件处理函数
+                let now = +new Date//当前时间
+                if (now - previous > wait) {
+                    fn.apply(that, arguments)
+                    previous = now
+                }
+            }
+        }
+        window.addEventListener('scroll', throttle(handle))
+    </script>
+</body>
+
+</html>

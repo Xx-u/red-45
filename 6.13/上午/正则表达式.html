@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式</title>
+</head>
+
+<body>
+    作用：就是用来做表单的检验
+    在实际开发中，检验信息的正确性，合法性
+    目标：
+    1.学会编写简单正则表达式
+    2.学会如何在项目中使用
+
+    是什么
+    是一些由 字母+符号 通过固定的编写规则，通过这些规则我们可以更加方便的操作字符串
+
+    本质：就是用来操作字符串的
+
+    功能(字符串)：1.查找 2.替换 3.验证 4.分割
+
+
+    如何去写 正则
+    正则 是我们 js中一个内置对象
+
+    1.创建正则对象
+    (1).字面量创建
+    语法结构： /主体/匹配方式 匹配方式只有3个值： i m g(常用global)
+    主体：书写具体要查找的字符内容
+
+    (2). new + 构造函数创建
+    语法结构: new RegExp(主体，匹配方式)
+
+    2.正则表达式的方法
+
+    test()
+    参数：查找的字符
+    返回：true 或 false
+
+    exec()
+    参数：查找的字符
+    返回：(伪数组)类数组
+    0：查找的字符
+    groups:对应的分组
+    index:字符在字符串中对应的位置
+    input:参数
+
+    3.(重点) 如何编写正则(了解对应有什么规则)
+
+    为了方便大家记忆，按照功能来对一下规则分类：
+    (1).字符相关
+    普通字符
+    (2).数量相关
+    (3).位置相关
+    (4).括号相关
+
+</body>
+<script>
+
+    // 1.字符相关
+    // 普通字符
+    // let str = '123/'
+    // // let reg = /\d/g
+    // // let reg = /\w/g
+    // // let reg = /\s/g
+    // // let reg = /./g
+    // // let reg = /\./g
+    // let reg = /\//g
+    // console.log(reg.test(str));
+
+    // 2.数量相关  {}   ?  +  * 
+    // let str = 'ceeeeef'
+    // // let reg = /\d+/g  //连续出现的数字
+    // // let reg = /e{2}/g
+    // // let reg = /e?/g
+    // let reg = /e*/g
+    // console.log(reg.test(str));
+    // let res = str.match(reg)
+    // console.log(res);
+
+    // let str = '12345678'
+    // // let reg = /\d{1,4}/g
+    // // 默认就是贪婪匹配按照你设置最大次数去截取
+    // let reg = /\d{2,4}?/g
+    // // 这种称为惰性匹配，按照你设置的最小次数截取
+    // console.log(str.match(reg));
+
+    // 3.位置相关
+
+    // let str = 'this is book'
+    // // let reg = /^\d/g  //以数字开头
+    // // let reg = /^138\d+/g  //手机开头
+    // let reg = /\bis\b/g  //找的是is
+    // console.log(str.match(reg));
+    // // console.log(reg.test(str));
+
+    // 4.括号相关
+
+    // let str = 'ababababf'
+    // let reg = /(ab){3}/g
+    // console.log(str.match(reg));
+
+    // let str = '2022-06-13'
+    // let reg = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/g
+    // // console.log(str.match(reg));
+    // console.log(reg.exec(str));
+    // console.log(RegExp.$1);//第一个括号匹配的内容
+    // console.log(RegExp.$2);//第二个括号匹配的内容
+    // console.log(RegExp.$3);//第三个括号匹配的内容
+
+
+    let str = '1adzszxcsd'
+    // let reg = /^\d/g
+    let reg = /^[0-9]/g
+    console.log(reg.test(str));
+
+
+
+    // // 字面量创建
+    // let str = `zbcc`
+    // let reg = /c/g
+    // // 方法 test
+    // let bool = reg.test(str)
+    // console.log(bool);
+
+    // // 方法exec
+    // let a = reg.exec(str)
+    // console.log(a);
+    // // match方法  字符串里面的方法
+    // // 传入一个正则表达式,返回一个匹配的内容
+    // console.log(str.match(reg));
+
+    // // new + 构造函数创建
+    // let reg1 = new RegExp('b', 'g')
+    // console.log(str.match(reg1));
+
+
+
+
+    // let str = `123zbcxsdccxz345xcsdcds312`
+
+    // let reg = /\d+/g;
+    // let arr = str.match(reg)
+    // console.log(arr);
+
+    // 定义一个函数，把连续的数字放到一个新数组中
+    // arr = [123,345,312]
+    // 如果不会正则，我们只能通过数组或者字符的方式去完成
+
+
+    // 1.循环的去判断每个字符是不是数字
+    // 如果是数字 找一个变量保存起来 temp = ""
+    // temp = "123"
+    // 当判断到元素不是一个数字后  停止拼接，arr.push(temp)
+    // arr = ['123']  temp = ""
+    // 2.直到再次遇到数字的时候，重复1操作
+    // function getNum (str) {
+    //     let arr = []
+    //     let temp = ""
+    //     for (let i = 0; i < str.length; i++) {
+    //         if (!isNaN(str[i])) {
+    //             // 当前元素是数字
+    //             temp += str[i]
+    //         } else {
+    //             // 说明当前元素不是数字
+    //             if (temp != '') {
+    //                 arr.push(temp)
+    //             }
+    //             temp = ''
+    //         }
+    //     }
+    //     if (temp !== '') {
+    //         arr.push(temp)
+    //     }
+    //     return arr
+    // }
+    // console.log(getNum(str));
+</script>
+
+</html>

@@ -1,6 +1,11 @@
 @charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
 html {
-  font-size: 37.5px;
+  font-size: 37.5px !important;
 }
 
 .body {
@@ -42,6 +47,7 @@ html {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  margin-bottom: 0.5rem;
   width: 18.438rem;
   height: 11.875rem;
   background-color: #ffffff;

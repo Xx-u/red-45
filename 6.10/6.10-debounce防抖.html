@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防抖</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <script>
+        // 用户点击n-1次无效，只识别最后一次
+        // 制作一个防抖函数  可以人为的控制的第一次和最后一次
+
+        // 最后一次
+        let btn = document.querySelector('button')
+        // 按钮的事件处理函数
+        function btnClick (e) {
+            console.log('点击事件具体做的事亲')
+            console.log(this)//this 应该是要指向btn
+            console.log(e)
+        }
+        // 防抖函数
+        function debounce (handle) {
+            let timer = null
+            // btn具体的事件函数传递进来
+            // 才能在这里执行
+
+            // 连续点击触发定时器并马上清除，直到用户停止点击才触发handle函数
+            return function proxy () {
+                clearTimeout(timer)
+                // 把btn的this  保存that
+                let that = this
+                // arg  用来保存  事件对象
+                let arg = arguments
+                timer = setTimeout(() => {
+                    handle.call(that, arg[0])
+                    // handle.apply(that, arguments)
+                }, 800)
+            }
+        }
+
+        btn.onclick = debounce(btnClick)
+
+        // btn.addEventListener('click', debounce)
+
+
+
+        // // 第一次
+        // let btn = document.querySelector('button')
+        // // 按钮的事件处理函数
+        // function btnClick (e) {
+        //     console.log('点击事件具体做的事亲')
+        //     console.log(this)//this 应该是要指向btn
+        //     console.log(e)
+        // }
+        // // 防抖函数
+        // // 第一个参数 传入事件函数
+        // // 第二个参数  传入防抖时间
+        // // 第三个参数  是否立即执行 true第一次  false 最后一次
+        // function debounce (handle, wait, immediate) {
+        //     let timer = null
+        //     let init = null
+        //     // btn具体的事件函数传递进来
+        //     // 才能在这里执行
+
+        //     // 连续点击触发定时器并马上清除，直到用户停止点击才触发handle函数
+        //     return function proxy () {
+        //         //this 指向btn
+        //         // console.log('proxy', this)
+        //         let that = this
+        //         let arg = arguments
+        //         // console.log(arg[0])
+        //         //点击一次，就会执行一次
+        //         // 连续点击触发定时器，并马上清楚
+        //         init = immediate && !timer
+        //         clearTimeout(timer)
+        //         timer = setTimeout(() => {
+        //             !immediate ? handle.call(that, arg[0]) : null
+        //         }, wait)
+        //         init ? handle.call(that, arg[0]) : null
+        //         // 如何阻止 后面的点击
+        //     }
+        // }
+
+        // btn.onclick = debounce(btnClick, 300, true)
+
+
+
+
+    </script>
+</body>
+
+</html>

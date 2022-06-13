@@ -28,7 +28,6 @@
         li {
             width: 18rem;
             height: 2.375rem;
-            // background-color: #ffffff;
             margin-bottom: 1.594rem;
 
             input {
@@ -40,6 +39,11 @@
                 border: transparent;
                 background-color: #ffffff;
                 background-color: rgba(255, 255, 255, 0.5);
+                outline: none;
+
+                &::placeholder {
+                    color: #000;
+                }
             }
         }
     }
